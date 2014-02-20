@@ -17,7 +17,6 @@
 
     UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initFromNib];
     UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
-    navVC.navigationBarHidden = YES;
 
     self.window.rootViewController = navVC;
 

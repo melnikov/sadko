@@ -2,13 +2,12 @@
 //  UIDoctorCategoryViewController.m
 //  SadkoProto
 //
-//  Created by Artyom Syrov on 20.02.14.
-//  Copyright (c) 2014 Stex Group. All rights reserved.
-//
 
 #import "UIDoctorCategoryViewController.h"
 
 @interface UIDoctorCategoryViewController ()
+
+@property (nonatomic, retain) IBOutlet UITableView* table;
 
 @end
 
@@ -26,7 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"Cпециальность";
 }
 
 - (void)didReceiveMemoryWarning

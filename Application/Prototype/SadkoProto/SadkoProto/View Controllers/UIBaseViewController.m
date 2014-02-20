@@ -36,13 +36,13 @@
     [super viewDidLoad];
 
     [self initTitleLabel];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 135, 198)] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor lightGrayColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 135, 198)] forBarMetrics:UIBarMetricsDefault];
     [[self.navigationController.navigationBar viewWithTag:TITLE_TAG] removeFromSuperview];
     
     const CGFloat buttonWidth = 26;
@@ -69,8 +69,9 @@
 {
     if ([[self.navigationController viewControllers] count] > 1)
     {
-        [self setLeftNavigationBarButtonWithImage:[UIImage imageNamed:@"back_btn"]
-                                     pressedImage:[UIImage imageNamed:@"back_btn_pressed"]
+        [self setLeftNavigationBarButtonWithImage:[UIImage imageNamed:@"back"]
+                                     pressedImage:[UIImage imageNamed:@"back"]
+                                     title:@"Назад"
                                             block:^
          {
              [self.navigationController popViewControllerAnimated:YES];
@@ -84,7 +85,6 @@
     [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [self.titleLabel setBackgroundColor:[UIColor clearColor]];
     [self.titleLabel setTag:TITLE_TAG];
-    //[self.titleLabel setFont:DEFAULT_NAVBAR_TITLE_FONT];
     [self.titleLabel setTextColor:[UIColor whiteColor]];
     [self.titleLabel setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 }

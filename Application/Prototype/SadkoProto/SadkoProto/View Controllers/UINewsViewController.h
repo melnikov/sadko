@@ -8,6 +8,6 @@
 
 #import "UIBaseViewController.h"
 
-@interface UINewsViewController : UIBaseViewController
+@interface UINewsViewController : UIBaseViewController <UIScrollViewDelegate>
 
 @end

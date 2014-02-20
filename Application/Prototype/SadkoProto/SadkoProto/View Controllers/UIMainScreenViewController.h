@@ -7,6 +7,6 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIMainScreenViewController : UIBaseViewController
+@interface UIMainScreenViewController : UIBaseViewController <UIScrollViewDelegate>
 
 @end
