@@ -19,6 +19,14 @@
 		274BEF6818B1654C00C49814 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274BEF5018B1654C00C49814 /* UIKit.framework */; };
 		274BEF7018B1654C00C49814 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 274BEF6E18B1654C00C49814 /* InfoPlist.strings */; };
 		274BEF7218B1654C00C49814 /* SadkoProtoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 274BEF7118B1654C00C49814 /* SadkoProtoTests.m */; };
+		60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */; };
+		60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */; };
+		60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4F018B6261700A16C2F /* UIBaseViewController.m */; };
+		60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4F418B6264C00A16C2F /* NSString+Helper.m */; };
+		60ACF4F818B6264C00A16C2F /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4F618B6264C00A16C2F /* UIImage+Extensions.m */; };
+		60ACF4FD18B6273B00A16C2F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF4FC18B6273B00A16C2F /* README */; };
+		60ACF50218B6289B00A16C2F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF50018B6289B00A16C2F /* back.png */; };
+		60ACF50318B6289B00A16C2F /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF50118B6289B00A16C2F /* back@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,19 @@
 		274BEF6D18B1654C00C49814 /* SadkoProtoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SadkoProtoTests-Info.plist"; sourceTree = "<group>"; };
 		274BEF6F18B1654C00C49814 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		274BEF7118B1654C00C49814 /* SadkoProtoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SadkoProtoTests.m; sourceTree = "<group>"; };
+		60ACF4EA18B6256E00A16C2F /* UIMainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMainScreenViewController.h; sourceTree = "<group>"; };
+		60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMainScreenViewController.m; sourceTree = "<group>"; };
+		60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMainScreenViewController.xib; sourceTree = "<group>"; };
+		60ACF4EF18B6261700A16C2F /* UIBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBaseViewController.h; sourceTree = "<group>"; };
+		60ACF4F018B6261700A16C2F /* UIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBaseViewController.m; sourceTree = "<group>"; };
+		60ACF4F318B6264C00A16C2F /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		60ACF4F418B6264C00A16C2F /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		60ACF4F518B6264C00A16C2F /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		60ACF4F618B6264C00A16C2F /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		60ACF4FB18B6273B00A16C2F /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		60ACF4FC18B6273B00A16C2F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		60ACF50018B6289B00A16C2F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		60ACF50118B6289B00A16C2F /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +128,10 @@
 		274BEF5218B1654C00C49814 /* SadkoProto */ = {
 			isa = PBXGroup;
 			children = (
+				60ACF4F918B6273B00A16C2F /* External */,
+				60ACF4F218B6264C00A16C2F /* Extensions */,
+				60ACF4E918B624E600A16C2F /* View Controllers */,
+				60ACF4FE18B6289B00A16C2F /* Resources */,
 				274BEF5B18B1654C00C49814 /* AppDelegate.h */,
 				274BEF5C18B1654C00C49814 /* AppDelegate.m */,
 				274BEF5E18B1654C00C49814 /* Images.xcassets */,
@@ -142,6 +167,63 @@
 				274BEF6E18B1654C00C49814 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60ACF4E918B624E600A16C2F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF4EF18B6261700A16C2F /* UIBaseViewController.h */,
+				60ACF4F018B6261700A16C2F /* UIBaseViewController.m */,
+				60ACF4EA18B6256E00A16C2F /* UIMainScreenViewController.h */,
+				60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */,
+				60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		60ACF4F218B6264C00A16C2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF4F318B6264C00A16C2F /* NSString+Helper.h */,
+				60ACF4F418B6264C00A16C2F /* NSString+Helper.m */,
+				60ACF4F518B6264C00A16C2F /* UIImage+Extensions.h */,
+				60ACF4F618B6264C00A16C2F /* UIImage+Extensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		60ACF4F918B6273B00A16C2F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF4FA18B6273B00A16C2F /* TBMacros */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		60ACF4FA18B6273B00A16C2F /* TBMacros */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF4FB18B6273B00A16C2F /* Macros.h */,
+				60ACF4FC18B6273B00A16C2F /* README */,
+			);
+			path = TBMacros;
+			sourceTree = "<group>";
+		};
+		60ACF4FE18B6289B00A16C2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF4FF18B6289B00A16C2F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60ACF4FF18B6289B00A16C2F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				60ACF50018B6289B00A16C2F /* back.png */,
+				60ACF50118B6289B00A16C2F /* back@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +301,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60ACF4FD18B6273B00A16C2F /* README in Resources */,
+				60ACF50218B6289B00A16C2F /* back.png in Resources */,
+				60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */,
 				274BEF5718B1654C00C49814 /* InfoPlist.strings in Resources */,
 				274BEF5F18B1654C00C49814 /* Images.xcassets in Resources */,
+				60ACF50318B6289B00A16C2F /* back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */,
+				60ACF4F818B6264C00A16C2F /* UIImage+Extensions.m in Sources */,
+				60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */,
+				60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */,
 				274BEF5D18B1654C00C49814 /* AppDelegate.m in Sources */,
 				274BEF5918B1654C00C49814 /* main.m in Sources */,
 			);
@@ -361,10 +451,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ARTEMIY SYROV (U9HN5F9WJ2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ARTEMIY SYROV (U9HN5F9WJ2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SadkoProto/SadkoProto-Prefix.pch";
 				INFOPLIST_FILE = "SadkoProto/SadkoProto-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D9BEA6A9-98AB-4069-88D2-88D15940A765";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,10 +470,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ARTEMIY SYROV (U9HN5F9WJ2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ARTEMIY SYROV (U9HN5F9WJ2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SadkoProto/SadkoProto-Prefix.pch";
 				INFOPLIST_FILE = "SadkoProto/SadkoProto-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D9BEA6A9-98AB-4069-88D2-88D15940A765";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -443,6 +545,7 @@
 				274BEF7718B1654C00C49814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		274BEF7818B1654C00C49814 /* Build configuration list for PBXNativeTarget "SadkoProtoTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +554,7 @@
 				274BEF7A18B1654C00C49814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

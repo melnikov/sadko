@@ -2,11 +2,10 @@
 //  AppDelegate.m
 //  SadkoProto
 //
-//  Created by Artyom Syrov on 17.02.14.
-//  Copyright (c) 2014 Stex Group. All rights reserved.
-//
 
 #import "AppDelegate.h"
+
+#import "UIMainScreenViewController.h"
 
 @implementation AppDelegate
 
@@ -15,6 +14,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+
+    UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initFromNib];
+    UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
+    navVC.navigationBarHidden = YES;
+
+    self.window.rootViewController = navVC;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
