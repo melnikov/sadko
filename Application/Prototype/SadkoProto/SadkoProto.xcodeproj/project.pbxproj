@@ -22,6 +22,8 @@
 		27B9503518B6995A00EDBE52 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503218B6995A00EDBE52 /* banner.png */; };
 		27B9503618B6995A00EDBE52 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503318B6995A00EDBE52 /* banner@2x.png */; };
 		27B9503718B6995A00EDBE52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503418B6995A00EDBE52 /* logo.png */; };
+		27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */; };
+		27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */; };
 		60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */; };
 		60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */; };
 		60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4F018B6261700A16C2F /* UIBaseViewController.m */; };
@@ -88,6 +90,9 @@
 		27B9503218B6995A00EDBE52 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
 		27B9503318B6995A00EDBE52 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		27B9503418B6995A00EDBE52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		27B9503918B6AA4B00EDBE52 /* UIHumanSchemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHumanSchemeViewController.h; sourceTree = "<group>"; };
+		27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHumanSchemeViewController.m; sourceTree = "<group>"; };
+		27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIHumanSchemeViewController.xib; sourceTree = "<group>"; };
 		60ACF4EA18B6256E00A16C2F /* UIMainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMainScreenViewController.h; sourceTree = "<group>"; };
 		60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMainScreenViewController.m; sourceTree = "<group>"; };
 		60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMainScreenViewController.xib; sourceTree = "<group>"; };
@@ -240,6 +245,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		27B9503E18B6ABCC00EDBE52 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		60ACF4E918B624E600A16C2F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +290,9 @@
 				60ACF53118B643D400A16C2F /* UIQuestionAnswerViewController.h */,
 				60ACF53218B643D400A16C2F /* UIQuestionAnswerViewController.m */,
 				60ACF53318B643D400A16C2F /* UIQuestionAnswerViewController.xib */,
+				27B9503918B6AA4B00EDBE52 /* UIHumanSchemeViewController.h */,
+				27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */,
+				27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */,
 				60ACF53618B6441000A16C2F /* UISymptomsViewController.h */,
 				60ACF53718B6441000A16C2F /* UISymptomsViewController.m */,
 				60ACF53818B6441000A16C2F /* UISymptomsViewController.xib */,
@@ -322,6 +337,7 @@
 		60ACF4FE18B6289B00A16C2F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				27B9503E18B6ABCC00EDBE52 /* Scripts */,
 				60ACF4FF18B6289B00A16C2F /* Images */,
 			);
 			path = Resources;
@@ -430,6 +446,7 @@
 				60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */,
 				274BEF5718B1654C00C49814 /* InfoPlist.strings in Resources */,
 				60ACF50D18B640BF00A16C2F /* UIDoctorCategoryViewController.xib in Resources */,
+				27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */,
 				60ACF54418B6447900A16C2F /* UIBranchDetailsViewController.xib in Resources */,
 				274BEF5F18B1654C00C49814 /* Images.xcassets in Resources */,
 				60ACF50318B6289B00A16C2F /* back@2x.png in Resources */,
@@ -457,6 +474,7 @@
 				60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */,
 				60ACF53418B643D400A16C2F /* UIQuestionAnswerViewController.m in Sources */,
 				60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */,
+				27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */,
 				60ACF4F818B6264C00A16C2F /* UIImage+Extensions.m in Sources */,
 				60ACF51618B6411B00A16C2F /* UIDoctorDetailsViewController.m in Sources */,
 				60ACF53E18B6446100A16C2F /* UIBranchListViewController.m in Sources */,

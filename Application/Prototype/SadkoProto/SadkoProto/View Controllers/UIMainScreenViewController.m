@@ -9,6 +9,8 @@
 #import "UIDoctorCategoryViewController.h"
 #import "UIServiceListViewController.h"
 #import "UINewsViewController.h"
+#import "UIHumanSchemeViewController.h"
+#import "UIBranchListViewController.h"
 
 @interface UIMainScreenViewController ()
 
@@ -26,6 +28,8 @@
 @property (nonatomic, retain) IBOutlet UIButton* buttonCallUs;
 
 @property (nonatomic, retain) NSArray* branches;
+
+@property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initBranches;
 
@@ -45,6 +49,8 @@
 	self.pageController.currentPage = 0;
 
     self.pageController.numberOfPages = [self.branches count];
+    
+    self.callWebView = [[UIWebView alloc] init];
 }
 
 #pragma mark - Private Methods
@@ -105,17 +111,29 @@
 
 - (IBAction)buttonSymptomsPressed:(id)sender
 {
-    
+    UIHumanSchemeViewController* aboutScreen = [[UIHumanSchemeViewController alloc] initFromNib];
+    [self.navigationController pushViewController:aboutScreen animated:YES];
 }
 
 - (IBAction)buttonContactsPressed:(id)sender
 {
-    
+    UIBranchListViewController* aboutScreen = [[UIBranchListViewController alloc] initFromNib];
+    [self.navigationController pushViewController:aboutScreen animated:YES];
 }
 
 - (IBAction)buttonCallUsPressed:(id)sender
 {
-    
+    NSURL* callURL = [NSURL URLWithString:@""];
+    if ([[UIApplication sharedApplication] canOpenURL:callURL])
+    {
+        [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки/" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
 }
 
 @end
