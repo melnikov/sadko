@@ -19,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.title = @"Вопросы врачу";
 }
 
 @end

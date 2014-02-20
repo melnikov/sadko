@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIMainScreenViewController">
             <connections>
-                <outlet property="branchSelector" destination="df5-5G-Vk1" id="01v-pR-e11"/>
                 <outlet property="buttonAbout" destination="OwP-wS-yRR" id="BxJ-ar-pug"/>
                 <outlet property="buttonCallUs" destination="wy1-ci-M6y" id="PTr-5R-flu"/>
                 <outlet property="buttonContacts" destination="2Ve-ZG-1xp" id="cMR-nh-ufh"/>
@@ -15,6 +14,7 @@
                 <outlet property="buttonNews" destination="AyS-b8-8ga" id="f7M-L5-z34"/>
                 <outlet property="buttonServices" destination="KCn-bJ-c8l" id="Puh-8j-SMs"/>
                 <outlet property="buttonSymptoms" destination="OL1-oR-2pX" id="mA3-1F-SnQ"/>
+                <outlet property="clinicSelector" destination="df5-5G-Vk1" id="FWa-b1-Rio"/>
                 <outlet property="pageController" destination="gYy-L7-Igj" id="kzt-6o-f5L"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="viewMenu" destination="g4X-zf-VJB" id="IqM-U7-dgK"/>
@@ -26,16 +26,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="df5-5G-Vk1">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="gYy-L7-Igj">
-                    <rect key="frame" x="141" y="130" width="39" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="141" y="96" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.43201864919999999" blue="0.87556703629999999" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
                 <view contentMode="scaleToFill" id="g4X-zf-VJB">
-                    <rect key="frame" x="0.0" y="189" width="320" height="217"/>
+                    <rect key="frame" x="0.0" y="128" width="320" height="217"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PBo-xC-syI">
@@ -115,7 +117,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wy1-ci-M6y">
-                    <rect key="frame" x="20" y="433" width="280" height="44"/>
+                    <rect key="frame" x="20" y="353" width="280" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" label=""/>

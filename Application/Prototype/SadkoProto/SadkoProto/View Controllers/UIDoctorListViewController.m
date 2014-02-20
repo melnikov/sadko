@@ -5,19 +5,25 @@
 
 #import "UIDoctorListViewController.h"
 
+#import "UIDoctorDetailsViewController.h"
+
 @interface UIDoctorListViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
+
+@property (nonatomic, retain) NSArray* doctors;
 
 @end
 
 @implementation UIDoctorListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithScript:(NSString*)script
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initFromNib];
+    if (self)
+    {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
+        self.doctors = [[NSArray alloc] initWithContentsOfFile:filePath];
     }
     return self;
 }
@@ -29,10 +35,37 @@
     self.title = @"Врачи";
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Table View Data Source Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return [self.doctors count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString* kMenuCellId = @"DoctorsCell";
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kMenuCellId];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+    }
+    
+    cell.textLabel.text = [self.doctors objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - Table View Delegate Methods
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIDoctorDetailsViewController* doc = [[UIDoctorDetailsViewController alloc] initFromNib];
+    [self.navigationController pushViewController:doc animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

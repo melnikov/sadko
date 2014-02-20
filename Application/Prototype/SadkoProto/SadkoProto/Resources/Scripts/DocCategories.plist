@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Рентгенолог</string>
+	<string>Гинеколог</string>
+	<string>Акушер</string>
+	<string>Уролог</string>
+	<string>Ревматолог</string>
+	<string>Гастроэнтеролог</string>
+	<string>Эндокринолог</string>
+	<string>Хирург</string>
+	<string>Проктолог</string>
+	<string>Психолог</string>
+	<string>Криогинеколог</string>
+	<string>Дерматовенеролог</string>
+	<string>Андролог</string>
+	<string>Маммолог-онколог</string>
+	<string>Отоларинголог</string>
+</array>
+</plist>

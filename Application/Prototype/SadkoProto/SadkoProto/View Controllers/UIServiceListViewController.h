@@ -5,6 +5,6 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIServiceListViewController : UIBaseViewController
+@interface UIServiceListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

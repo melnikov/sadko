@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Сеть стоматологических клиник</string>
+		<key>top10</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Лечебно-диагностический центр</string>
+		<key>top10</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр женского здоровья</string>
+		<key>top10</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр неврологии</string>
+		<key>top10</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр имплантации</string>
+		<key>top10</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр ортодонтии &quot;Джем&quot;</string>
+		<key>top10</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Детская клиника &quot;Здоровенок&quot;</string>
+		<key>top10</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Детская стоматология &quot;Динозубрик&quot;</string>
+		<key>top10</key>
+		<true/>
+	</dict>
+</array>
+</plist>

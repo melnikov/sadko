@@ -9,12 +9,13 @@
 #import "UIDoctorCategoryViewController.h"
 #import "UIServiceListViewController.h"
 #import "UINewsViewController.h"
+#import "UITopTenQuestionsViewController.h"
 #import "UIHumanSchemeViewController.h"
 #import "UIBranchListViewController.h"
 
 @interface UIMainScreenViewController ()
 
-@property (nonatomic, retain) IBOutlet UIScrollView* branchSelector;
+@property (nonatomic, retain) IBOutlet UIScrollView* clinicSelector;
 @property (nonatomic, retain) IBOutlet UIPageControl* pageController;
 
 @property (nonatomic, retain) IBOutlet UIView* viewMenu;
@@ -27,59 +28,96 @@
 
 @property (nonatomic, retain) IBOutlet UIButton* buttonCallUs;
 
-@property (nonatomic, retain) NSArray* branches;
+@property (nonatomic, retain) NSArray* clinics;
 
 @property (nonatomic, retain) UIWebView* callWebView;
 
-- (void)initBranches;
+- (void)initClinics;
 
 @end
 
 @implementation UIMainScreenViewController
 
+- (id)initWithScript:(NSString*)script
+{
+    self = [super initFromNib];
+    if (self)
+    {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
+        self.clinics = [[NSArray alloc] initWithContentsOfFile:filePath];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self initBranches];
+    [self initClinics];
     
     self.title = @"Садко";
 
-    self.branchSelector.delegate = self;
+    self.clinicSelector.delegate = self;
 	self.pageController.currentPage = 0;
 
-    self.pageController.numberOfPages = [self.branches count];
+    self.pageController.numberOfPages = [self.clinics count];
+
+    [self selectionChanged];
     
     self.callWebView = [[UIWebView alloc] init];
 }
 
 #pragma mark - Private Methods
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 	// Update the page when more than 50% of the previous/next page is visible
-    CGFloat pageWidth = self.branchSelector.frame.size.width;
-    int page = floor((self.branchSelector.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    CGFloat pageWidth = self.clinicSelector.frame.size.width;
+    int page = floor((self.clinicSelector.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    int oldPage = self.pageController.currentPage;
+    
     self.pageController.currentPage = page;
+
+    if (oldPage != page)
+    {
+        [self selectionChanged];
+    }
 }
 
-- (void)initBranches
+- (void)initClinics
 {
-    self.branches = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", nil];
-
-    NSArray* colors = [NSArray arrayWithObjects:[UIColor lightGrayColor], [UIColor redColor], [UIColor blueColor],
-                                                [UIColor lightGrayColor], [UIColor redColor], [UIColor blueColor],
-                                                [UIColor lightGrayColor], [UIColor redColor], [UIColor blueColor], [UIColor yellowColor], nil];
-
-    for (int i = 0; i < [self.branches count]; i++)
+    for (int i = 0; i < [self.clinics count]; i++)
     {
-        UIView* banner = [[UIView alloc] init];
-        banner.backgroundColor = [colors objectAtIndex:i];
-        banner.frame = CGRectMake(self.branchSelector.contentSize.width, 0, self.branchSelector.bounds.size.width, self.branchSelector.bounds.size.height);
-        
-        [self.branchSelector addSubview:banner];
+        UIImageView* banner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"banner"]];
+        banner.frame = CGRectMake(self.clinicSelector.contentSize.width, 0, self.clinicSelector.bounds.size.width, self.clinicSelector.bounds.size.height);
+    
+        UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, banner.frame.size.width - 40, banner.frame.size.height - 40)];
+        title.backgroundColor = [UIColor clearColor];
+        title.numberOfLines = 0;
+        title.font = [UIFont systemFontOfSize:24.0f];
+        title.textColor = [UIColor blackColor];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.text = [self.clinics objectAtIndex:i][@"title"];
 
-        self.branchSelector.contentSize = CGSizeMake(self.branchSelector.contentSize.width + banner.frame.size.width, self.branchSelector.contentSize.height);
+        [banner addSubview:title];
+        
+        [self.clinicSelector addSubview:banner];
+
+        self.clinicSelector.contentSize = CGSizeMake(self.clinicSelector.contentSize.width + banner.frame.size.width, self.clinicSelector.contentSize.height);
+    }
+}
+
+- (void)selectionChanged
+{
+    NSDictionary* options = [self.clinics objectAtIndex:self.pageController.currentPage];
+
+    if ([[options objectForKey:@"top10"] boolValue])
+    {
+        [self.buttonSymptoms setTitle:@"TOP-10" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.buttonSymptoms setTitle:@"Что болит?" forState:UIControlStateNormal];
     }
 }
 
@@ -87,8 +125,8 @@
 
 - (IBAction)buttonDoctorsPressed:(id)sender
 {
-    UIDoctorCategoryViewController* aboutScreen = [[UIDoctorCategoryViewController alloc] initFromNib];
-    [self.navigationController pushViewController:aboutScreen animated:YES];
+    UIDoctorCategoryViewController* doctorsScreen = [[UIDoctorCategoryViewController alloc] initWithScript:@"DocCategories"];
+    [self.navigationController pushViewController:doctorsScreen animated:YES];
 }
 
 - (IBAction)buttonAboutPressed:(id)sender
@@ -99,38 +137,48 @@
 
 - (IBAction)buttonServicesPressed:(id)sender
 {
-    UIServiceListViewController* aboutScreen = [[UIServiceListViewController alloc] initFromNib];
-    [self.navigationController pushViewController:aboutScreen animated:YES];
+    UIServiceListViewController* servicesScreen = [[UIServiceListViewController alloc] initWithScript:@"Services"];
+    [self.navigationController pushViewController:servicesScreen animated:YES];
 }
 
 - (IBAction)buttonNewsPressed:(id)sender
 {
-    UINewsViewController* aboutScreen = [[UINewsViewController alloc] initFromNib];
-    [self.navigationController pushViewController:aboutScreen animated:YES];
+    UINewsViewController* newsScreen = [[UINewsViewController alloc] initFromNib];
+    [self.navigationController pushViewController:newsScreen animated:YES];
 }
 
 - (IBAction)buttonSymptomsPressed:(id)sender
 {
-    UIHumanSchemeViewController* aboutScreen = [[UIHumanSchemeViewController alloc] initFromNib];
-    [self.navigationController pushViewController:aboutScreen animated:YES];
+    NSDictionary* options = [self.clinics objectAtIndex:self.pageController.currentPage];
+    
+    if ([[options objectForKey:@"top10"] boolValue])
+    {
+        UITopTenQuestionsViewController* top10Screen = [[UITopTenQuestionsViewController alloc] initFromNib];
+        [self.navigationController pushViewController:top10Screen animated:YES];
+    }
+    else
+    {
+        UIHumanSchemeViewController* schemeScreen = [[UIHumanSchemeViewController alloc] initFromNib];
+        [self.navigationController pushViewController:schemeScreen animated:YES];
+    }
 }
 
 - (IBAction)buttonContactsPressed:(id)sender
 {
-    UIBranchListViewController* aboutScreen = [[UIBranchListViewController alloc] initFromNib];
-    [self.navigationController pushViewController:aboutScreen animated:YES];
+    UIBranchListViewController* contactScreen = [[UIBranchListViewController alloc] initFromNib];
+    [self.navigationController pushViewController:contactScreen animated:YES];
 }
 
 - (IBAction)buttonCallUsPressed:(id)sender
 {
-    NSURL* callURL = [NSURL URLWithString:@""];
+    NSURL* callURL = [NSURL URLWithString:@"tel:+78314210101"];
     if ([[UIApplication sharedApplication] canOpenURL:callURL])
     {
         [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
     }
     else
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки/" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
         [alertView release];
     }

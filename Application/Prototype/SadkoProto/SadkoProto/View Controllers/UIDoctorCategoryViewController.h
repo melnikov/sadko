@@ -5,6 +5,6 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIDoctorCategoryViewController : UIBaseViewController
+@interface UIDoctorCategoryViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

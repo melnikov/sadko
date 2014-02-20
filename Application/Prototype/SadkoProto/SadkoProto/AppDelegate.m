@@ -15,7 +15,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
-    UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initFromNib];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initWithScript:@"Clinics"];
     UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
 
     self.window.rootViewController = navVC;

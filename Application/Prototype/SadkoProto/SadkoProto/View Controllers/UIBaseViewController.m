@@ -21,6 +21,11 @@
 
 #pragma mark - Initialization/deallocation
 
+- (id)initWithScript:(NSString *)script
+{
+    return nil;
+}
+
 - (id)initFromNib
 {
     self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
@@ -84,6 +89,7 @@
     [self setTitleLabel:[[[UILabel alloc] initWithFrame:[[[self navigationController] navigationBar] bounds]]autorelease]];
     [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [self.titleLabel setBackgroundColor:[UIColor clearColor]];
+    [self.titleLabel setFont:[UIFont systemFontOfSize:20.0f]];
     [self.titleLabel setTag:TITLE_TAG];
     [self.titleLabel setTextColor:[UIColor whiteColor]];
     [self.titleLabel setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
