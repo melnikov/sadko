@@ -28,6 +28,7 @@
 		27B9504218B6C1DF00EDBE52 /* DocCategories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9504118B6C1DF00EDBE52 /* DocCategories.plist */; };
 		27B9504418B6C53D00EDBE52 /* DocList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9504318B6C53D00EDBE52 /* DocList.plist */; };
 		27B9504618B6C6BC00EDBE52 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9504518B6C6BC00EDBE52 /* Services.plist */; };
+		27B9504818B6C9DC00EDBE52 /* Service.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9504718B6C9DC00EDBE52 /* Service.plist */; };
 		60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */; };
 		60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */; };
 		60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4F018B6261700A16C2F /* UIBaseViewController.m */; };
@@ -101,6 +102,7 @@
 		27B9504118B6C1DF00EDBE52 /* DocCategories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DocCategories.plist; sourceTree = "<group>"; };
 		27B9504318B6C53D00EDBE52 /* DocList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DocList.plist; sourceTree = "<group>"; };
 		27B9504518B6C6BC00EDBE52 /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
+		27B9504718B6C9DC00EDBE52 /* Service.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Service.plist; sourceTree = "<group>"; };
 		60ACF4EA18B6256E00A16C2F /* UIMainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMainScreenViewController.h; sourceTree = "<group>"; };
 		60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMainScreenViewController.m; sourceTree = "<group>"; };
 		60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMainScreenViewController.xib; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				27B9504118B6C1DF00EDBE52 /* DocCategories.plist */,
 				27B9504318B6C53D00EDBE52 /* DocList.plist */,
 				27B9504518B6C6BC00EDBE52 /* Services.plist */,
+				27B9504718B6C9DC00EDBE52 /* Service.plist */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				60ACF50818B6405E00A16C2F /* UIAboutViewController.xib in Resources */,
 				60ACF52118B641CF00A16C2F /* UIServiceDetailsViewController.xib in Resources */,
 				60ACF52618B641EC00A16C2F /* UINewsViewController.xib in Resources */,
+				27B9504818B6C9DC00EDBE52 /* Service.plist in Resources */,
 				27B9503618B6995A00EDBE52 /* banner@2x.png in Resources */,
 				60ACF4FD18B6273B00A16C2F /* README in Resources */,
 				60ACF52B18B6420700A16C2F /* UINewsDetailsViewController.xib in Resources */,
