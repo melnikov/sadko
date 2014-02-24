@@ -61,7 +61,7 @@
         self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         self.hud.mode = MBProgressHUDModeIndeterminate;
         self.hud.labelText = @"Загрузка";
-        self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(progressTimerCallback) userInfo:nil repeats:YES];
+        self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(progressTimerCallback) userInfo:nil repeats:NO];
     }
     else
     {

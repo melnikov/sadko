@@ -7,4 +7,6 @@
 
 @interface UIDoctorDetailsViewController : UIBaseViewController
 
+- (id)initWithDoctorInfo:(NSDictionary*)doctor;
+
 @end

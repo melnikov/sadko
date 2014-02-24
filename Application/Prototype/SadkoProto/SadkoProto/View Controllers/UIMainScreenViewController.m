@@ -71,7 +71,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-	// Update the page when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.clinicSelector.frame.size.width;
     int page = floor((self.clinicSelector.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     int oldPage = self.pageController.currentPage;
@@ -110,9 +109,9 @@
 
 - (void)selectionChanged
 {
-    NSDictionary* options = [self.clinics objectAtIndex:self.pageController.currentPage];
+    NSDictionary* clinic = [self.clinics objectAtIndex:self.pageController.currentPage];
 
-    if ([[options objectForKey:@"top10"] boolValue])
+    if ([[clinic objectForKey:@"top10"] boolValue])
     {
         [self.buttonSymptoms setTitle:@"TOP-10" forState:UIControlStateNormal];
     }
@@ -126,7 +125,7 @@
 
 - (IBAction)buttonDoctorsPressed:(id)sender
 {
-    UIDoctorCategoryViewController* doctorsScreen = [[UIDoctorCategoryViewController alloc] initWithScript:@"DocCategories"];
+    UIDoctorCategoryViewController* doctorsScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:doctorsScreen animated:YES];
 }
 

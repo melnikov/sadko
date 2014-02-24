@@ -9,4 +9,6 @@
 
 @interface UIMainScreenViewController : UIBaseViewController <UIScrollViewDelegate>
 
+- (id)initWithScript:(NSString*)script;
+
 @end

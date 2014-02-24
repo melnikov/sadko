@@ -11,19 +11,23 @@
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
+@property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSArray* categories;
+
+- (void)initCategoryListWithArray:(NSArray*)docs;
 
 @end
 
 @implementation UIDoctorCategoryViewController
 
-- (id)initWithScript:(NSString*)script
+- (id)initWithClinicInfo:(NSDictionary *)clinic
 {
     self = [super initFromNib];
     if (self)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        self.categories = [[NSArray alloc] initWithContentsOfFile:filePath];
+        self.clinic = clinic;
+
+        [self initCategoryListWithArray:clinic[@"docs"]];
     }
     return self;
 }
@@ -39,6 +43,32 @@
     self.table.separatorColor = [UIColor whiteColor];
     
     self.title = @"Cпециальность";
+}
+
+#pragma mark - Private Methods
+
+- (void)initCategoryListWithArray:(NSArray *)docs
+{
+    NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[docs count]];
+
+    for (NSDictionary* doc in docs)
+    {
+        NSString* category = doc[@"speciality"];
+        NSInteger i = 0;
+        for (i = 0; i < [result count]; ++i)
+        {
+            NSString* cat = result[i];
+            if ([cat isEqualToString:category])
+                break;
+        }
+
+        if (i == [result count])
+        {
+            [result addObject:category];
+        }
+    }
+
+    self.categories = [NSArray arrayWithArray:result];
 }
 
 #pragma mark - Table View Data Source Methods
@@ -58,9 +88,9 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
         cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
 
-    cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.text = [self.categories objectAtIndex:indexPath.row];
     
     return cell;
@@ -70,7 +100,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithScript:@"DocList"];
+    UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:docList animated:YES];
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

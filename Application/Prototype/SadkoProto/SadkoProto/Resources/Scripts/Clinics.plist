@@ -4,51 +4,408 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Сеть стоматологических клиник</string>
-		<key>top10</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Лечебно-диагностический центр</string>
-		<key>top10</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Центр женского здоровья</string>
-		<key>top10</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Центр неврологии</string>
-		<key>top10</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>Центр имплантации</string>
 		<key>top10</key>
 		<true/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Центр ортодонтии &quot;Джем&quot;</string>
-		<key>top10</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Детская клиника &quot;Здоровенок&quot;</string>
-		<key>top10</key>
-		<false/>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Детская стоматология &quot;Динозубрик&quot;</string>
-		<key>top10</key>
-		<true/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>О центре имплантации
+
+Имплантация зубов - это серьезная и достаточно сложная работа стоматолога, требующая в первую очередь специализированного оборудования и высокой квалификации целой команды врачей — хирурга-имплантолога, ортопеда, терапевта и зубного техника.</string>
+		<key>main_phone</key>
+		<string>+7 (831) 421-50-00</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://implant.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Центр профессиональной имплантации &quot;САДКО&quot;</string>
+				<key>address</key>
+				<string>ул. Белинского, 71/1</string>
+				<key>phone</key>
+				<string>+7 (831) 421-50-00</string>
+				<key>web</key>
+				<string>http://implant.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Имплантация  &quot;Центр развития стоматологии &quot;САДКО&quot;</string>
+				<key>address</key>
+				<string>ул. Бекетова, 13</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-120</string>
+				<key>web</key>
+				<string>http://implant.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Имплантация  &quot;Нижегородское отделение сети клиник &quot;САДКО&quot;</string>
+				<key>address</key>
+				<string>ул. Родионова, 199</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-888</string>
+				<key>web</key>
+				<string>http://implant.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Ковалев</string>
+				<key>first</key>
+				<string>Дмитрий</string>
+				<key>middle</key>
+				<string>Александрович</string>
+				<key>speciality</key>
+				<string>Ортопед</string>
+				<key>resume</key>
+				<string>2000 г. - окончил Нижегородскую государственную медицинскую академию
+2001 г. - клиническая интернатура
+2007 г. - присвоена специальность «стоматология ортопедическая»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Пужак</string>
+				<key>first</key>
+				<string>Андрей</string>
+				<key>middle</key>
+				<string>Вадимович</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>1994 г. – окончил Нижегородскую государственную медицинскую академию по специальности «стоматология»
+1994 г. - интернатура на базе Нижегородской областной клинической больницы им. Семашко и стоматологической поликлинике Приокского района г. Нижнего Новгорода
+2010 г. - действующий сертификат «стоматология хирургическая»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Горева</string>
+				<key>first</key>
+				<string>Мария</string>
+				<key>middle</key>
+				<string>Алексеевна</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>1985 г. - окончила Омский государственный медицинский институт
+Действительный член Российкого стоматологического общества</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Рацюк</string>
+				<key>first</key>
+				<string>Марина</string>
+				<key>middle</key>
+				<string>Михайловна</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>1998 г. - окончила Нижегородскую государственную медицинскую академию по специальности «Стоматология»
+2000 г. - клиническая ординатура по специальности «Стоматология терапевтическая»
+2006 г. - присвоена первая квалификационная категория</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Аскерова</string>
+				<key>first</key>
+				<string>Гюлдане</string>
+				<key>middle</key>
+				<string>Кавказовна</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>2004 г. - окончила стоматологический факультет Нижегородской государственной медицинской академии
+2004-2005 гг. - интернатура на базе Областной стоматологической поликлиники</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Бакланов</string>
+				<key>first</key>
+				<string>Максим</string>
+				<key>middle</key>
+				<string>Владимирович</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>2004 г. - окончил Нижегородскую государственную медицинскую академию по специальности «Стоматология»
+2004-2005 гг.- интернатура на базе МЛПУ «Стоматологическая поликлиника Ленинского района»
+2005 г. - сертификационный курс «Стоматология»
+2007 г. - специализация по направлению: «Хирургическая стоматология»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Бакланов</string>
+				<key>first</key>
+				<string>Максим</string>
+				<key>middle</key>
+				<string>Владимирович</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>2004 г. - окончил Нижегородскую государственную медицинскую академию по специальности «Стоматология»
+2004-2005 гг.- интернатура на базе МЛПУ «Стоматологическая поликлиника Ленинского района»
+2005 г. - сертификационный курс «Стоматология»
+2007 г. - специализация по направлению: «Хирургическая стоматология»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Селезнева</string>
+				<key>first</key>
+				<string>Лилия</string>
+				<key>middle</key>
+				<string>Сашиковна</string>
+				<key>speciality</key>
+				<string>Пародонтолог</string>
+				<key>resume</key>
+				<string>1996 - 2002 гг. – Нижегородская государственная медицинская академия, факультет стоматологии
+2002 – 2003 гг. – интернатура
+2008 – 2010 гг. – ординатура на базе кафедры челюстно-лицевой хирургии и стоматологии</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Буяло</string>
+				<key>first</key>
+				<string>Евгения</string>
+				<key>middle</key>
+				<string>Владимировна</string>
+				<key>speciality</key>
+				<string>Хирург-имплантолог</string>
+				<key>resume</key>
+				<string>1999 г. - окончила Нижегородскую государственную медицинскую академию по специальности «Стоматология»
+1999-2000 гг. -  клиническая интернатура по специальности «Стоматология хирургическая»
+2000-2002  гг. – клиническая ординатура по специальности «Стоматология»
+2005 г., 2010 г. – повышение квалификации по специальности «Стоматология хирургическая»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Катина</string>
+				<key>first</key>
+				<string>Наталья</string>
+				<key>middle</key>
+				<string>Юрьевна</string>
+				<key>speciality</key>
+				<string>Хирург-имплантолог</string>
+				<key>resume</key>
+				<string>1993 г. - окончила Нижегородскую государственную медицинскую академию
+1994 г. - интернатура «Хирургическая стоматология»
+Имеет I квалификационную категорию по хирургической стоматологии</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Имплантация без разрезов и швов</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Нет описания</string>
+				<key>docs</key>
+				<array>
+					<integer>0</integer>
+					<integer>3</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Одномоментная имплантация (за 1 день)</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>В сети клиник «САДКО» существует возможность установить имплантат и коронку В ОДИН ДЕНЬ (немедленная нагрузка).
+Метод экспресс - имплантации позволяет поставить имплантат сразу же после удаления. В некоторых клинических ситуациях - это быстрый и удобный для пациента способ восстановления зуба.
+Одномоментная имплантация в клинике «САДКО»  - это
+Моментальная имплантация : cокращенные сроки лечения — протезирование сразу после удаления и постановки титанового корня
+Атравматическая имплантация: одноэтапное  хирургическое вмешательство — одномоментная операционная нагрузка
+Великолепный эстетический результат через 45 минут после начала операции  
+Ускоренная функциональная регенерация — возможность ввернуться к полноценной жевательной нагрузке на 4-5 день после проведения процедуры</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>3</integer>
+					<integer>4</integer>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Протезирование на имплантатах</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Нет описания</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Полное восстановление зубного ряда</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Нет описания</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Имплантация под седацией</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Нет описания</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Костная пластика</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Недоразвитие или убыль количества костной ткани челюстей происходит из-за разных причин : врожденных аномалий, травм, потери зубов, заболеваний пародонта. Современный уровень реконструктивной челюстно-лицевой хирургии позволяет восстановить практически любой дефицит костной ткани челюстей и восстановить утраченную функцию, а также эстетику.
+Многообразие методик (синус-лифтинг, тканевая регенерация, костная пластика) в сочетании с костными трансплантатами последнего поколения создают условия для оптимальной постановки имплантов и последующего протезирования.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>3D диагностика</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Компьютерная томограмма - рентгенологическое 3 D обследование, дающее послойное трехмерное изображение исследуемой области с возможностью дальнейшей компьютерной обработки. Клиника «Садко» сегодня обладает самым точным компьютерным томографом в городе!
+Компьютерная томограмма дает  возможность оценить состояние костной ткани в месте планируемой имплантации, смоделировать постановку имплантов, спланировать форму и положение ортопедических конструкций. Бывает, что состояние костной ткани в месте предполагаемой имплантации не удовлетворительно, то есть ее объема недостаточно для проведения операции. В этом случае имплантация возможна после проведения специальных процедур по наращиванию костной ткани: синус лифтинг, операция по забору кости, костная пластика.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Синус лифтинг</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Нет описания</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Мини импланты</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Съемное протезирование - наиболее распространенный способ восстановления улыбки при полной потере зубов.
+Крепление протеза на специальную адгезивную массу - классический вариант фиксации. Такой вариант лечения смогут предложить практически в любой стоматологической клинике. Большинство пациентов это вариант лечения привлекает своей экономичностью и простотой изготовления. В тоже время, надежность крепления нейлонового или пластмассового протеза на клей не всегда оправдывает ожидания. Некоторые пациенты вынуждены навсегда отказаться от пережевывания жесткой пищи, так как протез не выдерживает чрезмерной жевательной нагрузки. Аллергические реакции на составляющие компоненты адгезивной пасты также не редкость.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Индивидуальное 3D моделирование</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>3D моделирование в дентальной имплантации. Навигационная хирургия.
+3D моделирование — это процесс, который представляет собой виртуальное планирование любой операции, проходящей в области зубочелюстной системы, например, имплантации зубов.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+		</array>
 	</dict>
 </array>
 </plist>

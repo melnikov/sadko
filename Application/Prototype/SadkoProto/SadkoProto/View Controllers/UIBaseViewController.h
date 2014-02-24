@@ -29,6 +29,4 @@ typedef void(^ButtonActionBlock)(void);
                                         title:(NSString *)title
                                         block:(ButtonActionBlock)block;
 
-- (id)initWithScript:(NSString*)script;
-
 @end
