@@ -90,6 +90,7 @@
     {
         UIImageView* banner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"banner"]];
         banner.frame = CGRectMake(self.clinicSelector.contentSize.width, 0, self.clinicSelector.bounds.size.width, self.clinicSelector.bounds.size.height);
+        banner.backgroundColor = [UIColor clearColor];
     
         UILabel* title = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, banner.frame.size.width - 40, banner.frame.size.height - 40)];
         title.backgroundColor = [UIColor clearColor];

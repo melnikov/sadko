@@ -40,6 +40,8 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = UIColorFromRGB(140, 192, 202);
+
     [self initTitleLabel];
 }
 
