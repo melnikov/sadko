@@ -41,13 +41,12 @@
     [super viewDidLoad];
 
     [self initTitleLabel];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 135, 198)] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 135, 198)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 109, 175)] forBarMetrics:UIBarMetricsDefault];
     [[self.navigationController.navigationBar viewWithTag:TITLE_TAG] removeFromSuperview];
     
     const CGFloat buttonWidth = 26;

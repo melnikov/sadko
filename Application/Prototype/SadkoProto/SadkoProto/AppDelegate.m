@@ -5,7 +5,7 @@
 
 #import "AppDelegate.h"
 
-#import "UIMainScreenViewController.h"
+#import "UISplashScreenViewController.h"
 
 @implementation AppDelegate
 
@@ -17,10 +17,8 @@
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initWithScript:@"Clinics"];
-    UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
-
-    self.window.rootViewController = navVC;
+    UISplashScreenViewController* splashScreen = [[UISplashScreenViewController alloc] initFromNib];
+    self.window.rootViewController = splashScreen;
 
     [self.window makeKeyAndVisible];
     return YES;
