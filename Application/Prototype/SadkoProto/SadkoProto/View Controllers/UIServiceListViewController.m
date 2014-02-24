@@ -11,19 +11,20 @@
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
+@property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSArray* services;
 
 @end
 
 @implementation UIServiceListViewController
 
-- (id)initWithScript:(NSString*)script
+- (id)initWithClinicInfo:(NSDictionary*)clinic;
 {
     self = [super initFromNib];
     if (self)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        self.services = [[NSArray alloc] initWithContentsOfFile:filePath];
+        self.clinic = clinic;
+        self.services = self.clinic[@"services"];
     }
     return self;
 }
@@ -31,6 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.table.backgroundView = nil;
+    self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
+    self.table.backgroundColor = [UIColor clearColor];
+    self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.table.separatorColor = [UIColor whiteColor];
 
     self.title = @"Услуги";
 }
@@ -51,9 +58,11 @@
     if (!cell)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor blackColor];
     }
     
-    cell.textLabel.text = [self.services objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[self.services objectAtIndex:indexPath.row] objectForKey:@"title"];
     
     return cell;
 }
@@ -62,7 +71,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIServiceDetailsViewController* service = [[UIServiceDetailsViewController alloc] initFromNib];
+    UIServiceDetailsViewController* service = [[UIServiceDetailsViewController alloc] initWithClinicInfo:self.clinic andService:[self.services objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:service animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

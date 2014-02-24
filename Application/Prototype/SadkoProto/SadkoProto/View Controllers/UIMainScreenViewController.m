@@ -137,7 +137,7 @@
 
 - (IBAction)buttonServicesPressed:(id)sender
 {
-    UIServiceListViewController* servicesScreen = [[UIServiceListViewController alloc] initWithScript:@"Services"];
+    UIServiceListViewController* servicesScreen = [[UIServiceListViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:servicesScreen animated:YES];
 }
 

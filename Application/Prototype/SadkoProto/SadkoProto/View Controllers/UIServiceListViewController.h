@@ -7,4 +7,6 @@
 
 @interface UIServiceListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (id)initWithClinicInfo:(NSDictionary*)clinic;
+
 @end
