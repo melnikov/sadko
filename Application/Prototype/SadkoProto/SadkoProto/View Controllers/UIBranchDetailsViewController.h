@@ -8,6 +8,10 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIBranchDetailsViewController : UIBaseViewController
+#import <MessageUI/MessageUI.h>
+
+@interface UIBranchDetailsViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
+
+- (id)initWithBranchInfo:(NSDictionary*)branch;
 
 @end

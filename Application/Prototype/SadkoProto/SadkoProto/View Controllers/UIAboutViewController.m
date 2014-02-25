@@ -143,7 +143,7 @@
     {
         case 0:
         {
-            UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithClinicInfo:self.clinic];
+            UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:self.clinic[@"info"]];
             [self.navigationController pushViewController:infoScreen animated:YES];
             break;
         }

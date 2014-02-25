@@ -8,6 +8,8 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIBranchListViewController : UIBaseViewController
+@interface UIBranchListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
+
+- (id)initWithClinicInfo:(NSDictionary*)clinic;
 
 @end

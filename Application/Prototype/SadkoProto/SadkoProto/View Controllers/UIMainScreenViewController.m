@@ -12,6 +12,7 @@
 #import "UITopTenQuestionsViewController.h"
 #import "UIHumanSchemeViewController.h"
 #import "UIBranchListViewController.h"
+#import "UIBranchDetailsViewController.h"
 
 @interface UIMainScreenViewController ()
 
@@ -165,8 +166,18 @@
 
 - (IBAction)buttonContactsPressed:(id)sender
 {
-    UIBranchListViewController* contactScreen = [[UIBranchListViewController alloc] initFromNib];
-    [self.navigationController pushViewController:contactScreen animated:YES];
+    NSArray* branches = [self.clinics objectAtIndex:self.pageController.currentPage][@"branches"];
+
+    if ([branches count] > 1)
+    {
+        UIBranchListViewController* contactScreen = [[UIBranchListViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
+        [self.navigationController pushViewController:contactScreen animated:YES];
+    }
+    else if ([branches count] > 0)
+    {
+        UIBranchDetailsViewController* detailsScreen = [[UIBranchDetailsViewController alloc] initWithBranchInfo:[branches objectAtIndex:0]];
+        [self.navigationController pushViewController:detailsScreen animated:YES];
+    }
 }
 
 - (IBAction)buttonCallUsPressed:(id)sender

@@ -1,5 +1,5 @@
 //
-//  UIInfoViewController.h
+//  UIMapViewController.h
 //  SadkoProto
 //
 //  Created by Artyom Syrov on 25.02.14.
@@ -8,8 +8,6 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIInfoViewController : UIBaseViewController
-
-- (id)initWithText:(NSString*)text;
+@interface UIMapViewController : UIBaseViewController
 
 @end

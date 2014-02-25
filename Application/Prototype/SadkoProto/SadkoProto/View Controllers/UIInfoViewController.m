@@ -12,18 +12,18 @@
 
 @property (nonatomic, retain) IBOutlet UITextView* textView;
 
-@property (nonatomic, retain) NSDictionary* clinic;
+@property (nonatomic, retain) NSString* textInfo;
 
 @end
 
 @implementation UIInfoViewController
 
-- (id)initWithClinicInfo:(NSDictionary *)clinic
+- (id)initWithText:(NSString *)text
 {
     self = [super initFromNib];
     if (self)
     {
-        self.clinic = clinic;
+        self.textInfo = text;
     }
     return self;
 }
@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
 
-    self.textView.text = self.clinic[@"info"];
+    self.textView.text = self.textInfo;
 
     self.title = @"Информация";
 }

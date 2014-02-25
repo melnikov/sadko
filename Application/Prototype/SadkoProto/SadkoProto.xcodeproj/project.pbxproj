@@ -41,6 +41,9 @@
 		6036753118BC82B2008D2CB5 /* service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752F18BC82B2008D2CB5 /* service@2x.png */; };
 		6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036753318BC901A008D2CB5 /* UIInfoViewController.m */; };
 		6036753618BC901A008D2CB5 /* UIInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036753418BC901A008D2CB5 /* UIInfoViewController.xib */; };
+		6036753A18BCB063008D2CB5 /* UIMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036753818BCB063008D2CB5 /* UIMapViewController.m */; };
+		6036753B18BCB063008D2CB5 /* UIMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036753918BCB063008D2CB5 /* UIMapViewController.xib */; };
+		6036753D18BCB0DF008D2CB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6036753C18BCB0DF008D2CB5 /* MapKit.framework */; };
 		6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096A40518BB6D63008064FC /* UISplashScreenViewController.m */; };
 		6096A40818BB6DC8008064FC /* UISplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6096A40718BB6DC8008064FC /* UISplashScreenViewController.xib */; };
 		6096A40B18BB6EFA008064FC /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096A40A18BB6EFA008064FC /* Utils.m */; };
@@ -135,6 +138,10 @@
 		6036753218BC901A008D2CB5 /* UIInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInfoViewController.h; sourceTree = "<group>"; };
 		6036753318BC901A008D2CB5 /* UIInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIInfoViewController.m; sourceTree = "<group>"; };
 		6036753418BC901A008D2CB5 /* UIInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIInfoViewController.xib; sourceTree = "<group>"; };
+		6036753718BCB063008D2CB5 /* UIMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMapViewController.h; sourceTree = "<group>"; };
+		6036753818BCB063008D2CB5 /* UIMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMapViewController.m; sourceTree = "<group>"; };
+		6036753918BCB063008D2CB5 /* UIMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMapViewController.xib; sourceTree = "<group>"; };
+		6036753C18BCB0DF008D2CB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6096A40418BB6D63008064FC /* UISplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISplashScreenViewController.h; sourceTree = "<group>"; };
 		6096A40518BB6D63008064FC /* UISplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISplashScreenViewController.m; sourceTree = "<group>"; };
 		6096A40718BB6DC8008064FC /* UISplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -204,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6036753D18BCB0DF008D2CB5 /* MapKit.framework in Frameworks */,
 				274BEF4F18B1654C00C49814 /* CoreGraphics.framework in Frameworks */,
 				274BEF5118B1654C00C49814 /* UIKit.framework in Frameworks */,
 				274BEF4D18B1654C00C49814 /* Foundation.framework in Frameworks */,
@@ -264,6 +272,7 @@
 		274BEF4B18B1654C00C49814 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6036753C18BCB0DF008D2CB5 /* MapKit.framework */,
 				274BEF4C18B1654C00C49814 /* Foundation.framework */,
 				274BEF4E18B1654C00C49814 /* CoreGraphics.framework */,
 				274BEF5018B1654C00C49814 /* UIKit.framework */,
@@ -391,6 +400,9 @@
 				60ACF54018B6447900A16C2F /* UIBranchDetailsViewController.h */,
 				60ACF54118B6447900A16C2F /* UIBranchDetailsViewController.m */,
 				60ACF54218B6447900A16C2F /* UIBranchDetailsViewController.xib */,
+				6036753718BCB063008D2CB5 /* UIMapViewController.h */,
+				6036753818BCB063008D2CB5 /* UIMapViewController.m */,
+				6036753918BCB063008D2CB5 /* UIMapViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -541,6 +553,7 @@
 				2712D83A18BC01E600C59B47 /* back@2x.png in Resources */,
 				6036753618BC901A008D2CB5 /* UIInfoViewController.xib in Resources */,
 				60ACF51218B640D100A16C2F /* UIDoctorListViewController.xib in Resources */,
+				6036753B18BCB063008D2CB5 /* UIMapViewController.xib in Resources */,
 				2712D83918BC01E600C59B47 /* back.png in Resources */,
 				2712D82B18BBEC5800C59B47 /* FAQ.plist in Resources */,
 				6036753018BC82B2008D2CB5 /* service.png in Resources */,
@@ -607,6 +620,7 @@
 				60ACF52F18B643B900A16C2F /* UITopTenQuestionsViewController.m in Sources */,
 				6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */,
 				60ACF51B18B641B200A16C2F /* UIServiceListViewController.m in Sources */,
+				6036753A18BCB063008D2CB5 /* UIMapViewController.m in Sources */,
 				60ACF51118B640D100A16C2F /* UIDoctorListViewController.m in Sources */,
 				274BEF5918B1654C00C49814 /* main.m in Sources */,
 				60ACF53918B6441000A16C2F /* UISymptomsViewController.m in Sources */,
