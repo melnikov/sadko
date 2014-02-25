@@ -10,4 +10,6 @@
 
 @interface UIQuestionAnswerViewController : UIBaseViewController
 
+- (id)initWithInfo:(NSDictionary*)info;
+
 @end

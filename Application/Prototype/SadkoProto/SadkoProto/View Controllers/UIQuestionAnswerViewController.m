@@ -10,15 +10,21 @@
 
 @interface UIQuestionAnswerViewController ()
 
+@property (nonatomic, retain) NSDictionary* info;
+
+@property (nonatomic, retain) IBOutlet UITextView* question;
+@property (nonatomic, retain) IBOutlet UITextView* answer;
+
 @end
 
 @implementation UIQuestionAnswerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithInfo:(NSDictionary *)info
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initFromNib];
+    if (self)
+    {
+        self.info = info;
     }
     return self;
 }
@@ -26,13 +32,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.title = @"Вопрос - ответ";
+
+    self.question.text = self.info[@"question"];
+    self.answer.text = self.info[@"answer"];
 }
 
 @end

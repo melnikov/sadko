@@ -8,6 +8,8 @@
 
 #import "UIBaseViewController.h"
 
-@interface UITopTenQuestionsViewController : UIBaseViewController
+@interface UITopTenQuestionsViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
+
+- (id)initWithScript:(NSString*)script;
 
 @end

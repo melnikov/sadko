@@ -154,7 +154,7 @@
     
     if ([[options objectForKey:@"top10"] boolValue])
     {
-        UITopTenQuestionsViewController* top10Screen = [[UITopTenQuestionsViewController alloc] initFromNib];
+        UITopTenQuestionsViewController* top10Screen = [[UITopTenQuestionsViewController alloc] initWithScript:@"FAQ"];
         [self.navigationController pushViewController:top10Screen animated:YES];
     }
     else
