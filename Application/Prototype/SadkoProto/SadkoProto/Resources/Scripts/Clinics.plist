@@ -825,64 +825,13 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Нижегородский район</string>
-				<key>address</key>
-				<string>ул. Большая Покровская, 75</string>
-				<key>phone</key>
-				<string>+7 (831) 4-370-370</string>
-				<key>web</key>
-				<string>http://dental.sadkomed.ru/</string>
-				<key>email</key>
-				<string>sadko@gmail.com</string>
-				<key>schedule</key>
-				<string>пн-сб: 08:00 - 20:00
-вс: 09:00 - 18:00</string>
-				<key>route</key>
-				<string>route.png</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Советский район</string>
-				<key>address</key>
-				<string>ул. Бекетова, 13</string>
-				<key>phone</key>
-				<string>+7 (831) 4-120-120</string>
-				<key>web</key>
-				<string>http://dental.sadkomed.ru/</string>
-				<key>email</key>
-				<string>sadko@gmail.com</string>
-				<key>schedule</key>
-				<string>пн-сб: 08:00 - 20:00
-вс: 09:00 - 18:00</string>
-				<key>route</key>
-				<string>route.png</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Верхние Печеры</string>
+				<string>Центр неврологии и реабилитации</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
-				<string>+7 (831) 4-120-888</string>
+				<string>+7 (831) 4-120-555</string>
 				<key>web</key>
-				<string>http://dental.sadkomed.ru/</string>
-				<key>email</key>
-				<string>sadko@gmail.com</string>
-				<key>schedule</key>
-				<string>пн-сб: 08:00 - 20:00
-вс: 09:00 - 18:00</string>
-				<key>route</key>
-				<string>route.png</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Сормово</string>
-				<key>address</key>
-				<string>Сормовское шоссе, 20</string>
-				<key>phone</key>
-				<string>+7 (831) 2-75-22-75</string>
-				<key>web</key>
-				<string>http://dental.sadkomed.ru/</string>
+				<string>http://neurology.sadkomed.ru/</string>
 				<key>email</key>
 				<string>sadko@gmail.com</string>
 				<key>schedule</key>
@@ -1285,6 +1234,2044 @@
 				<array>
 					<integer>1</integer>
 					<integer>4</integer>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Лечебно-диагностический центр</string>
+		<key>top10</key>
+		<false/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Лечебно-диагностический центр  «САДКО» - это уникальный медицинский комплекс, ломающий стереотип поликлиники, это клиника будущего, распахнувшая двери для нижегородцев уже сегодня.
+
+В клинике «САДКО» действует принцип «ОТ и ДО», означающий комплексный подход к Вашему здоровью и позволяющий гармонично сочетать возможность тщательного обследования и лечения в условиях одного медицинского учреждения.</string>
+		<key>main_phone</key>
+		<string>+7 (831) 421-01-01</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://clinic.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Лечебно-диагностический центр &quot;Садко&quot; на Бекетова</string>
+				<key>address</key>
+				<string>ул. Бекетова,13</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-777</string>
+				<key>web</key>
+				<string>http://clinic.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечебно-диагностический центр &quot;Садко&quot; на Родионова</string>
+				<key>address</key>
+				<string>ул. Родионова, 199</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-555</string>
+				<key>web</key>
+				<string>http://clinic.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечебно-диагностический центр «Садко» на проспекте Ленина</string>
+				<key>address</key>
+				<string>пр. Ленина, 67/1</string>
+				<key>phone</key>
+				<string>+7 (831) 412-07-07</string>
+				<key>web</key>
+				<string>http://clinic.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечебно-диагностический центр «Садко» в Сормово</string>
+				<key>address</key>
+				<string>СОРМОВСКОЕ ШОССЕ, 20</string>
+				<key>phone</key>
+				<string>+7 (831) 275-22-22</string>
+				<key>web</key>
+				<string>http://clinic.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Александров</string>
+				<key>first</key>
+				<string>Александр</string>
+				<key>middle</key>
+				<string>Юрьевич</string>
+				<key>speciality</key>
+				<string>Рентгенолог</string>
+				<key>resume</key>
+				<string>Стаж работы 12 лет
+
+Закончил Самарскую медицинскую академию
+
+Курсы повышения квалификации:
+2006 г. - курс усовершенствования на базе Самарской медицинской академии;
+
+2011 г. - курс усовершенствования на базе Самарской медицинской академии.
+
+2013 г. - Сертификат &quot;Трехмерная радиодиагностика челюстно-лицевой области. Углубленный курс&quot;</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Алексеева</string>
+				<key>first</key>
+				<string>Людмила</string>
+				<key>middle</key>
+				<string>Сергеевна</string>
+				<key>speciality</key>
+				<string>УЗИ-диагностика</string>
+				<key>resume</key>
+				<string>Закончила Горьковский медицинский институт в 1982 году
+
+Имеет высшую квалификационную категорию
+
+Опыт работы :
+
+1981г интернатура по терапии.
+
+1981г Участковый врач терапевт в поликлинике№30
+
+1984г Врач эндокринолог в поликлинике № 35 Советского р-на
+
+1991г получила специализацию по УЗДГ
+
+1991г Врач ультразвуковой диагностики в поликлинике №35
+
+2003г Врач ультразвуковой диагностики в медсанчасти.
+
+2004 г Клиника Современных технологий «Садко»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Антонова</string>
+				<key>first</key>
+				<string>Юлия</string>
+				<key>middle</key>
+				<string>Валерьевна</string>
+				<key>speciality</key>
+				<string>Гинеколог</string>
+				<key>resume</key>
+				<string>Закончила Туркменский государственный мед.институт 1988-1994
+
+1994-1995-интернатура РКБ или Н.И.Пирогова
+
+Врач первой квалификационной категории
+
+Стаж работы 17 лет
+
+Специалист первой квалификационной категории
+
+Доктор профессионально занимается вопросами оперативной гинекологии и делает гистероскопию.
+
+Залог успешного лечения,считает Юлия Валерьевна, это тщательная и точная диагностика и профессионализм лечащего врача.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Афанасьева</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Гинеколог</string>
+				<key>resume</key>
+				<string>Главное кредо врача, по мнению Елены Александровны - повышать свой профессионализм, внимательно слушать и слышать пациента, оказывать  помощь по максимуму своих возможностей.
+
+Закончила НижГМА
+
+Стаж работы 23 года
+
+Категория высшая
+
+Залог успешного лечения, с точки зрения Елены Александровны, постоянное расширение знаний и навыков врача, и успешное и грамотное их приложение на практике.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Бахметьев</string>
+				<key>first</key>
+				<string>Олег</string>
+				<key>middle</key>
+				<string>Александрович</string>
+				<key>speciality</key>
+				<string>Уролог</string>
+				<key>resume</key>
+				<string>Категория высшая
+
+Место учёбы : НижГМА
+
+Общий стаж работы: 14 лет
+
+Олег Александрович считает, что залог успешного лечения во взаимопонимании между пациентом и врачом
+
+
+
+Курсы повышения квалификации:
+
+2000г первичная специализация «Урология»
+
+2004г- ФПК ВМИ ФСБ России «Андрология»
+
+2005г-ФПК ГОУ ВПО НижГМА «Урология»
+
+2010г-ФПК ГОУ ВПО НижГМА «Урология»
+
+2006г- ФПК ГОУ ВПО НижГМА «Эндоскопическая урология»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Березина</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Борисовна</string>
+				<key>speciality</key>
+				<string>Аллерголог</string>
+				<key>resume</key>
+				<string>Закончила НижГМА
+
+по специализации аллергология-иммунология
+
+Общий стаж работы 17 лет
+
+Период работы в «Садко» - с ноября 2011г.
+
+Главное в работе врача, по мнению Елены Борисовны - ответственность за пациента и  постоянное повышение уровня знаний.
+
+Залог успешного лечения — это всегда поддерживать желание пациента вылечиться.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Валдаев</string>
+				<key>first</key>
+				<string>Вячеслав</string>
+				<key>middle</key>
+				<string>Сергеевич</string>
+				<key>speciality</key>
+				<string>Хирург</string>
+				<key>resume</key>
+				<string>Хирург высшей квалификационной категории.
+
+Доктор закончил ГМИ им. С.М. Кирова по специальности хирургия
+
+Общий стаж работы доктора 25 лет.Все эти годы он посвятил спасению жизни людей, оказывая неотложную помощь в полном объеме больным хирургического и травмологического профиля, при работе на скорой медицинской помощи.
+
+В работе доктор всегда доброжелателен, учтив и профессионален. Все амбулаторные хирургические вмешательства Вячеслав Сергеевич проводит быстро и практически безболезненно.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ванцинова</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Владимировна</string>
+				<key>speciality</key>
+				<string>Проктолог</string>
+				<key>resume</key>
+				<string>Елена Владимировна закончила НижГМА
+
+Закончила интернатуру и ординатуру по хирургии.
+
+с 10.2009г. - ассистент кафедры общей хирургии им. Кожевникова А.И. НижГМА
+
+Кандидат медицинских наук
+
+Главные требования, которые Елена Владимировна предъявляет к себе как к врач у - ответственность, профессионализм, грамотность. Залог успешного лечения, по ее мнению - это точная диагностика и своевременное лечение.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Вопилов</string>
+				<key>first</key>
+				<string>Юрий</string>
+				<key>middle</key>
+				<string>Леонидович</string>
+				<key>speciality</key>
+				<string>Проктолог</string>
+				<key>resume</key>
+				<string>Доктор закончил НижГМА
+
+Юрий Леонидович – не только профессионал в своем деле, но и яркий интересный увлекающийся человек! Любит проводить время со своей семьей и увлекается активными видами спорта, отсюда – всегда в хорошем расположении духа.
+
+Доктор всегда знает, как найти подход к своим пациентам, окружает их заботой и готов незамедлительно оказать не только квалифицированную медицинскую помощь, но и выслушать, понять и посоветовать.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Закхеина</string>
+				<key>first</key>
+				<string>Татьяна</string>
+				<key>middle</key>
+				<string>Викторовна</string>
+				<key>speciality</key>
+				<string>Отоларинголог</string>
+				<key>resume</key>
+				<string>Татьяна Викторовна врач первой квалификационной категории, закончила НижГМА.
+
+Общий стаж работы доктора 13 лет. При работе с пациентами доктор всегда старается найти индивидуальный подход основанный на взаимопонимании.
+
+Доктор прекрасно владеет всеми современными методиками лечения ЛОР заболеваний, в частности беспункционными технологиями и принципами радиоволновой хирургии</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Аллергология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Венерология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Каждый год в России регистрируется более 1 млн. новых случаев инфекций, передающихся половым путем (ИППП). В действительности эти показатели имеют более высокие значения. К ИППП относятся около 20 заболеваний. Помимо «классических» венерических заболеваний – сифилиса, мягкого шанкра и гонореи, к ним относятся трихомоноз, хламидиоз, генитальный герпес, СПИД и другие. (Читать подробнее &quot;Гепатит: инструкция к действию&quot;) Вызывают ИППП различные возбудители: бактерии, вирусы, простейшие.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Гастроэнтерология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Гастроэнтерология — направление медицины, специализирующееся на диагностике, лечении и профилактике заболеваний желудочно-кишечного тракта (ЖКТ).</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Детская урология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Кардиология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечение простатита</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>6</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Наркология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Причины и механизмы возникновения наркомании, алкоголизма или другой зависимости изучены достаточно хорошо. В медицине принято говорить, в первую очередь, о наличии врождённой предрасположенности к данному явлению и механизмах взаимодействия психоактивных веществ с медиаторами головного мозга. Психиатрия ставит вопрос о наличии психологических причин возникновения зависимости, которые связаны с особенностями личности и её развития.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Проктология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Ревматолог</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Рентген</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр ортодонтии «Джем»</string>
+		<key>top10</key>
+		<true/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Центр ортодонтии Джем — это клиника полного цикла, где все этапы ортодонтического лечения от первой консультации до последнего посещения проходят в одном месте у ведущих специалистов клиники!</string>
+		<key>main_phone</key>
+		<string>+7 (831) 4-30-30-30</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://jam.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Центр ортодонтии Джем</string>
+				<key>address</key>
+				<string>ул. Белинского 71/1 (6 этаж)</string>
+				<key>phone</key>
+				<string>+7 (831) 4-30-30-30</string>
+				<key>web</key>
+				<string>http://jam.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Бердникова</string>
+				<key>first</key>
+				<string>Татьяна</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string> отличием закончила Нижегородскую Государственную Медицинскую Академию в 1995г.
+
+1995-1996 гг. интернатура на базе «Областной стоматологической поликлинике» по специализации « терапевтическая стоматология»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Емельянова</string>
+				<key>first</key>
+				<string>Наталья</string>
+				<key>middle</key>
+				<string>Николаевна</string>
+				<key>speciality</key>
+				<string>Гигиенист</string>
+				<key>resume</key>
+				<string>В 2002 году закончила НМУ
+
+
+Курсы повышения квалификации:
+
+2003г. - Центр повышения квалификации  «Анестезиология и реаниматология»
+
+2009г. - Центр повышения квалификации « Управление и экономика в здравоохранении»
+
+2012г. -  МСК №1 Диплом по специальности «Стоматология профилактическая», г. Москва
+
+2012г. - Курс повышения квалификации «Современные технологии в стоматологии профилактической»
+
+Является активным участником ассоциации стоматологических гигиенистов.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ивашкина</string>
+				<key>first</key>
+				<string>Ольга</string>
+				<key>middle</key>
+				<string>Вячеславовна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string>В клинике “Садко” работает с 2006 г.
+
+1999г. ГУ “Нижегородская государственная медицинская академия” по специальности: “Стоматология”
+
+1999-2001г. Ординатура на кафедре ортопедической стоматологии НГМА по специальности “Стоматология”
+
+2001г ГУ НижГМА - сертификационные курсы: “стоматология”
+
+2002г., 2006г. Сертификационные курсы: “Ортодонтия”</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Карпачев</string>
+				<key>first</key>
+				<string>Иван</string>
+				<key>middle</key>
+				<string>Андреевич</string>
+				<key>speciality</key>
+				<string>Гигиенист</string>
+				<key>resume</key>
+				<string>2008г. - окончил Нижегородский Медицинский Базовый Колледж №3, специальность  зубной врач.
+
+2013г. - получил диплом по специальности «Стоматология профилактическая»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Куприянова</string>
+				<key>first</key>
+				<string>Анна</string>
+				<key>middle</key>
+				<string>Викторовна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string>2004г. Окончила стоматологический факультет Нижегородской Государственной Медицинской Академии
+
+2004-2006 гг. Клиническая ординатура по специальности «Ортодонтия»
+
+2005-2008 гг. Врач-ортодонт в стоматологической поликлинике Канавинского района
+
+с 2008 г. работает в &quot;Садко&quot;</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Максакова</string>
+				<key>first</key>
+				<string>Екатерина</string>
+				<key>middle</key>
+				<string>Павловна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string>2003 г. - Окончила Нижегородское медицинское училище по специальности «Акушерское дело».
+
+2008 г. - Окончила Нижегородскую государственную медицинскую академию по специальности «стоматолог-ортодонт».
+
+2010 г. - Клиническая ординатура на базе Нижегородской государственной медицинской академии по специальности «ортодонтия».</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Осминина</string>
+				<key>first</key>
+				<string>Екатерина</string>
+				<key>middle</key>
+				<string>Николаевна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string>В 2010г. закончила Нижегородскую Государственную Медицинскую Академию
+
+В 2012г. закончила ординатуру по специализации «ортодонтия»
+
+В 2012г. поступила в аспирантуру по специализации «ортодонтия»
+ 
+Успешно прошла дополнительное обучение и получила следующие сертификаты:
+
+2010г. «Biomechanics in orthodontics» проф. Burston, г. Санкт- Петербург
+
+2011г. « Микроимпланты в ортодонтии» ( проф. Hii-Moon Kyung, Корея), г. Санкт- Петербург
+
+2012г. «Ортодонтическое лечение прозрачными каппами Orthosnap », г.Н.Новгород
+
+2012г. Типодонт-курс «Современные методы ортодонтического лечения» ( dr/Vittorio Cacciafesta, Италия) г.Суздаль, г.Н.Новгород</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Отмахова</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Ортодонт</string>
+				<key>resume</key>
+				<string>В 1996 г. – закончила Нижегородскую Государственную Медицинскую Академию
+
+В 2003 г. – закончила очную аспирантуру НГМА по специальности «стоматология»
+
+В 2003 г. под научным руководством д.м.н., проф. Е.Н.Жулева защищена кандидатская диссертация на тему: «Рентгеноцефалометрическая диагностика и лечение мезиальной окклюзии» и присуждена ученая степень кандидата медицинских наук.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Арт-стоматология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Ламинирование зубов</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Ламинирование зубов —  это процедура покрытия  зубов тонкими керамическими пластинками, которые изготавливаются лабораторным путем и устанавливаются на фронтальную поверхность зубов с эстетической целью изменить форму и цвет зубов, а также защитить поверхность зубов от агрессивного воздействия внешней среды.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Брекеты</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Невидимое ортодонтическое лечение</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Ортодонтия</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>3</integer>
+					<integer>4</integer>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Исправление прикуса</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>6</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Эстетическая ортодонтия нового уровня</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>По статистике, многие пациенты, страдающие нарушением прикуса, отказываются от лечения из-за перспективы носить брекеты.  Не смотря на это, многие врачи-ортодонты упорно утверждают, что это эстетично и удобно.
+Но, вспомните, как часто Вы замечали металлические конструкции на зубах ваших знакомых? Разве они не привлекали каждый раз Ваше внимание?  Всегда ли обладатели брекет- систем чувствовали себя уверенно при разговоре с Вами? Всегда ли открыто улыбались?</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Детская стоматология «Динозубрик»</string>
+		<key>top10</key>
+		<true/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Сеть стоматологических клиник &quot;Садко&quot; уделяет особое внимание детской стоматологии, ведь маленькие пациенты должны привыкать заботиться о своих зубах с самого раннего возраста. Мы делаем все, чтобы лечение в наших стоматологиях проходило максимально комфортно, весело, безболезненно и абсолютно не страшно. В каждом отделении стоматологии &quot;Садко&quot; работает специальное детское отделение, а на Пискунова 22 расположена большая детская стоматология &quot;Динозубрик&quot;, в которой можно весело провести время с большим, мягким, плюшевым Динозубриком, поиграть в компьютерные игры, порисовать, собрать конструктор, поучавствовать в конкурсах, получить подарки и конечно же самое важное - вылечить зубки.</string>
+		<key>main_phone</key>
+		<string>+7 (831) 4-119-999</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://child.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Детская стоматология «Динозубрик»</string>
+				<key>address</key>
+				<string>ул. Пискунова, 22</string>
+				<key>phone</key>
+				<string>+7 (831) 4-119-999</string>
+				<key>web</key>
+				<string>http://child.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Детское отделение в стоматологии &quot;Садко&quot; на Белинского</string>
+				<key>address</key>
+				<string>ул. Белинского, 71/1</string>
+				<key>phone</key>
+				<string>+7 (831) 278-55-55</string>
+				<key>web</key>
+				<string>http://child.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Детское отделение в стоматологии &quot;Садко&quot; на Родионова</string>
+				<key>address</key>
+				<string>ул. Родионова, 199</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-888</string>
+				<key>web</key>
+				<string>http://child.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Белоусова</string>
+				<key>first</key>
+				<string>Екатерина</string>
+				<key>middle</key>
+				<string>Юрьевна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>В 2007г. закончила Нижегородскую Государственную Медицинскую Академию по специальности «Стоматология», с получение сертификата по квалификации «Врач-стоматолог».
+
+С 2007 по 2008г.проходила интернатуру на базе МЛПУ «Приокская стоматологическая поликлиника» по терапевтической и хирургической стоматологии.
+
+С 1.09.2009 г. поступила в ординатуру в Нижегородскую Государственную Медицинскую Академию на кафедру челюстно-лицевой хирургии.
+
+С 2008-2009 г. работала в «Стоматологической поликлинике Приокского района» по специальности стоматолог-терапевт.
+
+С 2009 г. работает в клинике «Садко» детским стоматологом.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ващанов</string>
+				<key>first</key>
+				<string>Сергей</string>
+				<key>middle</key>
+				<string>Владимирович</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>Должность: стоматолог-терапевт.
+В июле 2007 г. устроился работать зубным врачом в Кстовскую стоматологическую поликлинику.  До декабря 2010 г., работал на станции скорой помощи в должности фельдшера выездной бригады (первая квалифицированная категория). Работу на станции совмещал с работой в стоматологической поликлинике зубным врачом. С 2010г. Работает в «Садко» детским стоматологом-терапевтом.
+Курсы:
+1. «Комфортное общение с пациентами»
+2. «Кариес детской стоматологии: от профилактики к лечению осложнений. Основы адгезивных технологий». Апрель 2011г.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Гаврилова</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Петровна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>В 2001г. Закончила мед. Лицей № 8, поступила в НГМА  стом. Факультет.
+В 2006 г. Закончила НГМА, квалификация «Врач-стоматолог».
+2006-2007гг. Интернатура, присвоена специальность стоматология (на базе МЛПУ «Детская стоматологическая поликлиника» Нижегородского р-на).
+2007-2009гг Клиническая ординатура по специальности «ортодонтия» на  базе ЦПК и ППС Ниж. ГМА Росздрава
+2007г. Прошла повышение квалификации, присвоена специальность «Детская стоматология» на базе ГОУ ВПО «СПБ РМУ им. Академика И.П. Павлова»
+27.09.2007 Сертификат «Алгоритм эстетической реставрации зубов с использованием современных методик, инструментов и материалов». Лобовкина А.А.
+В клинике «Садко» работает с 2007 года.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Дворянчикова</string>
+				<key>first</key>
+				<string>Оксана</string>
+				<key>middle</key>
+				<string>Валентиновна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>В 1997 году закончила НГМА, стоматологический факультет.
+
+С 1997-1998 гг. прошла клиническую интернатуру на базе детской стоматологической поликлиники г. Дзержинска, где работала до января, 2006 года.
+
+С января 2006 года работает в клинике «Садко».</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ивашов</string>
+				<key>first</key>
+				<string>Валентин</string>
+				<key>middle</key>
+				<string>Николаевич</string>
+				<key>speciality</key>
+				<string>Анестезиолог</string>
+				<key>resume</key>
+				<string>Диплом от 24.06.1982 НГМИ г.  Архангельска по специальности «Лечебное дело».
+
+
+Должность: врач анестезиолог-реаниматолог.
+
+
+Действующий сертификат: анестезиология и реаниматология от 16.03.2007
+
+
+В 1982 г. закончил Архангельский государственный медицинский институт по специальности врач-лечебник
+
+
+С 1982 - 1983гг. Прошел интернатуру на базе Областной клинической больницы г. Архангельска по специальности: «Анестезиология-реаниматология».
+
+
+Работает в клинике «Садко» с 1999 года врачом анестезиологом-реаниматологом в отделении анестезиологии и реанимации.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Кузьмичева</string>
+				<key>first</key>
+				<string>Марина</string>
+				<key>middle</key>
+				<string>Сергеевна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>В 2001 году окончила НГМА, стоматологический ф-т.
+
+С 2001 – 2003 г. – прошла обучение в клинической ординатуре по специальности «Стоматология», на базе кафедры стоматологии ЦПК и ППС ГУ НГМА.
+
+С 2003 года по настоящее время работает в клинике «Садко».</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Курочкина</string>
+				<key>first</key>
+				<string>Анна</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Стоматолог-хирург</string>
+				<key>resume</key>
+				<string>2008 г. - окончила стоматологический факультет Нижегородской государственной медицинской академии
+
+2008-2009 гг. - интернатура на базе МЛПУ «Стоматологическая поликлиника» Автозаводского района по специальности врач - стоматолог общей практики
+
+2009-2010 гг. - стажировка на базе ГОУ ВПО НижГМА Росздрава, защитила аттестационную работу по теме «Особенности восстановительной хирургии ЧЛО». Получила сертификат по хирургической стоматологии.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Курсакова</string>
+				<key>first</key>
+				<string>Ирина</string>
+				<key>middle</key>
+				<string>Владимировна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>Курсы повышения квалификации:
+
+2003 г. - прошла курс повышения квалификации по циклу &quot;Стоматологическая помощь населению&quot; в Нижегородском областном НЦП.
+
+2006 г. - Прошла обучение по теме: &quot;Слагаемые клинического успеха в эндодонтии&quot;
+
+2007 г. - Мастер-класс &quot;Современные аспекты профилактики и лечения на детском стоматологическом кресле&quot;
+
+2008 г. - подтвердила квалификацию по циклу &quot;Стоматологическая помощь населению&quot; в Нижегородском областном НЦП.
+
+2008 г. - Лекция &quot;Инструментальная обработка и трехмерная абтурация каналов с помощью приборов и технологий компании &quot;Sybron Endo&quot;
+
+2010 г. - Леция по теме &quot;Применение коффердама в ежедневной практике&quot;
+
+2013 г. - Подтвердила квалификацию по циклу &quot;Стоматологическая помощь населению&quot; в Нижегородском областном НЦП. </string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ладыгина</string>
+				<key>first</key>
+				<string>Эльвира</string>
+				<key>middle</key>
+				<string>Викторовна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>В 1999-2002 г. – обучение в НГМА на стоматологическом ф-те.
+
+В 2002-2003 г. – Клиническая интернатура на базе областной стоматологической поликлиники.
+
+В 2003-2006 г. – работа в МЛПУ «Детская стоматологическая поликлиника» Нижегородского р-на.
+
+С 2006 г. – работа в клинике «Садко».</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Турушкина</string>
+				<key>first</key>
+				<string>Светлана</string>
+				<key>middle</key>
+				<string>Егоровна</string>
+				<key>speciality</key>
+				<string>Стоматолог-терапевт</string>
+				<key>resume</key>
+				<string>1993 г. - Закончила медицинское училище №2, по специальности &quot;Зубоврачебная&quot;
+
+1996, 2001, 2006 г. - Проходила курсы повышения квалификации на базе Нижегородского областного УПК, 1 мес
+
+2006 г. - Лекция «Слагаемые клинического успеха в эндодонтии»
+
+2006 г. - Лекция «атравматическое удаление зубов»
+
+2007 г. - Цикл практических занятий по теме «Эстетические основы формообразования зубов»
+
+2007 г. - Цикл практических занятий по теме «Особенности местного обезболивания в стоматологии»
+
+2012 г. - Лекция «Новейшие технологии в детском приеме»
+
+2013 г. - Лекция «Современные аспекты в эндодонтии»
+
+2013 г. - Лекция «Новейшие технологии в диагностике и лечении кариеса у детей»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Детская стоматология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>0</integer>
+					<integer>3</integer>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>4</integer>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Детское протезирование</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Мы уже давно ответили на вопрос, лечить ли молочные зубы. Лечить однозначно! Молочные зубы измельчают пищу в полости рта, помогают маленькой челюсти ребенка развиваться, а главное – берегут место для зубов постоянных. А что же делать, если кариозный процесс разрушил зубки малыша, и от них остались одни пеньки? Пломбировать зуб сложно: ребятишки сидят не очень спокойно, возятся в кресле. Из-за этого слюна попадает под пломбу. В результате возникает риск ее выпадения. Беззубый рот некрасив очень! Ребенок начинает комплексовать. Ребята в детском саду и во дворе, куда он выходит гулять, дразнят беззубым. Ваш малыш плачет, прячется в своей комнате. Нарушает свой рост челюсть ребенка, из-за чего серьезно страдает прикус и симметрия лица. Немаловажно, что ранняя потеря зубов ведет к нарушению развития речи, а потом и мышления. Выход один: использовать достижения современного детского протезирования.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Исправление прикуса</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Часто родители задаются вопросом, стоит ли обращать внимание на прикус молочных зубов, может имеет смысл подождать, пока все молочные зубы сменятся на постоянные? Ответ однозначен: начинать заниматься правильным прикусом необходимо с раннего возраста, как только Вы заметили проблему. Детская стоматология ДИНОЗУБРИК приглашает Вас и Вашего ребенка получить консультацию детского врача-ортодонта, чтобы предупредить зубочелюстные нарушения.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лазерная стоматология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечение зубов во сне</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечение кариеса молочных зубов</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>6</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Профилактика детских зубов</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Помните знаменитый детский мультфильм про маленькую птичку Тари, которая помогла крокодилу вычистить и вылечить зубы? Хорошо, что у крокодила нашлась такая помощница, а то долго бы он мучился и страдал от зубной боли.
+
+А что делать, когда пациент очень маленький, 1,5-3 года, когда болит не один зуб, а сразу несколько? Когда вследствие патологии беременности нарушения формирования зубов внутриутробно, а затем и постнатальной патологии (нарушение фосфорно-кальциего обмена, рахита, приема ряда медикаментов и др.) у ребенка вдруг развивается множественное, тяжелое поражение зубов?</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Центр женского здоровья</string>
+		<key>top10</key>
+		<true/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Сама концепция Центра Женского Здоровья создана на основе желаний женщины: желания создать семью, построить гармоничные отношения, стать мамой, быть здоровой, красивой и довольной собой в любом возрасте.</string>
+		<key>main_phone</key>
+		<string>+7 (831) 4-21-01-01</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://women.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Центр женского здоровья &quot;Садко&quot; на Родионова</string>
+				<key>address</key>
+				<string>ул. Родионова, 199</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-555</string>
+				<key>web</key>
+				<string>http://women.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Центр женского здоровья &quot;Садко&quot; на пр. Ленина</string>
+				<key>address</key>
+				<string>пр. Ленина, 67/1</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-707</string>
+				<key>web</key>
+				<string>http://women.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Центр женского здоровья &quot;Садко&quot; на Бекетова</string>
+				<key>address</key>
+				<string>ул. Бекетова,13</string>
+				<key>phone</key>
+				<string>+7 (831) 4-120-777</string>
+				<key>web</key>
+				<string>http://women.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Центр женского здоровья &quot;Садко&quot; в Сормово</string>
+				<key>address</key>
+				<string>СОРМОВСКОЕ ШОССЕ, 20</string>
+				<key>phone</key>
+				<string>+7 (831) 275-22-22</string>
+				<key>web</key>
+				<string>http://women.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Александров</string>
+				<key>first</key>
+				<string>Александр</string>
+				<key>middle</key>
+				<string>Юрьевич</string>
+				<key>speciality</key>
+				<string>Рентгенолог</string>
+				<key>resume</key>
+				<string>Стаж работы 12 лет
+
+Закончил Самарскую медицинскую академию
+
+Курсы повышения квалификации:
+2006 г. - курс усовершенствования на базе Самарской медицинской академии;
+
+2011 г. - курс усовершенствования на базе Самарской медицинской академии.
+
+2013 г. - Сертификат &quot;Трехмерная радиодиагностика челюстно-лицевой области. Углубленный курс&quot;</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Алексеева</string>
+				<key>first</key>
+				<string>Людмила</string>
+				<key>middle</key>
+				<string>Сергеевна</string>
+				<key>speciality</key>
+				<string>УЗИ-диагностика</string>
+				<key>resume</key>
+				<string>1981г интернатура по терапии.
+
+1981г Участковый врач терапевт в поликлинике№30
+
+1984г Врач эндокринолог в поликлинике № 35 Советского р-на
+
+1991г получила специализацию по УЗДГ
+
+1991г Врач ультразвуковой диагностики в поликлинике №35
+
+2003г Врач ультразвуковой диагностики в медсанчасти.
+
+2004 г Клиника Современных технологий «Садко»</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Антонова</string>
+				<key>first</key>
+				<string>Юлия</string>
+				<key>middle</key>
+				<string>Валерьевна</string>
+				<key>speciality</key>
+				<string>Гинеколог</string>
+				<key>resume</key>
+				<string>Закончила Туркменский государственный мед.институт 1988-1994
+
+1994-1995-интернатура РКБ или Н.И.Пирогова
+
+Врач первой квалификационной категории
+
+Стаж работы 17 лет
+
+Специалист первой квалификационной категории
+
+Доктор профессионально занимается вопросами оперативной гинекологии и делает гистероскопию.
+
+Залог успешного лечения,считает Юлия Валерьевна, это тщательная и точная диагностика и профессионализм лечащего врача.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Бахметьев</string>
+				<key>first</key>
+				<string>Олег</string>
+				<key>middle</key>
+				<string>Александрович</string>
+				<key>speciality</key>
+				<string>Уролог</string>
+				<key>resume</key>
+				<string>Категория высшая
+
+Место учёбы : НижГМА
+
+Общий стаж работы: 14 лет
+
+Олег Александрович считает, что залог успешного лечения во взаимопонимании между пациентом и врачом</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Волкова</string>
+				<key>first</key>
+				<string>Светлана</string>
+				<key>middle</key>
+				<string>Евгеньевна</string>
+				<key>speciality</key>
+				<string>Акушер-гинеколог</string>
+				<key>resume</key>
+				<string>Светлана Евгеньевна очень приятный, добрый , опытный и грамотный доктор. Пациентки,  хоть  один раз окзавшиеся у нее на приеме  - потом приходят только к ней! Доктор постоянно совершенствует свои навыки и знания, старается быть в курсе всех последних тенденций в области гинекологии и репродукции.
+
+Закончила НижГМА
+
+Стаж работы 24 года
+
+Категория Высшая</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Голованова</string>
+				<key>first</key>
+				<string>Татьяна</string>
+				<key>middle</key>
+				<string>Петровна</string>
+				<key>speciality</key>
+				<string>Психолог</string>
+				<key>resume</key>
+				<string>В 1975 году закончила Горьковский Государственный педагогический институт им. М. Горького по специальности &quot;Учитель биологии и химии&quot;.
+В 1991 году получила диплом практического психолога по направлению «Психология» в МГИУУ.
+15 лет работала психологом в Женской консультации Нижегородского района.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Горькова</string>
+				<key>first</key>
+				<string>Ирина</string>
+				<key>middle</key>
+				<string>Владимировна</string>
+				<key>speciality</key>
+				<string>Гинеколог</string>
+				<key>resume</key>
+				<string>Опыт работы:
+
+1979г интернатура по акушерству и гинекологии.
+
+1979-1994 Женская консультация №5 канавинского рйона, участковый врач гинеколог ( прием, ведение беременности, общие вопросы)
+
+1994-2003гг Специализированный прием по патологии шейки матки и онкогинекологии , районный онкогинеколог.
+
+2003г Клиника Современных технологий «Садко», специализированный прием по патологии шейки матки и общим вопросам гинекологии.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Грачев</string>
+				<key>first</key>
+				<string>Дмитрий</string>
+				<key>middle</key>
+				<string>Борисович</string>
+				<key>speciality</key>
+				<string>Дерматолог</string>
+				<key>resume</key>
+				<string>Закончил в 1997г Нижегородскую Государственную Медицинскую Академию
+
+1997г. интернатуру по дерматовенерологии на базе ОКВД.
+
+1998-2002г. Работал в качестве врача-ординатора во втором мужском отделении ОКВД.
+
+С 1998г. Работает в клинике «Садко»
+
+1997г. Присвоена квалификация врача, по специализации «Педиатрия»
+
+2003г. Присвоена специальность дерматовенерология.
+
+2003г. Свидетельство о повышении квалификации по дерматовенерологии.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Громова</string>
+				<key>first</key>
+				<string>Евгения</string>
+				<key>middle</key>
+				<string>Игоревна</string>
+				<key>speciality</key>
+				<string>Уролог</string>
+				<key>resume</key>
+				<string>Закончила: диплом Нижегородской медицинской академии им. С.М. Кирова., сертификат уролога получала в КГМА, его подтверждение — в СпбМАПО.
+
+Специализация: хирург, уролог-андролог
+Стаж работы: 9 лет
+Поликлиника № 31 - хирург, уролог-андролог.
+Клиника эндохирургии и андрологии «Медлайт» - хирург, уролог-андролог.
+Клиника «Медси» - хирург, уролог-андролог.
+Клиника «Садко» - уролог-андролог.
+В «Садко» - с 2008 г.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Ершов</string>
+				<key>first</key>
+				<string>Александр</string>
+				<key>middle</key>
+				<string>Сергеевич</string>
+				<key>speciality</key>
+				<string>Маммолог</string>
+				<key>resume</key>
+				<string>Александр Сергеевич ведет в нашей клинике прием маммолога, онколога, гинеколога-хирурга, делает УЗИ молочных желез. Все эти направления, убежден доктор, взаимосвязаны, и только комплексный подход позволит поставить правильный диагноз. Поэтому Александр Сергеевич считает себя обязанным знать и уметь все. Особая тема – удаление родинок и папиллом. Здесь А.С. Ершов проявил себя как доктор с большой буквы. Ведь прежде чем применить тот или иной метод на практике, он опробует его на себе! Доктор проводит удаление родинок методом криодеструкции, электрокоагуляции, хирургическим путем. Кстати, запись к нему на прием – на неделю вперед.</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Аллергология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>0</integer>
+					<integer>3</integer>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>4</integer>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Ведение беременности</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Ожидание ребенка… пожалуй, самый счастливый, но в тоже время сложный и ответственный период в жизни каждой женщины. Все мы готовы сделать все, от нас зависящее, чтобы период ожидания малыша про шел благополучно, и малыш родился крепким и здоровым. От квалифицированного медицинского наблюденияза состоянием женщины на протяжении всего периода беременности,ведения беременности, во многом зависит здоровье матери и её будущего ребенка.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Гинекология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Гинекология - наука о женщине, изучающая заболевания женской половой системы, репродуктивное здоровье.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечение бесплодия</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Маммология</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Операционный блок</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>6</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Послеродовый период</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Послеродовый период — это время для полного восстановления женщины после периода беременности, происходит обратное развитие органов (инволюция). Поэтому в это время со стороны акушеров-гинекологов ведется усиленное наблюдение не только за состоянием малыша, но и молодой мамы еще с роддома, а при выписке домой даются рекомендации о необходимости обращения в послеродовом периоде к акушеру-гинекологу, который вел беременность.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Детская клиника &quot;Здоровёнок&quot;</string>
+		<key>top10</key>
+		<false/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Детская клиника Здоровенок - это настоящая СТРАНА ЗДОРОВЬЯ и хорошего настроения, созданная специально для наших самых маленьких пациентов — Ваших детей!</string>
+		<key>main_phone</key>
+		<string>+7 (831) 430-01-30</string>
+		<key>email</key>
+		<string>sadko@gmail.com</string>
+		<key>web</key>
+		<string>http://zdorovenok.sadkomed.ru/</string>
+		<key>branches</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Детская клиника &quot;Здоровёнок&quot;</string>
+				<key>address</key>
+				<string>ул. Воровского, д. 22</string>
+				<key>phone</key>
+				<string>+7 (831) 430-01-30</string>
+				<key>web</key>
+				<string>http://zdorovenok.sadkomed.ru/</string>
+				<key>email</key>
+				<string>sadko@gmail.com</string>
+				<key>schedule</key>
+				<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+				<key>route</key>
+				<string>route.png</string>
+			</dict>
+		</array>
+		<key>docs</key>
+		<array>
+			<dict>
+				<key>last</key>
+				<string>Фоголева</string>
+				<key>first</key>
+				<string>Ангелина</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Педиатр</string>
+				<key>resume</key>
+				<string>1999г. - Закончила Нижегородскую Государственную медицинскую академию, педиатрический факультет
+
+2001-2002г. - Проходила интернатуру по педиатрии и нефрологии на базе Областной детской клинической больницы
+
+2007,2012 г. - Прошла курсы усовершенствования по нефрологии и педиатрии
+
+2011 года – Hunter Syndrom. г. Варшава
+
+2011г. - Награждена Почётной грамотой Министра здравоохранения Нижегородской области за долголетний, добросовестный труд и высокий профессионализм в оказании медицинской помощи детя</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Азизова</string>
+				<key>first</key>
+				<string>Елена</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Массажист</string>
+				<key>resume</key>
+				<string>2004г.- закончила Нижегородский медицинский базовый колледж</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Андреюк</string>
+				<key>first</key>
+				<string>Валерия</string>
+				<key>middle</key>
+				<string>Юрьевна</string>
+				<key>speciality</key>
+				<string>Психотерапевт</string>
+				<key>resume</key>
+				<string>Кандидат медицинских наук, доктор высшей категории
+
+1996г. - Закончила Нижегородскую государственную медицинскую академию по специальности «Педиатрия»
+
+1996-1997г. - Прошла интернатуру по специальности «Психотерапия» на базе областного наркодиспансера
+
+2009г. - Защитила кандидатскую диссертацию на базе НИИ психиатрии Росздрава, г. Москвы</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Баранова</string>
+				<key>first</key>
+				<string>Зоя</string>
+				<key>middle</key>
+				<string>Александровна</string>
+				<key>speciality</key>
+				<string>Педиатр</string>
+				<key>resume</key>
+				<string>1995г. - закончила НижГМА, педиатрический факультет
+
+1996г. - интернатура по специальности педиатрия</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Башурова</string>
+				<key>first</key>
+				<string>Ирина</string>
+				<key>middle</key>
+				<string>Анатольевна</string>
+				<key>speciality</key>
+				<string>Педиатр</string>
+				<key>resume</key>
+				<string>1999-2005г. - Закончила Амурскую медицинскую Академию по специальности «Лечебное дело»
+
+2005-2006г. - Прошла интернатуру по педиатрии в Хабаровском медицинской университетом</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Береснева</string>
+				<key>first</key>
+				<string>Татьяна</string>
+				<key>middle</key>
+				<string>Вячеславовна</string>
+				<key>speciality</key>
+				<string>Врач ультразвуковой диагностики</string>
+				<key>resume</key>
+				<string>1995г. - Закончила Нижегородскую Государственную Медицинскую Академию</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Вагина</string>
+				<key>first</key>
+				<string>Оксана</string>
+				<key>middle</key>
+				<string>Михайловна</string>
+				<key>speciality</key>
+				<string>Офтальмолог</string>
+				<key>resume</key>
+				<string>2004г. - Закончила НижГМА. Специальность: врач-педиатр
+
+2006г. - Присвоена квалификация врач-офтальмолог, ГОУ ВПО Российский Государственный Медицинский Университет Росздрава. Название курса (экзамена): повышение квалификации по циклу &quot;Контактная коррекция зрения&quot; г.Москва
+
+2007г. – Микрохирургия глаза. Московская офтальмологическая клиника им.Гельмгольца. Название курса (экзамена): п.к. на рабочем месте по теме &quot;Особенности травм у офтальмологических больных, особенности их хирургического лечения&quot;
+
+2011г. - Детская микрохирургия глаза. Ленинградская областная клиническая больница. Название курса (экзамена): обучение на рабочем месте по теме &quot;Особенности микрохирургического лечения при ретинопатиях недоношенных детей&quot;
+
+2011г. - Детская офтальмология. Кафедра офтальмологии ФПКВ НижГМА. Название курса (экзамена): авторский курс д.м.н., профессора Поспелова В.И. по теме &quot;Детская офтальмология»
+
+2011г. – Присвоена квалификация по офтальмологии. Учебное заведение: ГОУ ВПО НижГМА Минздравсоцразвития России</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Венедиктова</string>
+				<key>first</key>
+				<string>Ирина</string>
+				<key>middle</key>
+				<string>Степановна</string>
+				<key>speciality</key>
+				<string>Педиатр</string>
+				<key>resume</key>
+				<string>Врач высшей категории
+
+1980-1986г. - Закончила НижГМА, педиатрический факультет
+
+1986-1987г. - Закончила интернатуру
+
+1992г. - Присвоена специализация &quot;Педиатрия&quot;
+
+1993г. - Прослушала курс -&quot;Фитотерапия и клиническая фармакология&quot;, НижГМА
+
+2000,2003, 2005, 2006, 2009г. - Повышение квалификации по педиатрии, ГУ Нижегородская государственная академия
+
+2005г. - Присвоена высшая квалификационная категория</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Воронина</string>
+				<key>first</key>
+				<string>Ольга</string>
+				<key>middle</key>
+				<string>Олеговна</string>
+				<key>speciality</key>
+				<string>Офтальмолог</string>
+				<key>resume</key>
+				<string>Врач первой категории
+
+1992г. – Закончила Горьковский медицинский институт им. С.М Кирова, педиатрический факультет
+
+1992-1995г. - Клиническая ординатура по специальности педиатрия, НГМД
+
+1999г. - Общая специализация по офтальмологии, ГУ «НГМД»
+
+1999г. - Специализация по нейроофтальмологии , ГУ «НГМД»
+
+2006, 2010 г. - ГОУ ВПО НижГМА Росздрава</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+			<dict>
+				<key>last</key>
+				<string>Карпович</string>
+				<key>first</key>
+				<string>Екатерина</string>
+				<key>middle</key>
+				<string>Ильинична</string>
+				<key>speciality</key>
+				<string>Невролог</string>
+				<key>resume</key>
+				<string>Врач высшей категории, доктор медицинских наук
+
+1990г. - Закончила Нижегородский Государственный медицинский институт, педиатрический факультет
+
+1991г. - Прошла специализацию по электронейромиографии на базе отдела нервно-мышечной патологии человека с Всесоюзным миастеническим центром Института Общей Патологии и Патологической Физиологии РАМН.
+
+1992г. - Прошла курс обучения по методам анализа ЭЭГ и вызванных потенциалов на базе НИИ нейрохирургии им. Н.Н.Бурденко РАМН
+
+1995г. - Защитила кандидатскую диссертацию на тему «Миоглобиновый тест в диагностике и оценке тяжести течения прогрессирующих мышечных дистрофий у детей»
+
+2002г. - Защитила докторскую диссертацию на тему «Полиневропатии у детей и подростков: патогенетические варианты и комплексные критерии диагностики, оценки тяжести течения и прогнозирование исходов».
+
+2004г. - Прошла повышение квалификации по клинической эпилептологии и ЭЭГ на базе РГМУ г. Москва.
+
+2006г. - Прошла профессиональную переподготовку по клинической неврологии.
+
+2007г. - Прошла профессиональную переподготовку по функциональной диагностике на базе НижГМА Росдздрава</string>
+				<key>picture</key>
+				<string>avatar.png</string>
+				<key>time</key>
+				<string>с 9:00 до 18:00</string>
+			</dict>
+		</array>
+		<key>services</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Консультативное отделение</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>0</integer>
+					<integer>3</integer>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>4</integer>
+					<integer>5</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Диагностическое отделение</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Диагностическое оборудование в детской клинике «Здоровенок» позволяет проводить исследования различных систем организма ребенка, а именно: ультразвуковое исследование внутренних органов и сердца, исследование работы центральной нервной системы, рентгенография, диагностика заболеваний уха и дерматологических заболеваний.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лабораторная диагностика</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Детская клиника «Здоровёнок» предлагает огромный перечень лабораторных исследований на базе собственной лаборатории клиники «Садко».</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+					<integer>3</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Отделение помощи на дому</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Оздоравливающие процедуры</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Детская вакцинация</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>6</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Отделение психологического развития ребенка</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>В отделении психологического развития ребенка логопеды, психологи и психотерапевты помогут решить психологические проблемы ребенка, установить причины, затрудняющие социализацию. Своевременное обращение к специалисту - это возможность для вашего ребёнка обрести здоровье, научиться качественно и безболезненно справляться с возникающими трудностями.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>4</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Физиотерапевтическое отделение</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Физиотерапия представляет эффективное сочетание магнитотерапии, электротерапии, ультразвуковой, ингаляционной и лазерной терапии, направленной на лечение и профилактику аллергических, гастроэнтерологических, урологических и ЛОР-заболеваний у детей. Безопасность, безболезненность и отсутствие побочных эффектов позволяют врачам рекомендовать физиотерапию уже с первых месяцев жизни малыша.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Лечебное отделение</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Многие заболевания требуют регулярного наблюдения врачей и режима введения препаратов внутривенно, внутримышечно, проведения инфузионной терапии а для этого необходимы дополнительное оборудование и специальные условия, которые созданы в детских палатах дневного стационара.</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>УЗИ детское</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Наиболее малоинвазивным и безопасным методом диагностики заболеваний на сегодняшний день считается УЗИ-диагностика. Благодаря данному методу врач может оценить органов брюшной полости, сердца, почек, головного мозга, тазобедренных суставов. Начиная с рождения малышу необходимо проводить УЗИ- исследования разных систем организма, для того чтобы оценить правильно ли развиваются внутренние органы, есть ли склонность к патологиям. УЗИ-диагностика входит в программы патронажа детской клиники «Здоровенок».</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Рентген детский</string>
+				<key>picture</key>
+				<string>service.png</string>
+				<key>description</key>
+				<string>Цифровой детский рентгенографический комплекс «RenInnMed» разработан для диагностики самых маленьких пациентов. Рентгенография проводится в течение нескольких минут и исключает неприятные ощущения у малышей. После рентгенографии врач оценивает состояние органов ребенка по качественным и точным снимкам, которые будут готовы сразу же после обследования!</string>
+				<key>docs</key>
+				<array>
+					<integer>1</integer>
+					<integer>2</integer>
+					<integer>7</integer>
+					<integer>4</integer>
+					<integer>9</integer>
 				</array>
 			</dict>
 		</array>
