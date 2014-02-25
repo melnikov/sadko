@@ -76,7 +76,10 @@
     self.middle.text = self.doctor[@"middle"];
 
     self.speciality.text = self.doctor[@"speciality"];
-    self.resume.text = self.doctor[@"resume"];
+    if (self.doctor[@"resume"])
+    {
+        self.resume.text = self.doctor[@"resume"];
+    }
     self.schedule.text = self.doctor[@"time"];
 }
 

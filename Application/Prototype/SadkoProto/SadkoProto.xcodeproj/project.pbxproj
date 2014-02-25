@@ -37,6 +37,10 @@
 		27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */; };
 		27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */; };
 		27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503F18B6B19200EDBE52 /* Clinics.plist */; };
+		6036753018BC82B2008D2CB5 /* service.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752E18BC82B2008D2CB5 /* service.png */; };
+		6036753118BC82B2008D2CB5 /* service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752F18BC82B2008D2CB5 /* service@2x.png */; };
+		6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036753318BC901A008D2CB5 /* UIInfoViewController.m */; };
+		6036753618BC901A008D2CB5 /* UIInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6036753418BC901A008D2CB5 /* UIInfoViewController.xib */; };
 		6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096A40518BB6D63008064FC /* UISplashScreenViewController.m */; };
 		6096A40818BB6DC8008064FC /* UISplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6096A40718BB6DC8008064FC /* UISplashScreenViewController.xib */; };
 		6096A40B18BB6EFA008064FC /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6096A40A18BB6EFA008064FC /* Utils.m */; };
@@ -126,6 +130,11 @@
 		27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHumanSchemeViewController.m; sourceTree = "<group>"; };
 		27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIHumanSchemeViewController.xib; sourceTree = "<group>"; };
 		27B9503F18B6B19200EDBE52 /* Clinics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Clinics.plist; sourceTree = "<group>"; };
+		6036752E18BC82B2008D2CB5 /* service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service.png; sourceTree = "<group>"; };
+		6036752F18BC82B2008D2CB5 /* service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service@2x.png"; sourceTree = "<group>"; };
+		6036753218BC901A008D2CB5 /* UIInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInfoViewController.h; sourceTree = "<group>"; };
+		6036753318BC901A008D2CB5 /* UIInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIInfoViewController.m; sourceTree = "<group>"; };
+		6036753418BC901A008D2CB5 /* UIInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIInfoViewController.xib; sourceTree = "<group>"; };
 		6096A40418BB6D63008064FC /* UISplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISplashScreenViewController.h; sourceTree = "<group>"; };
 		6096A40518BB6D63008064FC /* UISplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISplashScreenViewController.m; sourceTree = "<group>"; };
 		6096A40718BB6DC8008064FC /* UISplashScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISplashScreenViewController.xib; sourceTree = "<group>"; };
@@ -217,6 +226,8 @@
 		2712D82E18BC01E600C59B47 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6036752E18BC82B2008D2CB5 /* service.png */,
+				6036752F18BC82B2008D2CB5 /* service@2x.png */,
 				2712D82F18BC01E600C59B47 /* avatar.png */,
 				2712D84118BC025700C59B47 /* avatar@2x.png */,
 				2712D83018BC01E600C59B47 /* back.png */,
@@ -338,6 +349,9 @@
 				60ACF50418B6405E00A16C2F /* UIAboutViewController.h */,
 				60ACF50518B6405E00A16C2F /* UIAboutViewController.m */,
 				60ACF50618B6405E00A16C2F /* UIAboutViewController.xib */,
+				6036753218BC901A008D2CB5 /* UIInfoViewController.h */,
+				6036753318BC901A008D2CB5 /* UIInfoViewController.m */,
+				6036753418BC901A008D2CB5 /* UIInfoViewController.xib */,
 				60ACF50918B640BF00A16C2F /* UIDoctorCategoryViewController.h */,
 				60ACF50A18B640BF00A16C2F /* UIDoctorCategoryViewController.m */,
 				60ACF50B18B640BF00A16C2F /* UIDoctorCategoryViewController.xib */,
@@ -525,9 +539,11 @@
 				6096A41518BB7547008064FC /* Default~iphone.png in Resources */,
 				60ACF52B18B6420700A16C2F /* UINewsDetailsViewController.xib in Resources */,
 				2712D83A18BC01E600C59B47 /* back@2x.png in Resources */,
+				6036753618BC901A008D2CB5 /* UIInfoViewController.xib in Resources */,
 				60ACF51218B640D100A16C2F /* UIDoctorListViewController.xib in Resources */,
 				2712D83918BC01E600C59B47 /* back.png in Resources */,
 				2712D82B18BBEC5800C59B47 /* FAQ.plist in Resources */,
+				6036753018BC82B2008D2CB5 /* service.png in Resources */,
 				60ACF53A18B6441000A16C2F /* UISymptomsViewController.xib in Resources */,
 				60ACF53518B643D400A16C2F /* UIQuestionAnswerViewController.xib in Resources */,
 				2712D83B18BC01E600C59B47 /* banner.png in Resources */,
@@ -547,6 +563,7 @@
 				2712D83D18BC01E600C59B47 /* Default-568h@2x.png in Resources */,
 				2712D84218BC025700C59B47 /* avatar@2x.png in Resources */,
 				60ACF50318B6289B00A16C2F /* back@2x.png in Resources */,
+				6036753118BC82B2008D2CB5 /* service@2x.png in Resources */,
 				60ACF53F18B6446100A16C2F /* UIBranchListViewController.xib in Resources */,
 				60ACF53018B643B900A16C2F /* UITopTenQuestionsViewController.xib in Resources */,
 				6096A41418BB7547008064FC /* Default@2x~iphone.png in Resources */,
@@ -572,6 +589,7 @@
 			files = (
 				60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */,
 				6096A40B18BB6EFA008064FC /* Utils.m in Sources */,
+				6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */,
 				6096A40F18BB74D9008064FC /* MBProgressHUD.m in Sources */,
 				60ACF53418B643D400A16C2F /* UIQuestionAnswerViewController.m in Sources */,
 				60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */,

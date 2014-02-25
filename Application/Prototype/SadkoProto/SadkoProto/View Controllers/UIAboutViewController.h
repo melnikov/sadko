@@ -5,6 +5,10 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIAboutViewController : UIBaseViewController
+#import <MessageUI/MessageUI.h>
+
+@interface UIAboutViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
+
+- (id)initWithClinicInfo:(NSDictionary*)clinic;
 
 @end

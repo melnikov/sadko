@@ -42,7 +42,7 @@
 {
     [super viewDidLoad];
 
-    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 504);
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 700);
 
     [self initChildControls];
 
@@ -62,7 +62,10 @@
     self.serviceTitle.text = self.service[@"title"];
 
     self.logo.image = [UIImage imageNamed:self.service[@"picture"]];
-    self.description.text = self.service[@"description"];
+    if (self.service[@"description"])
+    {
+        self.description.text = self.service[@"description"];
+    }
 }
 
 #pragma mark - Table View Data Source Methods

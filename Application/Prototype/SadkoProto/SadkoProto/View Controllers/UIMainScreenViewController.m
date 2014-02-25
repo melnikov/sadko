@@ -131,7 +131,7 @@
 
 - (IBAction)buttonAboutPressed:(id)sender
 {
-    UIAboutViewController* aboutScreen = [[UIAboutViewController alloc] initFromNib];
+    UIAboutViewController* aboutScreen = [[UIAboutViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:aboutScreen animated:YES];
 }
 
