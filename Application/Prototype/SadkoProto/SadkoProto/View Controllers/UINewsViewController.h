@@ -8,6 +8,8 @@
 
 #import "UIBaseViewController.h"
 
-@interface UINewsViewController : UIBaseViewController <UIScrollViewDelegate>
+@interface UINewsViewController : UIBaseViewController <UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
+
+- (id)initWithScript:(NSString*)script;
 
 @end

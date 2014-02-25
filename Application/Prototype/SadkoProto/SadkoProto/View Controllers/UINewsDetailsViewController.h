@@ -10,4 +10,6 @@
 
 @interface UINewsDetailsViewController : UIBaseViewController
 
+- (id)initWithInfo:(NSDictionary*)info andTitle:(NSString*)title;
+
 @end

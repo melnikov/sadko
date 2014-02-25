@@ -144,7 +144,7 @@
 
 - (IBAction)buttonNewsPressed:(id)sender
 {
-    UINewsViewController* newsScreen = [[UINewsViewController alloc] initFromNib];
+    UINewsViewController* newsScreen = [[UINewsViewController alloc] initWithScript:@"News"];
     [self.navigationController pushViewController:newsScreen animated:YES];
 }
 

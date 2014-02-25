@@ -10,15 +10,25 @@
 
 @interface UINewsDetailsViewController ()
 
+@property (nonatomic, retain) IBOutlet UILabel* infoTitle;
+@property (nonatomic, retain) IBOutlet UITextView* infoText;
+
+@property (nonatomic, retain) NSDictionary* info;
+@property (nonatomic, retain) NSString* screenTitle;
+
+- (void)initChildControls;
+
 @end
 
 @implementation UINewsDetailsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithInfo:(NSDictionary *)info andTitle:(NSString *)title
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initFromNib];
+    if (self)
+    {
+        self.info = info;
+        self.screenTitle = title;
     }
     return self;
 }
@@ -26,13 +36,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    [self initChildControls];
+
+    self.title = self.screenTitle;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Private Methods
+
+- (void)initChildControls
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.infoTitle.text = self.info[@"title"];
+    self.infoText.text = self.info[@"description"];
 }
 
 @end
