@@ -41,7 +41,7 @@
     [super viewDidLoad];
 
     self.callWebView = [[UIWebView alloc] init];
-    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 504);
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 500);
 
     [self initChildControls];
 

@@ -17,9 +17,11 @@
 @property (nonatomic, retain) IBOutlet UIImageView* logo;
 @property (nonatomic, retain) IBOutlet UITextView* description;
 @property (nonatomic, retain) IBOutlet UITableView* table;
+@property (nonatomic, retain) IBOutlet UIButton* callButton;
 
 @property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSDictionary* service;
+@property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initChildControls;
 
@@ -42,7 +44,8 @@
 {
     [super viewDidLoad];
 
-    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 700);
+    self.callWebView = [[UIWebView alloc] init];
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 970);
 
     [self initChildControls];
 
@@ -53,6 +56,23 @@
     self.table.separatorColor = [UIColor whiteColor];
 
     self.title = @"Услуга";
+}
+
+#pragma mark - Public Methods
+
+- (IBAction)callButtonPressed:(id)sender
+{
+    NSURL* callURL = [NSURL URLWithString:@"tel:+78314210101"];
+    if ([[UIApplication sharedApplication] canOpenURL:callURL])
+    {
+        [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
 }
 
 #pragma mark - Private Methods
