@@ -5,7 +5,7 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIServiceListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UIServiceListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UITextFieldDelegate>
 
 - (id)initWithClinicInfo:(NSDictionary*)clinic;
 

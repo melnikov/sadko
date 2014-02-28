@@ -8,8 +8,10 @@
 
 #import "UIBaseViewController.h"
 
+#import "Service.h"
+
 @interface UIServiceDetailsViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
-- (id)initWithClinicInfo:(NSDictionary*)clinic andService:(NSDictionary*)service;
+- (id)initWithClinicInfo:(NSDictionary*)clinic andService:(Service*)service;
 
 @end

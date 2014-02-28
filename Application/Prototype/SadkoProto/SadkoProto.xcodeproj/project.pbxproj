@@ -85,6 +85,7 @@
 		60ACF53F18B6446100A16C2F /* UIBranchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF53D18B6446100A16C2F /* UIBranchListViewController.xib */; };
 		60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF54118B6447900A16C2F /* UIBranchDetailsViewController.m */; };
 		60ACF54418B6447900A16C2F /* UIBranchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF54218B6447900A16C2F /* UIBranchDetailsViewController.xib */; };
+		60F96E1518C0AAE1003FB8E6 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F96E1418C0AAE1003FB8E6 /* Service.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,8 @@
 		60ACF54018B6447900A16C2F /* UIBranchDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBranchDetailsViewController.h; sourceTree = "<group>"; };
 		60ACF54118B6447900A16C2F /* UIBranchDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBranchDetailsViewController.m; sourceTree = "<group>"; };
 		60ACF54218B6447900A16C2F /* UIBranchDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBranchDetailsViewController.xib; sourceTree = "<group>"; };
+		60F96E1318C0AAE1003FB8E6 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		60F96E1418C0AAE1003FB8E6 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +287,7 @@
 		274BEF5218B1654C00C49814 /* SadkoProto */ = {
 			isa = PBXGroup;
 			children = (
+				60F96E1218C0AAC6003FB8E6 /* Data Model */,
 				60ACF4F918B6273B00A16C2F /* External */,
 				60ACF4F218B6264C00A16C2F /* Extensions */,
 				60ACF4E918B624E600A16C2F /* View Controllers */,
@@ -463,6 +467,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		60F96E1218C0AAC6003FB8E6 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				60F96E1318C0AAE1003FB8E6 /* Service.h */,
+				60F96E1418C0AAE1003FB8E6 /* Service.m */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,6 +616,7 @@
 				60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */,
 				6096A40B18BB6EFA008064FC /* Utils.m in Sources */,
 				6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */,
+				60F96E1518C0AAE1003FB8E6 /* Service.m in Sources */,
 				6096A40F18BB74D9008064FC /* MBProgressHUD.m in Sources */,
 				60ACF53418B643D400A16C2F /* UIQuestionAnswerViewController.m in Sources */,
 				60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */,

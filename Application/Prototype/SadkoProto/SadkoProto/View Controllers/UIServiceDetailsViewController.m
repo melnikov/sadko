@@ -20,7 +20,7 @@
 @property (nonatomic, retain) IBOutlet UIButton* callButton;
 
 @property (nonatomic, retain) NSDictionary* clinic;
-@property (nonatomic, retain) NSDictionary* service;
+@property (nonatomic, retain) Service* service;
 @property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initChildControls;
@@ -29,7 +29,7 @@
 
 @implementation UIServiceDetailsViewController
 
-- (id)initWithClinicInfo:(NSDictionary*)clinic andService:(NSDictionary*)service
+- (id)initWithClinicInfo:(NSDictionary*)clinic andService:(Service*)service
 {
     self = [super initFromNib];
     if (self)
@@ -79,12 +79,12 @@
 
 - (void)initChildControls
 {
-    self.serviceTitle.text = self.service[@"title"];
+    self.serviceTitle.text = self.service.title;
 
-    self.logo.image = [UIImage imageNamed:self.service[@"picture"]];
-    if (self.service[@"description"])
+    self.logo.image = [UIImage imageNamed:self.service.image];
+    if (self.service.description)
     {
-        self.description.text = self.service[@"description"];
+        self.description.text = self.service.description;
     }
 }
 
@@ -92,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.service[@"docs"] count];
+    return [self.service.doctors count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,7 +108,7 @@
         cell.textLabel.textColor = [UIColor blackColor];
     }
 
-    NSInteger docIndex = [[self.service[@"docs"] objectAtIndex:indexPath.row] integerValue];
+    NSInteger docIndex = [[self.service.doctors objectAtIndex:indexPath.row] integerValue];
     NSDictionary* doc = [self.clinic[@"docs"] objectAtIndex:docIndex];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ %@ %@", doc[@"last"], doc[@"first"], doc[@"middle"]];
     cell.imageView.image = [UIImage imageNamed:doc[@"picture"]];
@@ -120,7 +120,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger docIndex = [[self.service[@"docs"] objectAtIndex:indexPath.row] integerValue];
+    NSInteger docIndex = [[self.service.doctors objectAtIndex:indexPath.row] integerValue];
     NSDictionary* doc = [self.clinic[@"docs"] objectAtIndex:docIndex];
 
     UIDoctorDetailsViewController* doctor = [[UIDoctorDetailsViewController alloc] initWithDoctorInfo:doc];
