@@ -3,6 +3,8 @@
 //  SadkoProto
 //
 
+#import "UISidePanelViewController.h"
+
 #import "UIMainScreenViewController.h"
 
 #import "UIAboutViewController.h"
@@ -13,6 +15,7 @@
 #import "UIHumanSchemeViewController.h"
 #import "UIBranchListViewController.h"
 #import "UIBranchDetailsViewController.h"
+#import "UIBranchFilterViewController.h"
 
 @interface UIMainScreenViewController ()
 
@@ -126,8 +129,20 @@
 
 - (IBAction)buttonDoctorsPressed:(id)sender
 {
+    UISidePanelViewController* panel = [[UISidePanelViewController alloc] init];
+
+    panel.bounceOnSidePanelOpen = NO;
+    panel.bounceOnSidePanelClose = NO;
+    panel.bounceOnCenterPanelChange = NO;
+    panel.shouldDelegateAutorotateToVisiblePanel = NO;
+
     UIDoctorCategoryViewController* doctorsScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
-    [self.navigationController pushViewController:doctorsScreen animated:YES];
+    UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initFromNib];
+
+    panel.centerPanel = doctorsScreen;
+    panel.rightPanel = filterScreen;
+
+    [self.navigationController pushViewController:panel animated:YES];
 }
 
 - (IBAction)buttonAboutPressed:(id)sender

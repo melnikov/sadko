@@ -1,15 +1,15 @@
 //
-//  UIBaseViewController.m
-//  SadkoProto
+//  UISidePanelViewController.m
+//  MegaTaxi
 //
 
-#import "UIBaseViewController.h"
+#import "UISidePanelViewController.h"
 
 #import "UIImage+Extensions.h"
 
-#define TITLE_TAG 111
+#define TITLE_TAG 222
 
-@interface UIBaseViewController ()
+@interface UISidePanelViewController ()
 
 @property (nonatomic, retain) UILabel *titleLabel;
 @property (nonatomic, copy) ButtonActionBlock leftButtonActionBlock;
@@ -17,33 +17,17 @@
 
 @end
 
-@implementation UIBaseViewController
-
-#pragma mark - Initialization/deallocation
-
-- (id)initFromNib
-{
-    self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
-    if (self)
-    {
-
-    }
-    return self;
-}
+@implementation UISidePanelViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.view.backgroundColor = UIColorFromRGB(140, 192, 202);
 
     [self initTitleLabel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:UIColorFromRGB(0, 109, 175)] forBarMetrics:UIBarMetricsDefault];
     [[self.navigationController.navigationBar viewWithTag:TITLE_TAG] removeFromSuperview];
     
     const CGFloat buttonWidth = 26;
@@ -51,17 +35,10 @@
     SET_FRAME_WIDTH(self.titleLabel.frame, self.navigationController.navigationBar.bounds.size.width - 2 * buttonWidth);
     
     [[[self navigationController] navigationBar] addSubview:[self titleLabel]];
-
+    
     [self initBackButton];
-
+    
     [super viewWillAppear:animated];
-}
-
-#pragma mark - UIViewcontroller methods
-
-- (void)setTitle:(NSString *)title
-{
-    [self.titleLabel setText:title];
 }
 
 #pragma mark - Private Methods
@@ -72,7 +49,7 @@
     {
         [self setLeftNavigationBarButtonWithImage:[UIImage imageNamed:@"back"]
                                      pressedImage:[UIImage imageNamed:@"back"]
-                                     title:@"Назад"
+                                            title:@"Назад"
                                             block:^
          {
              [self.navigationController popViewControllerAnimated:YES];
@@ -96,10 +73,16 @@
     self.leftButtonActionBlock();
 }
 
-
 - (void)rightBarButtonItemWasClicked
 {
     self.rightButtonActionBlock();
+}
+
+#pragma mark - UIViewcontroller methods
+
+- (void)setTitle:(NSString *)title
+{
+    [self.titleLabel setText:title];
 }
 
 #pragma mark - Public Methods
@@ -125,9 +108,9 @@
 }
 
 - (void) setLeftNavigationBarButtonWithImage:(UIImage *)image
-                         pressedImage:(UIImage *)pressedImage
-                         title:(NSString *)title
-                         block:(ButtonActionBlock)block
+                                pressedImage:(UIImage *)pressedImage
+                                       title:(NSString *)title
+                                       block:(ButtonActionBlock)block
 {
     [self setLeftButtonActionBlock:block];
     
@@ -155,7 +138,7 @@
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     [self.navigationItem setLeftBarButtonItem:item];
-
+    
     [button release];
     [item release];
 }
