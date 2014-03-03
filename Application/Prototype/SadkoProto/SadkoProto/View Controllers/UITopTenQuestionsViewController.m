@@ -64,8 +64,8 @@
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
-    cell.textLabel.text = [self.questions objectAtIndex:indexPath.row][@"question"];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"Вопрос №%d", indexPath.row + 1];
     
     return cell;
 }

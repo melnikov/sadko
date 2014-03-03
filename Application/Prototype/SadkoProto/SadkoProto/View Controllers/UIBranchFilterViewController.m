@@ -14,11 +14,18 @@
 
 @implementation UIBranchFilterViewController
 
+- (id)initWithBranchesInfo:(NSArray *)info
+{
+    self = [super initFromNib];
+    if (self)
+    {
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    
 }
 
 @end

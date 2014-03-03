@@ -37,6 +37,8 @@
 		27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */; };
 		27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */; };
 		27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503F18B6B19200EDBE52 /* Clinics.plist */; };
+		60025C0F18C4B6B000725A1C /* faq.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0D18C4B6B000725A1C /* faq.png */; };
+		60025C1018C4B6B000725A1C /* faq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0E18C4B6B000725A1C /* faq@2x.png */; };
 		6036753018BC82B2008D2CB5 /* service.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752E18BC82B2008D2CB5 /* service.png */; };
 		6036753118BC82B2008D2CB5 /* service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752F18BC82B2008D2CB5 /* service@2x.png */; };
 		6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036753318BC901A008D2CB5 /* UIInfoViewController.m */; };
@@ -139,6 +141,8 @@
 		27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHumanSchemeViewController.m; sourceTree = "<group>"; };
 		27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIHumanSchemeViewController.xib; sourceTree = "<group>"; };
 		27B9503F18B6B19200EDBE52 /* Clinics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Clinics.plist; sourceTree = "<group>"; };
+		60025C0D18C4B6B000725A1C /* faq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faq.png; sourceTree = "<group>"; };
+		60025C0E18C4B6B000725A1C /* faq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faq@2x.png"; sourceTree = "<group>"; };
 		6036752E18BC82B2008D2CB5 /* service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service.png; sourceTree = "<group>"; };
 		6036752F18BC82B2008D2CB5 /* service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service@2x.png"; sourceTree = "<group>"; };
 		6036753218BC901A008D2CB5 /* UIInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInfoViewController.h; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 		2712D82E18BC01E600C59B47 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				60025C0D18C4B6B000725A1C /* faq.png */,
+				60025C0E18C4B6B000725A1C /* faq@2x.png */,
 				6036752E18BC82B2008D2CB5 /* service.png */,
 				6036752F18BC82B2008D2CB5 /* service@2x.png */,
 				2712D82F18BC01E600C59B47 /* avatar.png */,
@@ -582,8 +588,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60025C1018C4B6B000725A1C /* faq@2x.png in Resources */,
 				60ACF51718B6411B00A16C2F /* UIDoctorDetailsViewController.xib in Resources */,
 				60ACF51C18B641B200A16C2F /* UIServiceListViewController.xib in Resources */,
+				60025C0F18C4B6B000725A1C /* faq.png in Resources */,
 				27B9503718B6995A00EDBE52 /* logo.png in Resources */,
 				60ACF50818B6405E00A16C2F /* UIAboutViewController.xib in Resources */,
 				60ACF52118B641CF00A16C2F /* UIServiceDetailsViewController.xib in Resources */,

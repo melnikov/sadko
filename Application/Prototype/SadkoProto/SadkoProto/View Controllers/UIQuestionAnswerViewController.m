@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextView* question;
 @property (nonatomic, retain) IBOutlet UITextView* answer;
+@property (nonatomic, retain) IBOutlet UIImageView* picture;
 
 @end
 
@@ -35,8 +36,9 @@
 
     self.title = @"Вопрос - ответ";
 
-    self.question.text = self.info[@"question"];
-    self.answer.text = self.info[@"answer"];
+    //self.question.text = self.info[@"question"];
+    //self.answer.text = self.info[@"answer"];
+    self.picture.image = [UIImage imageNamed:self.info[@"picture"]];
 }
 
 @end
