@@ -16,6 +16,7 @@
 #import "UIBranchListViewController.h"
 #import "UIBranchDetailsViewController.h"
 #import "UIBranchFilterViewController.h"
+#import "UIBonusCardViewController.h"
 
 @interface UIMainScreenViewController ()
 
@@ -37,6 +38,8 @@
 @property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initClinics;
+
+- (IBAction)bonusCardButtonPressed:(id)sender;
 
 @end
 
@@ -69,6 +72,12 @@
     [self selectionChanged];
     
     self.callWebView = [[UIWebView alloc] init];
+
+    [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Карта" block:^
+    {
+        UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
+        [self.navigationController pushViewController:bonusVC animated:YES];
+    }];
 }
 
 #pragma mark - Private Methods
@@ -208,6 +217,11 @@
         [alertView show];
         [alertView release];
     }
+}
+
+- (void)bonusCardButtonPressed:(id)sender
+{
+    
 }
 
 @end

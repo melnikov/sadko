@@ -39,6 +39,10 @@
 		27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503F18B6B19200EDBE52 /* Clinics.plist */; };
 		60025C0F18C4B6B000725A1C /* faq.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0D18C4B6B000725A1C /* faq.png */; };
 		60025C1018C4B6B000725A1C /* faq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0E18C4B6B000725A1C /* faq@2x.png */; };
+		60025C1418C4C31900725A1C /* UIBonusCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025C1218C4C31900725A1C /* UIBonusCardViewController.m */; };
+		60025C1518C4C31900725A1C /* UIBonusCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60025C1318C4C31900725A1C /* UIBonusCardViewController.xib */; };
+		60025C1918C4C33600725A1C /* UIAddBonusCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025C1718C4C33600725A1C /* UIAddBonusCardViewController.m */; };
+		60025C1A18C4C33600725A1C /* UIAddBonusCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60025C1818C4C33600725A1C /* UIAddBonusCardViewController.xib */; };
 		6036753018BC82B2008D2CB5 /* service.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752E18BC82B2008D2CB5 /* service.png */; };
 		6036753118BC82B2008D2CB5 /* service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6036752F18BC82B2008D2CB5 /* service@2x.png */; };
 		6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036753318BC901A008D2CB5 /* UIInfoViewController.m */; };
@@ -143,6 +147,12 @@
 		27B9503F18B6B19200EDBE52 /* Clinics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Clinics.plist; sourceTree = "<group>"; };
 		60025C0D18C4B6B000725A1C /* faq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faq.png; sourceTree = "<group>"; };
 		60025C0E18C4B6B000725A1C /* faq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faq@2x.png"; sourceTree = "<group>"; };
+		60025C1118C4C31900725A1C /* UIBonusCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBonusCardViewController.h; sourceTree = "<group>"; };
+		60025C1218C4C31900725A1C /* UIBonusCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBonusCardViewController.m; sourceTree = "<group>"; };
+		60025C1318C4C31900725A1C /* UIBonusCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBonusCardViewController.xib; sourceTree = "<group>"; };
+		60025C1618C4C33600725A1C /* UIAddBonusCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAddBonusCardViewController.h; sourceTree = "<group>"; };
+		60025C1718C4C33600725A1C /* UIAddBonusCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAddBonusCardViewController.m; sourceTree = "<group>"; };
+		60025C1818C4C33600725A1C /* UIAddBonusCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAddBonusCardViewController.xib; sourceTree = "<group>"; };
 		6036752E18BC82B2008D2CB5 /* service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service.png; sourceTree = "<group>"; };
 		6036752F18BC82B2008D2CB5 /* service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service@2x.png"; sourceTree = "<group>"; };
 		6036753218BC901A008D2CB5 /* UIInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIInfoViewController.h; sourceTree = "<group>"; };
@@ -432,6 +442,12 @@
 				6036753718BCB063008D2CB5 /* UIMapViewController.h */,
 				6036753818BCB063008D2CB5 /* UIMapViewController.m */,
 				6036753918BCB063008D2CB5 /* UIMapViewController.xib */,
+				60025C1118C4C31900725A1C /* UIBonusCardViewController.h */,
+				60025C1218C4C31900725A1C /* UIBonusCardViewController.m */,
+				60025C1318C4C31900725A1C /* UIBonusCardViewController.xib */,
+				60025C1618C4C33600725A1C /* UIAddBonusCardViewController.h */,
+				60025C1718C4C33600725A1C /* UIAddBonusCardViewController.m */,
+				60025C1818C4C33600725A1C /* UIAddBonusCardViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -590,6 +606,7 @@
 			files = (
 				60025C1018C4B6B000725A1C /* faq@2x.png in Resources */,
 				60ACF51718B6411B00A16C2F /* UIDoctorDetailsViewController.xib in Resources */,
+				60025C1A18C4C33600725A1C /* UIAddBonusCardViewController.xib in Resources */,
 				60ACF51C18B641B200A16C2F /* UIServiceListViewController.xib in Resources */,
 				60025C0F18C4B6B000725A1C /* faq.png in Resources */,
 				27B9503718B6995A00EDBE52 /* logo.png in Resources */,
@@ -616,6 +633,7 @@
 				27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */,
 				2712D83C18BC01E600C59B47 /* banner@2x.png in Resources */,
 				60ACF50218B6289B00A16C2F /* back.png in Resources */,
+				60025C1518C4C31900725A1C /* UIBonusCardViewController.xib in Resources */,
 				60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */,
 				274BEF5718B1654C00C49814 /* InfoPlist.strings in Resources */,
 				60ACF50D18B640BF00A16C2F /* UIDoctorCategoryViewController.xib in Resources */,
@@ -653,6 +671,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60025C1918C4C33600725A1C /* UIAddBonusCardViewController.m in Sources */,
+				60025C1418C4C31900725A1C /* UIBonusCardViewController.m in Sources */,
 				60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */,
 				6096A40B18BB6EFA008064FC /* Utils.m in Sources */,
 				6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */,

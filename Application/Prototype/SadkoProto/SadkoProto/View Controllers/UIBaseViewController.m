@@ -167,7 +167,7 @@
 {
     [self setRightButtonActionBlock:block];
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(-10, 0, image.size.width, image.size.height)];
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     [button addTarget:self action:@selector(rightBarButtonItemWasClicked) forControlEvents:UIControlEventTouchUpInside];
     
     [button.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
