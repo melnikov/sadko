@@ -7,14 +7,18 @@
 
 #import "UIDoctorDetailsViewController.h"
 
+#import "DataManager.h"
+
 @interface UIDoctorListViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
 @property (nonatomic, retain) NSDictionary* clinic;
+@property (nonatomic, retain) NSString* category;
 @property (nonatomic, retain) NSArray* doctors;
 
 - (void)initDoctorListWithCategory:(NSString *)category;
+- (void)filterChanged;
 
 @end
 
@@ -26,10 +30,25 @@
     if (self)
     {
         self.clinic = clinic;
+        self.category = category;
 
         [self initDoctorListWithCategory:category];
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterChanged)  name:@"FILTER_CHANGED" object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
@@ -51,8 +70,15 @@
 {
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[self.clinic[@"docs"] count]];
 
+    NSArray* filter = [DataManager sharedInstance].filter;
+
     for (NSDictionary* doc in self.clinic[@"docs"])
     {
+        NSInteger branch = [doc[@"branch"] integerValue];
+        
+        if (![[filter objectAtIndex:branch] boolValue])
+            continue;
+
         if ([doc[@"speciality"] isEqualToString:category])
         {
             [result addObject:doc];
@@ -60,6 +86,13 @@
     }
 
     self.doctors = [NSArray arrayWithArray:result];
+}
+
+- (void)filterChanged
+{
+    [self initDoctorListWithCategory:self.category];
+    
+    [self.table reloadData];
 }
 
 #pragma mark - Table View Data Source Methods

@@ -16,4 +16,5 @@
 
     #import "Macros.h"
     #import "Utils.h"
+    #import "SynthesizeSingleton.h"
 #endif

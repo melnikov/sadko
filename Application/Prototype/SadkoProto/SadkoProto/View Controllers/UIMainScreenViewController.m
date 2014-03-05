@@ -18,6 +18,8 @@
 #import "UIBranchFilterViewController.h"
 #import "UIBonusCardViewController.h"
 
+#import "DataManager.h"
+
 @interface UIMainScreenViewController ()
 
 @property (nonatomic, retain) IBOutlet UIScrollView* clinicSelector;
@@ -132,6 +134,8 @@
     {
         [self.buttonSymptoms setTitle:@"Что болит?" forState:UIControlStateNormal];
     }
+
+    [[DataManager sharedInstance] resetFilterWithCapacity:[clinic[@"branches"] count]];
 }
 
 #pragma mark - User Interaction
@@ -145,10 +149,10 @@
     panel.bounceOnCenterPanelChange = NO;
     panel.shouldDelegateAutorotateToVisiblePanel = NO;
 
-    UIDoctorCategoryViewController* doctorsScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
-    UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initFromNib];
+    UIDoctorCategoryViewController* categoryScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
+    UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithBranchesInfo:[self.clinics objectAtIndex:self.pageController.currentPage][@"branches"]];
 
-    panel.centerPanel = doctorsScreen;
+    panel.centerPanel = categoryScreen;
     panel.rightPanel = filterScreen;
 
     [self.navigationController pushViewController:panel animated:YES];

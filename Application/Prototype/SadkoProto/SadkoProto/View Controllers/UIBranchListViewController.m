@@ -42,7 +42,7 @@
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
 
-    self.title = @"Подразделения";
+    self.title = @"Филиалы";
 }
 
 #pragma mark - Table View Data Source Methods

@@ -10,6 +10,6 @@
 
 @interface UIBranchFilterViewController : UIBaseViewController
 
-- (id)initWithBranchesInfo:(NSArray*)info;
+- (id)initWithBranchesInfo:(NSArray*)branches;
 
 @end

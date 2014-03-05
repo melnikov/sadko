@@ -132,7 +132,7 @@ static char ja_kvoContext;
 - (void)_baseInit {
     self.style = JASidePanelSingleActive;
     self.leftGapPercentage = 0.8f;
-    self.rightGapPercentage = 0.8f;
+    self.rightGapPercentage = 0.9f;
     self.minimumMovePercentage = 0.15f;
     self.maximumAnimationDuration = 0.2f;
     self.bounceDuration = 0.1f;

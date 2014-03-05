@@ -19,11 +19,26 @@
 
 @implementation UISidePanelViewController
 
+- (void)dealloc
+{
+    self.centerPanel = nil;
+    self.rightPanel = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     [self initTitleLabel];
+
+    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"filter_menu"]
+                                  pressedImage:[UIImage imageNamed:@"filter_menu"]
+                                           block:^
+    {
+        [self toggleRightPanel:nil];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,6 +68,8 @@
                                             block:^
          {
              [self.navigationController popViewControllerAnimated:YES];
+             [self.centerPanel release];
+             [self.rightPanel release];
          }];
     }
 }

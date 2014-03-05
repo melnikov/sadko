@@ -50,7 +50,7 @@
 
     [self initChildControls];
 
-    self.title = @"Подразделение";
+    self.title = @"Филиал";
 }
 
 #pragma mark - Private Methods
