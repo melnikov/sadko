@@ -8,6 +8,8 @@
 
 #import "UIBaseViewController.h"
 
-@interface UIBonusCardViewController : UIBaseViewController
+#import "ZBarSDK.h"
+
+@interface UIBonusCardViewController : UIBaseViewController <UIActionSheetDelegate, UIAlertViewDelegate, ZBarReaderDelegate>
 
 @end

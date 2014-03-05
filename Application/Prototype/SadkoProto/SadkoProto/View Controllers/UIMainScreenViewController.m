@@ -75,7 +75,7 @@
     
     self.callWebView = [[UIWebView alloc] init];
 
-    [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Карта" block:^
+    [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Карты" block:^
     {
         UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
         [self.navigationController pushViewController:bonusVC animated:YES];

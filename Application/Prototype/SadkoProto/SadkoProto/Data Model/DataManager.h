@@ -13,6 +13,7 @@
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(DataManager)
 
 @property (nonatomic, retain) NSMutableArray* filter;
+@property (nonatomic, retain) NSMutableArray* cards;
 
 - (void)resetFilterWithCapacity:(NSInteger)count;
 
