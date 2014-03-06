@@ -8,8 +8,6 @@
 
 #import "UIBonusCardViewController.h"
 
-#import "UIAddBonusCardViewController.h"
-
 #import "DataManager.h"
 
 @interface UIBonusCardViewController ()

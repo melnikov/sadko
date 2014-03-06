@@ -918,7 +918,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zeon/Documents/Work/sadko/src/Application/Prototype/SadkoProto/SadkoProto/External/ZBarSDK,
+					"$(SRCROOT)/SadkoProto/External/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "D9BEA6A9-98AB-4069-88D2-88D15940A765";
@@ -942,7 +942,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/zeon/Documents/Work/sadko/src/Application/Prototype/SadkoProto/SadkoProto/External/ZBarSDK,
+					"$(SRCROOT)/SadkoProto/External/ZBarSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "D9BEA6A9-98AB-4069-88D2-88D15940A765";
