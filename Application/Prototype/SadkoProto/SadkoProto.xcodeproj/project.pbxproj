@@ -38,6 +38,28 @@
 		274BEF7218B1654C00C49814 /* SadkoProtoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 274BEF7118B1654C00C49814 /* SadkoProtoTests.m */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
+		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
+		2795D1AA18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17F18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m */; };
+		2795D1AB18C930F4006CEF6F /* NKDBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18118C930F4006CEF6F /* NKDBarcode.m */; };
+		2795D1AC18C930F4006CEF6F /* NKDBarcodeOffscreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18418C930F4006CEF6F /* NKDBarcodeOffscreenView.m */; };
+		2795D1AD18C930F4006CEF6F /* NKDCodabarBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18618C930F4006CEF6F /* NKDCodabarBarcode.m */; };
+		2795D1AE18C930F4006CEF6F /* NKDCode128Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18818C930F4006CEF6F /* NKDCode128Barcode.m */; };
+		2795D1AF18C930F4006CEF6F /* NKDCode39Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18A18C930F4006CEF6F /* NKDCode39Barcode.m */; };
+		2795D1B018C930F4006CEF6F /* NKDEAN13Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18C18C930F4006CEF6F /* NKDEAN13Barcode.m */; };
+		2795D1B118C930F4006CEF6F /* NKDEAN8Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D18E18C930F4006CEF6F /* NKDEAN8Barcode.m */; };
+		2795D1B218C930F4006CEF6F /* NKDExtendedCode39Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19018C930F4006CEF6F /* NKDExtendedCode39Barcode.m */; };
+		2795D1B318C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19218C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.m */; };
+		2795D1B418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m */; };
+		2795D1B518C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19618C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m */; };
+		2795D1B618C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19818C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m */; };
+		2795D1B718C930F4006CEF6F /* NKDPlanetBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19A18C930F4006CEF6F /* NKDPlanetBarcode.m */; };
+		2795D1B818C930F4006CEF6F /* NKDPostnetBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19C18C930F4006CEF6F /* NKDPostnetBarcode.m */; };
+		2795D1B918C930F4006CEF6F /* NKDRoyalMailBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D19E18C930F4006CEF6F /* NKDRoyalMailBarcode.m */; };
+		2795D1BA18C930F4006CEF6F /* NKDUPCABarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D1A018C930F4006CEF6F /* NKDUPCABarcode.m */; };
+		2795D1BB18C930F4006CEF6F /* NKDUPCEBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D1A218C930F4006CEF6F /* NKDUPCEBarcode.m */; };
+		2795D1BC18C930F4006CEF6F /* NSString-UPCEAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D1A418C930F4006CEF6F /* NSString-UPCEAN.m */; };
+		2795D1BD18C930F4006CEF6F /* UIImage-NKDBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D1A618C930F4006CEF6F /* UIImage-NKDBarcode.m */; };
+		2795D1BE18C930F4006CEF6F /* UIImage-Normalize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D1A818C930F4006CEF6F /* UIImage-Normalize.m */; };
 		27B9503518B6995A00EDBE52 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503218B6995A00EDBE52 /* banner.png */; };
 		27B9503618B6995A00EDBE52 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503318B6995A00EDBE52 /* banner@2x.png */; };
 		27B9503718B6995A00EDBE52 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503418B6995A00EDBE52 /* logo.png */; };
@@ -172,6 +194,51 @@
 		274BEF7118B1654C00C49814 /* SadkoProtoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SadkoProtoTests.m; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
+		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
+		2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JapanPostBarcode.m; sourceTree = "<group>"; };
+		2795D17E18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDAbstractUPCEANBarcode.h; sourceTree = "<group>"; };
+		2795D17F18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDAbstractUPCEANBarcode.m; sourceTree = "<group>"; };
+		2795D18018C930F4006CEF6F /* NKDBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDBarcode.h; sourceTree = "<group>"; };
+		2795D18118C930F4006CEF6F /* NKDBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDBarcode.m; sourceTree = "<group>"; };
+		2795D18218C930F4006CEF6F /* NKDBarcodeFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDBarcodeFramework.h; sourceTree = "<group>"; };
+		2795D18318C930F4006CEF6F /* NKDBarcodeOffscreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDBarcodeOffscreenView.h; sourceTree = "<group>"; };
+		2795D18418C930F4006CEF6F /* NKDBarcodeOffscreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDBarcodeOffscreenView.m; sourceTree = "<group>"; };
+		2795D18518C930F4006CEF6F /* NKDCodabarBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDCodabarBarcode.h; sourceTree = "<group>"; };
+		2795D18618C930F4006CEF6F /* NKDCodabarBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDCodabarBarcode.m; sourceTree = "<group>"; };
+		2795D18718C930F4006CEF6F /* NKDCode128Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDCode128Barcode.h; sourceTree = "<group>"; };
+		2795D18818C930F4006CEF6F /* NKDCode128Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDCode128Barcode.m; sourceTree = "<group>"; };
+		2795D18918C930F4006CEF6F /* NKDCode39Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDCode39Barcode.h; sourceTree = "<group>"; };
+		2795D18A18C930F4006CEF6F /* NKDCode39Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDCode39Barcode.m; sourceTree = "<group>"; };
+		2795D18B18C930F4006CEF6F /* NKDEAN13Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDEAN13Barcode.h; sourceTree = "<group>"; };
+		2795D18C18C930F4006CEF6F /* NKDEAN13Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDEAN13Barcode.m; sourceTree = "<group>"; };
+		2795D18D18C930F4006CEF6F /* NKDEAN8Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDEAN8Barcode.h; sourceTree = "<group>"; };
+		2795D18E18C930F4006CEF6F /* NKDEAN8Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDEAN8Barcode.m; sourceTree = "<group>"; };
+		2795D18F18C930F4006CEF6F /* NKDExtendedCode39Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDExtendedCode39Barcode.h; sourceTree = "<group>"; };
+		2795D19018C930F4006CEF6F /* NKDExtendedCode39Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDExtendedCode39Barcode.m; sourceTree = "<group>"; };
+		2795D19118C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDIndustrialTwoOfFiveBarcode.h; sourceTree = "<group>"; };
+		2795D19218C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDIndustrialTwoOfFiveBarcode.m; sourceTree = "<group>"; };
+		2795D19318C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDInterleavedTwoOfFiveBarcode.h; sourceTree = "<group>"; };
+		2795D19418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDInterleavedTwoOfFiveBarcode.m; sourceTree = "<group>"; };
+		2795D19518C930F4006CEF6F /* NKDModifiedPlesseyBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDModifiedPlesseyBarcode.h; sourceTree = "<group>"; };
+		2795D19618C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDModifiedPlesseyBarcode.m; sourceTree = "<group>"; };
+		2795D19718C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDModifiedPlesseyHexBarcode.h; sourceTree = "<group>"; };
+		2795D19818C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDModifiedPlesseyHexBarcode.m; sourceTree = "<group>"; };
+		2795D19918C930F4006CEF6F /* NKDPlanetBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDPlanetBarcode.h; sourceTree = "<group>"; };
+		2795D19A18C930F4006CEF6F /* NKDPlanetBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDPlanetBarcode.m; sourceTree = "<group>"; };
+		2795D19B18C930F4006CEF6F /* NKDPostnetBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDPostnetBarcode.h; sourceTree = "<group>"; };
+		2795D19C18C930F4006CEF6F /* NKDPostnetBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDPostnetBarcode.m; sourceTree = "<group>"; };
+		2795D19D18C930F4006CEF6F /* NKDRoyalMailBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDRoyalMailBarcode.h; sourceTree = "<group>"; };
+		2795D19E18C930F4006CEF6F /* NKDRoyalMailBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDRoyalMailBarcode.m; sourceTree = "<group>"; };
+		2795D19F18C930F4006CEF6F /* NKDUPCABarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDUPCABarcode.h; sourceTree = "<group>"; };
+		2795D1A018C930F4006CEF6F /* NKDUPCABarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDUPCABarcode.m; sourceTree = "<group>"; };
+		2795D1A118C930F4006CEF6F /* NKDUPCEBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKDUPCEBarcode.h; sourceTree = "<group>"; };
+		2795D1A218C930F4006CEF6F /* NKDUPCEBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKDUPCEBarcode.m; sourceTree = "<group>"; };
+		2795D1A318C930F4006CEF6F /* NSString-UPCEAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString-UPCEAN.h"; sourceTree = "<group>"; };
+		2795D1A418C930F4006CEF6F /* NSString-UPCEAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString-UPCEAN.m"; sourceTree = "<group>"; };
+		2795D1A518C930F4006CEF6F /* UIImage-NKDBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-NKDBarcode.h"; sourceTree = "<group>"; };
+		2795D1A618C930F4006CEF6F /* UIImage-NKDBarcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-NKDBarcode.m"; sourceTree = "<group>"; };
+		2795D1A718C930F4006CEF6F /* UIImage-Normalize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage-Normalize.h"; sourceTree = "<group>"; };
+		2795D1A818C930F4006CEF6F /* UIImage-Normalize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage-Normalize.m"; sourceTree = "<group>"; };
 		27B9503218B6995A00EDBE52 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
 		27B9503318B6995A00EDBE52 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
 		27B9503418B6995A00EDBE52 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -444,6 +511,58 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2795D17B18C930F4006CEF6F /* Barcodes */ = {
+			isa = PBXGroup;
+			children = (
+				2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */,
+				2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */,
+				2795D17E18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.h */,
+				2795D17F18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m */,
+				2795D18018C930F4006CEF6F /* NKDBarcode.h */,
+				2795D18118C930F4006CEF6F /* NKDBarcode.m */,
+				2795D18218C930F4006CEF6F /* NKDBarcodeFramework.h */,
+				2795D18318C930F4006CEF6F /* NKDBarcodeOffscreenView.h */,
+				2795D18418C930F4006CEF6F /* NKDBarcodeOffscreenView.m */,
+				2795D18518C930F4006CEF6F /* NKDCodabarBarcode.h */,
+				2795D18618C930F4006CEF6F /* NKDCodabarBarcode.m */,
+				2795D18718C930F4006CEF6F /* NKDCode128Barcode.h */,
+				2795D18818C930F4006CEF6F /* NKDCode128Barcode.m */,
+				2795D18918C930F4006CEF6F /* NKDCode39Barcode.h */,
+				2795D18A18C930F4006CEF6F /* NKDCode39Barcode.m */,
+				2795D18B18C930F4006CEF6F /* NKDEAN13Barcode.h */,
+				2795D18C18C930F4006CEF6F /* NKDEAN13Barcode.m */,
+				2795D18D18C930F4006CEF6F /* NKDEAN8Barcode.h */,
+				2795D18E18C930F4006CEF6F /* NKDEAN8Barcode.m */,
+				2795D18F18C930F4006CEF6F /* NKDExtendedCode39Barcode.h */,
+				2795D19018C930F4006CEF6F /* NKDExtendedCode39Barcode.m */,
+				2795D19118C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.h */,
+				2795D19218C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.m */,
+				2795D19318C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.h */,
+				2795D19418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m */,
+				2795D19518C930F4006CEF6F /* NKDModifiedPlesseyBarcode.h */,
+				2795D19618C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m */,
+				2795D19718C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.h */,
+				2795D19818C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m */,
+				2795D19918C930F4006CEF6F /* NKDPlanetBarcode.h */,
+				2795D19A18C930F4006CEF6F /* NKDPlanetBarcode.m */,
+				2795D19B18C930F4006CEF6F /* NKDPostnetBarcode.h */,
+				2795D19C18C930F4006CEF6F /* NKDPostnetBarcode.m */,
+				2795D19D18C930F4006CEF6F /* NKDRoyalMailBarcode.h */,
+				2795D19E18C930F4006CEF6F /* NKDRoyalMailBarcode.m */,
+				2795D19F18C930F4006CEF6F /* NKDUPCABarcode.h */,
+				2795D1A018C930F4006CEF6F /* NKDUPCABarcode.m */,
+				2795D1A118C930F4006CEF6F /* NKDUPCEBarcode.h */,
+				2795D1A218C930F4006CEF6F /* NKDUPCEBarcode.m */,
+				2795D1A318C930F4006CEF6F /* NSString-UPCEAN.h */,
+				2795D1A418C930F4006CEF6F /* NSString-UPCEAN.m */,
+				2795D1A518C930F4006CEF6F /* UIImage-NKDBarcode.h */,
+				2795D1A618C930F4006CEF6F /* UIImage-NKDBarcode.m */,
+				2795D1A718C930F4006CEF6F /* UIImage-Normalize.h */,
+				2795D1A818C930F4006CEF6F /* UIImage-Normalize.m */,
+			);
+			path = Barcodes;
+			sourceTree = "<group>";
+		};
 		27B9503E18B6ABCC00EDBE52 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +670,7 @@
 		60ACF4F918B6273B00A16C2F /* External */ = {
 			isa = PBXGroup;
 			children = (
+				2795D17B18C930F4006CEF6F /* Barcodes */,
 				2716785118C6FD4A00D289E8 /* ZBarSDK */,
 				60F96E1618C0C4F0003FB8E6 /* JASidePanel */,
 				6096A40C18BB74D9008064FC /* MBProgressHUD */,
@@ -770,31 +890,53 @@
 				6096A40B18BB6EFA008064FC /* Utils.m in Sources */,
 				6036753518BC901A008D2CB5 /* UIInfoViewController.m in Sources */,
 				60F96E1518C0AAE1003FB8E6 /* Service.m in Sources */,
+				2795D1B718C930F4006CEF6F /* NKDPlanetBarcode.m in Sources */,
 				6096A40F18BB74D9008064FC /* MBProgressHUD.m in Sources */,
 				60ACF53418B643D400A16C2F /* UIQuestionAnswerViewController.m in Sources */,
+				2795D1B918C930F4006CEF6F /* NKDRoyalMailBarcode.m in Sources */,
+				2795D1BE18C930F4006CEF6F /* UIImage-Normalize.m in Sources */,
+				2795D1B818C930F4006CEF6F /* NKDPostnetBarcode.m in Sources */,
 				60F96E2318C0C8AE003FB8E6 /* UIBranchFilterViewController.m in Sources */,
 				60ACF4F718B6264C00A16C2F /* NSString+Helper.m in Sources */,
+				2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */,
+				2795D1AB18C930F4006CEF6F /* NKDBarcode.m in Sources */,
+				2795D1AF18C930F4006CEF6F /* NKDCode39Barcode.m in Sources */,
+				2795D1AC18C930F4006CEF6F /* NKDBarcodeOffscreenView.m in Sources */,
+				2795D1B318C930F4006CEF6F /* NKDIndustrialTwoOfFiveBarcode.m in Sources */,
 				27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */,
+				2795D1BD18C930F4006CEF6F /* UIImage-NKDBarcode.m in Sources */,
 				60ACF4F818B6264C00A16C2F /* UIImage+Extensions.m in Sources */,
+				2795D1AA18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m in Sources */,
 				60ACF51618B6411B00A16C2F /* UIDoctorDetailsViewController.m in Sources */,
+				2795D1B018C930F4006CEF6F /* NKDEAN13Barcode.m in Sources */,
 				60ACF53E18B6446100A16C2F /* UIBranchListViewController.m in Sources */,
 				60ACF50C18B640BF00A16C2F /* UIDoctorCategoryViewController.m in Sources */,
 				60ACF52518B641EC00A16C2F /* UINewsViewController.m in Sources */,
+				2795D1B118C930F4006CEF6F /* NKDEAN8Barcode.m in Sources */,
 				60F96E1C18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m in Sources */,
+				2795D1B418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m in Sources */,
 				60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */,
+				2795D1BA18C930F4006CEF6F /* NKDUPCABarcode.m in Sources */,
+				2795D1B218C930F4006CEF6F /* NKDExtendedCode39Barcode.m in Sources */,
 				60D3CE9A18C0CEE600A80AAD /* UISidePanelViewController.m in Sources */,
 				60ACF52A18B6420700A16C2F /* UINewsDetailsViewController.m in Sources */,
+				2795D1AD18C930F4006CEF6F /* NKDCodabarBarcode.m in Sources */,
 				60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */,
 				60ACF52018B641CF00A16C2F /* UIServiceDetailsViewController.m in Sources */,
 				274BEF5D18B1654C00C49814 /* AppDelegate.m in Sources */,
 				60ACF52F18B643B900A16C2F /* UITopTenQuestionsViewController.m in Sources */,
 				6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */,
+				2795D1B618C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m in Sources */,
 				60ACF51B18B641B200A16C2F /* UIServiceListViewController.m in Sources */,
+				2795D1BC18C930F4006CEF6F /* NSString-UPCEAN.m in Sources */,
 				6036753A18BCB063008D2CB5 /* UIMapViewController.m in Sources */,
+				2795D1BB18C930F4006CEF6F /* NKDUPCEBarcode.m in Sources */,
 				60ACF51118B640D100A16C2F /* UIDoctorListViewController.m in Sources */,
 				60F96E1B18C0C4F0003FB8E6 /* JASidePanelController.m in Sources */,
 				274BEF5918B1654C00C49814 /* main.m in Sources */,
 				60ACF53918B6441000A16C2F /* UISymptomsViewController.m in Sources */,
+				2795D1AE18C930F4006CEF6F /* NKDCode128Barcode.m in Sources */,
+				2795D1B518C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m in Sources */,
 				2716785018C6E24900D289E8 /* DataManager.m in Sources */,
 				60ACF50718B6405E00A16C2F /* UIAboutViewController.m in Sources */,
 			);

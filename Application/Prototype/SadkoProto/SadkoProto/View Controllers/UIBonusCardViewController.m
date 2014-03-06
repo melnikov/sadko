@@ -10,20 +10,27 @@
 
 #import "DataManager.h"
 
+#import "UIImage-NKDBarcode.h"
+#import "NKDEAN13Barcode.h"
+
 @interface UIBonusCardViewController ()
 
 #define ACTION_SHEET_TAG          111
 #define ALERT_MANUAL_ENTER_TAG    222
 #define ALERT_SCAN_RESULT_TAG     333
 
-@property (nonatomic, retain) IBOutlet UITableView* table;
 @property (nonatomic, retain) IBOutlet UILabel* emptyLabel;
+@property (nonatomic, retain) IBOutlet UIImageView* barCodeImage;
+@property (nonatomic, retain) IBOutlet UILabel* barCodeLabel;
+@property (nonatomic, retain) IBOutlet UILabel* prompt;
 
 @property (nonatomic, retain) NSString* lastScanned;
 
 @property (nonatomic, retain) ZBarReaderViewController* reader;
 
 - (void)addCardButtonPressed;
+- (BOOL)validateManualCode:(NSString*)code;
+- (void)updateChildControls;
 
 @end
 
@@ -32,51 +39,98 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.table.backgroundView = nil;
-    self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
-    self.table.backgroundColor = [UIColor clearColor];
-    self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.table.separatorColor = [UIColor whiteColor];
     
     self.title = @"Карта";
-
-    [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Добавить" block:^
-    {
-        [self addCardButtonPressed];
-    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
-    NSArray* cards = [DataManager sharedInstance].cards;
-
-    if (!cards || ([cards count] == 0))
-    {
-        self.emptyLabel.hidden = NO;
-        self.table.hidden = YES;
-    }
-    else
-    {
-        self.emptyLabel.hidden = YES;
-        self.table.hidden = NO;
-    }
-
-    [self.table reloadData];
+    [self updateChildControls];
 }
 
 #pragma mark - Private Methods
 
 - (void)addCardButtonPressed
 {
-    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
-                            @"Ввести код вручную",
-                            @"Сканировать код",
-                            nil];
+    NSString* code = [DataManager sharedInstance].card;
+    UIActionSheet *popup = nil;
+
+    if (code && [code length] > 0)
+    {
+        popup = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                 @"Ввести код вручную",
+                 @"Сканировать код",
+                 @"Удалить текущую карту",
+                 nil];
+    }
+    else
+    {
+        popup = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                 @"Ввести код вручную",
+                 @"Сканировать код",
+                 nil];
+    }
     popup.tag = ACTION_SHEET_TAG;
     [popup showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (void)updateChildControls
+{
+    NSString* code = [DataManager sharedInstance].card;
+
+    if (code && [code length] > 0)
+    {
+        self.emptyLabel.hidden = YES;
+        self.prompt.hidden = NO;
+        self.barCodeImage.hidden = NO;
+        self.barCodeLabel.hidden = NO;
+
+        NKDBarcode* nkdbarcode = [[NKDEAN13Barcode alloc] initWithContent:code];
+        UIImage* image = [UIImage imageFromBarcode:nkdbarcode];
+        CGSize size = image.size;
+
+        self.barCodeImage.frame = CGRectMake((self.view.frame.size.width - size.width) / 2, (self.view.frame.size.height - size.height) / 2, size.width, size.height);
+        self.barCodeImage.image = image;
+
+        self.barCodeLabel.frame = CGRectMake(0, self.barCodeImage.frame.origin.y + self.barCodeImage.frame.size.height + 10.0f, self.view.frame.size.width, 44.0f);
+        self.barCodeLabel.text = code;
+
+        [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Изменить" block:^
+        {
+            [self addCardButtonPressed];
+        }];
+    }
+    else
+    {
+        self.emptyLabel.hidden = NO;
+        self.prompt.hidden = YES;
+        self.barCodeImage.hidden = YES;
+        self.barCodeLabel.hidden = YES;
+
+        self.barCodeImage.image = nil;
+        self.barCodeLabel.text = nil;
+
+        [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Добавить" block:^
+        {
+            [self addCardButtonPressed];
+        }];
+    }
+}
+
+- (BOOL)validateManualCode:(NSString *)code
+{
+    if (!code || ([code length] == 0))
+        return NO;
+
+    NSCharacterSet* digits = [NSCharacterSet decimalDigitCharacterSet];
+    NSCharacterSet* stringSet = [NSCharacterSet characterSetWithCharactersInString:code];
+    
+    if (![digits isSupersetOfSet: stringSet])
+        return NO;
+
+    return YES;
 }
 
 #pragma mark - Action Sheet Delegate Methods
@@ -107,8 +161,14 @@
                 self.reader.readerDelegate = self;
                 self.reader.readerView.zoom = 1.0f;
                 [self presentViewController:self.reader animated:YES completion:nil];
-            }
                 break;
+            }
+            case 2:
+            {
+                [DataManager sharedInstance].card = nil;
+                [self updateChildControls];
+                break;
+            }
             default:
                 break;
         }
@@ -123,18 +183,16 @@
     {
         if (buttonIndex == 1)
         {
-            if([[alertView textFieldAtIndex:0].text length] > 0)
+            NSString* code = [alertView textFieldAtIndex:0].text;
+            if ([self validateManualCode:code])
             {
-                NSString* value = [alertView textFieldAtIndex:0].text;
-                [[DataManager sharedInstance].cards addObject:value];
+                [DataManager sharedInstance].card = [alertView textFieldAtIndex:0].text;
 
-                self.table.hidden = NO;
-                self.emptyLabel.hidden = YES;
-                [self.table reloadData];
+                [self updateChildControls];
             }
             else
             {
-                UIAlertView  *errorMessage = [[UIAlertView alloc]initWithTitle:@"Ошибка" message:@"Код карты введен неверно" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                UIAlertView  *errorMessage = [[UIAlertView alloc]initWithTitle:@"Ошибка" message:@"Код карты введен неверно. Для ввода карты используйте только цифры." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [errorMessage show];
             }
         }
@@ -143,47 +201,13 @@
     {
         if (buttonIndex == 1)
         {
-            [[DataManager sharedInstance].cards addObject:self.lastScanned];
-            self.table.hidden = NO;
-            self.emptyLabel.hidden = YES;
-            [self.table reloadData];
+            [DataManager sharedInstance].card = self.lastScanned;
+
+            [self updateChildControls];
         }
 
         self.lastScanned = nil;
     }
-}
-
-#pragma mark - Table View Data Source Methods
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [[DataManager sharedInstance].cards count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString* kMenuCellId = @"DoctorsCell";
-    
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:kMenuCellId];
-    
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.textColor = [UIColor blackColor];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    
-    cell.textLabel.text = [[DataManager sharedInstance].cards objectAtIndex:indexPath.row];
-    
-    return cell;
-}
-
-#pragma mark - Table View Delegate Methods
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - ZBar Reader Delegate Methods
@@ -198,7 +222,7 @@
     {
         self.lastScanned = symbol.data;
 
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Добавление карты" message:[NSString stringWithFormat:@"Добавить карту %@?", self.lastScanned] delegate:self cancelButtonTitle:@"Отмена" otherButtonTitles:@"ОК", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Дисконтная карта" message:[NSString stringWithFormat:@"Добавить карту %@?", self.lastScanned] delegate:self cancelButtonTitle:@"Отмена" otherButtonTitles:@"ОК", nil];
         alert.tag = ALERT_SCAN_RESULT_TAG;
         [alert show];
 

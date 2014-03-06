@@ -21,7 +21,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataManager)
     if (self)
     {
         self.filter = nil;
-        self.cards = [[NSMutableArray alloc] init];
+        self.card = nil;
     }
     
     return self;
