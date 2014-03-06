@@ -12,8 +12,14 @@
 
 @interface UIBonusCardViewController ()
 
+#define ACTION_SHEET_TAG          111
+#define ALERT_MANUAL_ENTER_TAG    222
+#define ALERT_SCAN_RESULT_TAG     333
+
 @property (nonatomic, retain) IBOutlet UITableView* table;
 @property (nonatomic, retain) IBOutlet UILabel* emptyLabel;
+
+@property (nonatomic, retain) NSString* lastScanned;
 
 @property (nonatomic, retain) ZBarReaderViewController* reader;
 
@@ -69,7 +75,7 @@
                             @"Ввести код вручную",
                             @"Сканировать код",
                             nil];
-    popup.tag = 111;
+    popup.tag = ACTION_SHEET_TAG;
     [popup showInView:[UIApplication sharedApplication].keyWindow];
 }
 
@@ -77,7 +83,7 @@
 
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (popup.tag == 111)
+    if (popup.tag == ACTION_SHEET_TAG)
     {
         switch (buttonIndex)
         {
@@ -89,12 +95,14 @@
                                                        cancelButtonTitle:@"Отмена"
                                                       otherButtonTitles:@"ОК", nil];
                 [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-                alert.tag = 222;
+                alert.tag = ALERT_MANUAL_ENTER_TAG;
                 [alert show];
                 break;
             }
             case 1:
             {
+                self.lastScanned = nil;
+
                 self.reader = [ZBarReaderViewController new];
                 self.reader.readerDelegate = self;
                 self.reader.readerView.zoom = 1.0f;
@@ -111,7 +119,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (alertView.tag == 222)
+    if (alertView.tag == ALERT_MANUAL_ENTER_TAG)
     {
         if (buttonIndex == 1)
         {
@@ -130,6 +138,18 @@
                 [errorMessage show];
             }
         }
+    }
+    else if (alertView.tag == ALERT_SCAN_RESULT_TAG)
+    {
+        if (buttonIndex == 1)
+        {
+            [[DataManager sharedInstance].cards addObject:self.lastScanned];
+            self.table.hidden = NO;
+            self.emptyLabel.hidden = YES;
+            [self.table reloadData];
+        }
+
+        self.lastScanned = nil;
     }
 }
 
@@ -166,6 +186,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark - ZBar Reader Delegate Methods
+
 - (void) imagePickerController: (UIImagePickerController*) reader didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
     id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
@@ -174,12 +196,15 @@
     
     for(symbol in results)
     {
-        NSString *upcString = symbol.data;
-        [[DataManager sharedInstance].cards addObject:upcString];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Добавление карты" message:[NSString stringWithFormat:@"Добавлена карта: %@", upcString] delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        self.lastScanned = symbol.data;
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Добавление карты" message:[NSString stringWithFormat:@"Добавить карту %@?", self.lastScanned] delegate:self cancelButtonTitle:@"Отмена" otherButtonTitles:@"ОК", nil];
+        alert.tag = ALERT_SCAN_RESULT_TAG;
         [alert show];
+
         [self.reader dismissViewControllerAnimated:YES completion:nil];
-        break;
+
+        break; //We need only the first one
     }
 }
 
