@@ -43,6 +43,8 @@
     self.callWebView = [[UIWebView alloc] init];
     self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 500);
 
+    self.callButton.layer.cornerRadius = 3.0f;
+
     [self initChildControls];
 
     self.title = @"Врач";

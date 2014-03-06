@@ -17,4 +17,5 @@
     #import "Macros.h"
     #import "Utils.h"
     #import "SynthesizeSingleton.h"
+    #import <QuartzCore/QuartzCore.h>
 #endif

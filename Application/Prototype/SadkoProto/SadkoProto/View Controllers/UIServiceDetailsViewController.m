@@ -55,6 +55,8 @@
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
 
+    self.callButton.layer.cornerRadius = 3.0f;
+
     self.title = @"Услуга";
 }
 

@@ -75,6 +75,19 @@
     
     self.callWebView = [[UIWebView alloc] init];
 
+    self.buttonDoctors.layer.cornerRadius = 3.0f;
+    self.buttonAbout.layer.cornerRadius = 3.0f;
+    self.buttonServices.layer.cornerRadius = 3.0f;
+    self.buttonNews.layer.cornerRadius = 3.0f;
+    self.buttonSymptoms.layer.cornerRadius = 3.0f;
+    self.buttonContacts.layer.cornerRadius = 3.0f;
+
+    self.buttonCallUs.layer.cornerRadius = 3.0f;
+    
+    self.buttonNews.titleLabel.numberOfLines = 0;
+    self.buttonNews.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonNews.titleLabel.textAlignment = NSTextAlignmentCenter;
+
     [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Карты" block:^
     {
         UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
