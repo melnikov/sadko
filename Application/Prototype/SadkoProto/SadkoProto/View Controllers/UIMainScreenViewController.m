@@ -3,8 +3,6 @@
 //  SadkoProto
 //
 
-#import "UISidePanelViewController.h"
-
 #import "UIMainScreenViewController.h"
 
 #import "UIAboutViewController.h"
@@ -40,8 +38,6 @@
 @property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initClinics;
-
-- (IBAction)bonusCardButtonPressed:(id)sender;
 
 @end
 
@@ -88,7 +84,7 @@
     self.buttonNews.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.buttonNews.titleLabel.textAlignment = NSTextAlignmentCenter;
 
-    [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Карты" block:^
+    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"next"] pressedImage:[UIImage imageNamed:@"next"] title:@"Карта" block:^
     {
         UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
         [self.navigationController pushViewController:bonusVC animated:YES];
@@ -155,20 +151,8 @@
 
 - (IBAction)buttonDoctorsPressed:(id)sender
 {
-    UISidePanelViewController* panel = [[UISidePanelViewController alloc] init];
-
-    panel.bounceOnSidePanelOpen = NO;
-    panel.bounceOnSidePanelClose = NO;
-    panel.bounceOnCenterPanelChange = NO;
-    panel.shouldDelegateAutorotateToVisiblePanel = NO;
-
     UIDoctorCategoryViewController* categoryScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
-    UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithBranchesInfo:[self.clinics objectAtIndex:self.pageController.currentPage][@"branches"]];
-
-    panel.centerPanel = categoryScreen;
-    panel.rightPanel = filterScreen;
-
-    [self.navigationController pushViewController:panel animated:YES];
+    [self.navigationController pushViewController:categoryScreen animated:YES];
 }
 
 - (IBAction)buttonAboutPressed:(id)sender
@@ -234,11 +218,6 @@
         [alertView show];
         [alertView release];
     }
-}
-
-- (void)bonusCardButtonPressed:(id)sender
-{
-    
 }
 
 @end

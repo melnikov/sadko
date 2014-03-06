@@ -3,12 +3,10 @@
 //  SadkoProto
 //
 
-#import "UISidePanelViewController.h"
-
 #import "UIDoctorCategoryViewController.h"
 
-#import "UIDoctorListViewController.h"
 #import "UIBranchFilterViewController.h"
+#import "UIDoctorListViewController.h"
 
 #import "DataManager.h"
 
@@ -20,7 +18,6 @@
 @property (nonatomic, retain) NSArray* categories;
 
 - (void)initCategoryListWithArray:(NSArray*)docs;
-- (void)filterChanged;
 
 @end
 
@@ -32,26 +29,10 @@
     if (self)
     {
         self.clinic = clinic;
+
+        [self initCategoryListWithArray:self.clinic[@"docs"]];
     }
     return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterChanged)  name:@"FILTER_CHANGED" object:nil];
-
-    [self initCategoryListWithArray:self.clinic[@"docs"]];
-    
-    [self.table reloadData];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
@@ -64,7 +45,7 @@
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
     
-    self.title = @"Cпециальность";
+    self.title = @"Cпециальности";
 }
 
 #pragma mark - Private Methods
@@ -73,15 +54,8 @@
 {
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[docs count]];
 
-    NSArray* filter = [DataManager sharedInstance].filter;
-
     for (NSDictionary* doc in docs)
     {
-        NSInteger branch = [doc[@"branch"] integerValue];
-
-        if (![[filter objectAtIndex:branch] boolValue])
-            continue;
-
         NSString* category = doc[@"speciality"];
         NSInteger i = 0;
         for (i = 0; i < [result count]; ++i)
@@ -98,13 +72,6 @@
     }
 
     self.categories = [NSArray arrayWithArray:result];
-}
-
-- (void)filterChanged
-{
-    [self initCategoryListWithArray:self.clinic[@"docs"]];
-    
-    [self.table reloadData];
 }
 
 #pragma mark - Table View Data Source Methods
@@ -137,20 +104,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UISidePanelViewController* panel = [[UISidePanelViewController alloc] init];
+    NSArray* branches = self.clinic[@"branches"];
     
-    panel.bounceOnSidePanelOpen = NO;
-    panel.bounceOnSidePanelClose = NO;
-    panel.bounceOnCenterPanelChange = NO;
-    panel.shouldDelegateAutorotateToVisiblePanel = NO;
-    
-    UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
-    UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithBranchesInfo:self.clinic[@"branches"]];
-    
-    panel.centerPanel = docList;
-    panel.rightPanel = filterScreen;
-    
-    [self.navigationController pushViewController:panel animated:YES];
+    if ([branches count] > 1)
+    {
+        UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithClinicInfo:self.clinic];
+        filterScreen.category = [self.categories objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:filterScreen animated:YES];
+    }
+    else if ([branches count] > 0)
+    {
+        UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
+        [self.navigationController pushViewController:docList animated:YES];
+    }
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

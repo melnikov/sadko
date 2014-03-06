@@ -41,7 +41,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Имплантация  &quot;Центр развития стоматологии &quot;САДКО&quot;</string>
+				<string>Центр развития стоматологии &quot;САДКО&quot;</string>
 				<key>address</key>
 				<string>ул. Бекетова, 13</string>
 				<key>phone</key>
@@ -58,7 +58,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Имплантация  &quot;Нижегородское отделение сети клиник &quot;САДКО&quot;</string>
+				<string>Нижегородское отделение сети клиник &quot;САДКО&quot;</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -1320,7 +1320,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Лечебно-диагностический центр &quot;Садко&quot; на Бекетова</string>
+				<string>Филиал на Бекетова</string>
 				<key>address</key>
 				<string>ул. Бекетова,13</string>
 				<key>phone</key>
@@ -1337,7 +1337,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Лечебно-диагностический центр &quot;Садко&quot; на Родионова</string>
+				<string>Филиал на Родионова</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -1354,7 +1354,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Лечебно-диагностический центр «Садко» на проспекте Ленина</string>
+				<string>Филиал на проспекте Ленина</string>
 				<key>address</key>
 				<string>пр. Ленина, 67/1</string>
 				<key>phone</key>
@@ -1371,7 +1371,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Лечебно-диагностический центр «Садко» в Сормово</string>
+				<string>Филиал в Сормово</string>
 				<key>address</key>
 				<string>СОРМОВСКОЕ ШОССЕ, 20</string>
 				<key>phone</key>

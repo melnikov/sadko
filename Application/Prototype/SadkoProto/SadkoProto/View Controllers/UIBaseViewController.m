@@ -170,13 +170,21 @@
     UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     [button addTarget:self action:@selector(rightBarButtonItemWasClicked) forControlEvents:UIControlEventTouchUpInside];
     
-    [button.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
-    [button.titleLabel setAdjustsFontSizeToFitWidth:[button frame].size.width];
+    button.contentMode = UIViewContentModeRight;
+    [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14]];
+    [button.titleLabel setAdjustsFontSizeToFitWidth:button.frame.size.width];;
     
     [button setTitleColor:[UIColor whiteColor]            forState:UIControlStateNormal];
-    [button setBackgroundImage:image                      forState:UIControlStateNormal];
-    [button setBackgroundImage:pressedImage               forState:UIControlStateSelected];
     [button setTitle:title                                forState:UIControlStateNormal];
+    [button setImage:image                      forState:UIControlStateNormal];
+    [button setImage:pressedImage               forState:UIControlStateSelected];
+    
+    button.imageEdgeInsets = UIEdgeInsetsMake(0., button.frame.size.width - (image.size.width/* + 15.*/), 0., 0.);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0., 0., 0., image.size.width);
+
+    button.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+
+    button.backgroundColor = [UIColor clearColor];
     
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:button];
     

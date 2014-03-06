@@ -39,7 +39,7 @@
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
     
-    self.title = @"Карты";
+    self.title = @"Карта";
 
     [self setRightNavigationBarButtonWithImage:nil pressedImage:nil title:@"Добавить" block:^
     {

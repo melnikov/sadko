@@ -8,12 +8,15 @@
 
 #import "UIBranchFilterViewController.h"
 
+#import "UIDoctorListViewController.h"
+
 #import "DataManager.h"
 
 @interface UIBranchFilterViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
+@property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSArray* branches;
 
 - (void)filterChanged;
@@ -22,23 +25,15 @@
 
 @implementation UIBranchFilterViewController
 
-- (id)initWithBranchesInfo:(NSArray *)branches
+- (id)initWithClinicInfo:(NSDictionary *)clinic
 {
     self = [super initFromNib];
     if (self)
     {
-        self.branches = branches;
-
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterChanged)  name:@"FILTER_CHANGED" object:nil];
+        self.clinic = clinic;
+        self.branches = clinic[@"branches"];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -50,6 +45,14 @@
     self.table.backgroundColor = [UIColor clearColor];
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
+
+    self.title = @"Филиалы";
+
+    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"next"] pressedImage:[UIImage imageNamed:@"next"] title:@"Далее" block:^
+    {
+         UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:self.category];
+         [self.navigationController pushViewController:docList animated:YES];
+    }];
 }
 
 - (void)filterChanged
@@ -72,7 +75,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
@@ -80,6 +83,7 @@
     
     NSDictionary* branch = [self.branches objectAtIndex:indexPath.row];
     cell.textLabel.text = branch[@"title"];
+    cell.detailTextLabel.text = branch[@"address"];
 
     NSMutableArray* filter = [DataManager sharedInstance].filter;
 
@@ -105,7 +109,9 @@
 
     [[DataManager sharedInstance].filter replaceObjectAtIndex:indexPath.row withObject:newValue];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"FILTER_CHANGED" object:nil];
+    [tableView reloadData];
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
