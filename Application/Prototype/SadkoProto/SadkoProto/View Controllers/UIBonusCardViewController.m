@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Карта";
+    self.title = @"Скидка";
 }
 
 - (void)viewWillAppear:(BOOL)animated

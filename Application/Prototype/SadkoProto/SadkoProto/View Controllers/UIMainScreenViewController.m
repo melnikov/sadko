@@ -84,7 +84,7 @@
     self.buttonNews.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.buttonNews.titleLabel.textAlignment = NSTextAlignmentCenter;
 
-    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"next"] pressedImage:[UIImage imageNamed:@"next"] title:@"Карта" block:^
+    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"next"] pressedImage:[UIImage imageNamed:@"next"] title:@"Скидка" block:^
     {
         UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
         [self.navigationController pushViewController:bonusVC animated:YES];
