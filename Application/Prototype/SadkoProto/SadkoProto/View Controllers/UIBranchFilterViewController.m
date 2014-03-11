@@ -10,8 +10,6 @@
 
 #import "UIDoctorListViewController.h"
 
-#import "DataManager.h"
-
 @interface UIBranchFilterViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
@@ -47,12 +45,6 @@
     self.table.separatorColor = [UIColor whiteColor];
 
     self.title = @"Филиалы";
-
-    [self setRightNavigationBarButtonWithImage:[UIImage imageNamed:@"next"] pressedImage:[UIImage imageNamed:@"next"] title:@"Далее" block:^
-    {
-         UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:self.category];
-         [self.navigationController pushViewController:docList animated:YES];
-    }];
 }
 
 - (void)filterChanged
@@ -64,7 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.branches count];
+    return [self.branches count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,22 +70,18 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
-        cell.textLabel.font = [UIFont systemFontOfSize:16.0f];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
-    NSDictionary* branch = [self.branches objectAtIndex:indexPath.row];
-    cell.textLabel.text = branch[@"title"];
-    cell.detailTextLabel.text = branch[@"address"];
 
-    NSMutableArray* filter = [DataManager sharedInstance].filter;
-
-    if ([[filter objectAtIndex:indexPath.row] boolValue])
+    if (indexPath.row == 0)
     {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.textLabel.text = @"Все филиалы";
     }
     else
     {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        NSDictionary* branch = [self.branches objectAtIndex:indexPath.row - 1];
+        cell.textLabel.text = branch[@"address"];
+        cell.detailTextLabel.text = branch[@"phone"];
     }
     
     return cell;
@@ -103,13 +91,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableArray* filter = [DataManager sharedInstance].filter;
+    NSInteger branch = -1;
 
-    NSNumber* newValue = [NSNumber numberWithBool:![[filter objectAtIndex:indexPath.row] boolValue]];
+    if (indexPath.row != 0)
+    {
+        branch = indexPath.row - 1;
+    }
 
-    [[DataManager sharedInstance].filter replaceObjectAtIndex:indexPath.row withObject:newValue];
-
-    [tableView reloadData];
+    UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic category:self.category andBranchIndex:branch];
+    [self.navigationController pushViewController:docList animated:YES];
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

@@ -7,48 +7,33 @@
 
 #import "UIDoctorDetailsViewController.h"
 
-#import "DataManager.h"
-
 @interface UIDoctorListViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
 @property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSString* category;
+@property (nonatomic, assign) NSInteger branchID;
 @property (nonatomic, retain) NSArray* doctors;
 
-- (void)initDoctorListWithCategory:(NSString *)category;
-- (void)filterChanged;
+- (void)initDoctorList;
 
 @end
 
 @implementation UIDoctorListViewController
 
-- (id)initWithClinicInfo:(NSDictionary *)clinic andCategory:(NSString *)category
+- (id)initWithClinicInfo:(NSDictionary *)clinic category:(NSString *)category andBranchIndex:(NSInteger)brahcnID
 {
     self = [super initFromNib];
     if (self)
     {
         self.clinic = clinic;
         self.category = category;
+        self.branchID = brahcnID;
 
-        [self initDoctorListWithCategory:category];
+        [self initDoctorList];
     }
     return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterChanged)  name:@"FILTER_CHANGED" object:nil];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad
@@ -66,33 +51,24 @@
 
 #pragma mark - Private Methods
 
-- (void)initDoctorListWithCategory:(NSString *)category
+- (void)initDoctorList
 {
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[self.clinic[@"docs"] count]];
-
-    NSArray* filter = [DataManager sharedInstance].filter;
 
     for (NSDictionary* doc in self.clinic[@"docs"])
     {
         NSInteger branch = [doc[@"branch"] integerValue];
         
-        if (![[filter objectAtIndex:branch] boolValue])
+        if ((self.branchID != -1) && (self.branchID != branch))
             continue;
 
-        if ([doc[@"speciality"] isEqualToString:category])
+        if ([doc[@"speciality"] isEqualToString:self.category])
         {
             [result addObject:doc];
         }
     }
 
     self.doctors = [NSArray arrayWithArray:result];
-}
-
-- (void)filterChanged
-{
-    [self initDoctorListWithCategory:self.category];
-    
-    [self.table reloadData];
 }
 
 #pragma mark - Table View Data Source Methods

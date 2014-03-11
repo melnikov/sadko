@@ -8,8 +8,6 @@
 #import "UIBranchFilterViewController.h"
 #import "UIDoctorListViewController.h"
 
-#import "DataManager.h"
-
 @interface UIDoctorCategoryViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
@@ -114,7 +112,7 @@
     }
     else if ([branches count] > 0)
     {
-        UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
+        UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic category:[self.categories objectAtIndex:indexPath.row] andBranchIndex:-1];
         [self.navigationController pushViewController:docList animated:YES];
     }
 

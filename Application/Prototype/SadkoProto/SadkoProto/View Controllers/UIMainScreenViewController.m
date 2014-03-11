@@ -16,8 +16,6 @@
 #import "UIBranchFilterViewController.h"
 #import "UIBonusCardViewController.h"
 
-#import "DataManager.h"
-
 @interface UIMainScreenViewController ()
 
 @property (nonatomic, retain) IBOutlet UIScrollView* clinicSelector;
@@ -79,6 +77,10 @@
     self.buttonContacts.layer.cornerRadius = 3.0f;
 
     self.buttonCallUs.layer.cornerRadius = 3.0f;
+    
+    self.buttonDoctors.titleLabel.numberOfLines = 0;
+    self.buttonDoctors.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonDoctors.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     self.buttonNews.titleLabel.numberOfLines = 0;
     self.buttonNews.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -143,8 +145,6 @@
     {
         [self.buttonSymptoms setTitle:@"Что болит?" forState:UIControlStateNormal];
     }
-
-    [[DataManager sharedInstance] resetFilterWithCapacity:[clinic[@"branches"] count]];
 }
 
 #pragma mark - User Interaction

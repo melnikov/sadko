@@ -7,6 +7,6 @@
 
 @interface UIDoctorListViewController : UIBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
-- (id)initWithClinicInfo:(NSDictionary*)clinic andCategory:(NSString*)category;
+- (id)initWithClinicInfo:(NSDictionary*)clinic category:(NSString*)category andBranchIndex:(NSInteger)brahcnID;
 
 @end
