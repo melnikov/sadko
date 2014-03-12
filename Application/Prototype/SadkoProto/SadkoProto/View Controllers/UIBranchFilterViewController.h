@@ -10,8 +10,6 @@
 
 @interface UIBranchFilterViewController : UIBaseViewController
 
-@property (nonatomic, retain) NSString* category;
-
-- (id)initWithClinicInfo:(NSDictionary *)clinic;
+- (id)initWithClinicInfo:(NSDictionary *)clinic andCategory:(NSString *)category;
 
 @end

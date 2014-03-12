@@ -106,8 +106,7 @@
     
     if ([branches count] > 1)
     {
-        UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithClinicInfo:self.clinic];
-        filterScreen.category = [self.categories objectAtIndex:indexPath.row];
+        UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
         [self.navigationController pushViewController:filterScreen animated:YES];
     }
     else if ([branches count] > 0)

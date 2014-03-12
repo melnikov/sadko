@@ -15,21 +15,24 @@
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
 @property (nonatomic, retain) NSDictionary* clinic;
+@property (nonatomic, retain) NSString* category;
 @property (nonatomic, retain) NSArray* branches;
 
-- (void)filterChanged;
+- (void)initBranchList;
 
 @end
 
 @implementation UIBranchFilterViewController
 
-- (id)initWithClinicInfo:(NSDictionary *)clinic
+- (id)initWithClinicInfo:(NSDictionary *)clinic andCategory:(NSString *)category
 {
     self = [super initFromNib];
     if (self)
     {
         self.clinic = clinic;
-        self.branches = clinic[@"branches"];
+        self.category = category;
+
+        [self initBranchList];
     }
     return self;
 }
@@ -47,9 +50,33 @@
     self.title = @"Филиалы";
 }
 
-- (void)filterChanged
+#pragma mark - Private Methods
+
+- (void)initBranchList
 {
-    [self.table reloadData];
+    NSMutableArray* result = [[[NSMutableArray alloc] init] autorelease];
+    
+    for (NSDictionary* branch in self.clinic[@"branches"])
+    {
+        NSInteger count = 0;
+        for (NSDictionary* doc in self.clinic[@"docs"])
+        {
+            NSString* category = doc[@"speciality"];
+            NSInteger brachIndex = [doc[@"branch"] integerValue];
+
+            if ([category isEqualToString:self.category] && (brachIndex == [self.clinic[@"branches"] indexOfObject:branch]))
+            {
+                count++;
+            }
+        }
+
+        if (count > 0)
+        {
+            [result addObject:branch];
+        }
+    }
+    
+    self.branches = [NSArray arrayWithArray:result];
 }
 
 #pragma mark - Table View Data Source Methods
