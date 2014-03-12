@@ -8,7 +8,7 @@
 
 #import "UISplashScreenViewController.h"
 
-#import "UIMainScreenViewController.h"
+#import "UIMainMenuViewController.h"
 
 @interface UISplashScreenViewController ()
 

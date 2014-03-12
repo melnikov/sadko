@@ -65,6 +65,8 @@
 		27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */; };
 		27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */; };
 		27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9503F18B6B19200EDBE52 /* Clinics.plist */; };
+		27D90D1B18CFB2DA00C660FF /* UIMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D90D1918CFB2DA00C660FF /* UIMainMenuViewController.m */; };
+		27D90D1C18CFB2DA00C660FF /* UIMainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D90D1A18CFB2DA00C660FF /* UIMainMenuViewController.xib */; };
 		60025C0F18C4B6B000725A1C /* faq.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0D18C4B6B000725A1C /* faq.png */; };
 		60025C1018C4B6B000725A1C /* faq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60025C0E18C4B6B000725A1C /* faq@2x.png */; };
 		60025C1418C4C31900725A1C /* UIBonusCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60025C1218C4C31900725A1C /* UIBonusCardViewController.m */; };
@@ -83,7 +85,6 @@
 		6096A41318BB7547008064FC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6096A41018BB7547008064FC /* Default-568h@2x.png */; };
 		6096A41418BB7547008064FC /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6096A41118BB7547008064FC /* Default@2x~iphone.png */; };
 		6096A41518BB7547008064FC /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6096A41218BB7547008064FC /* Default~iphone.png */; };
-		60A0561E18CA038000EBFC27 /* SadkoProto-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 274BEF5418B1654C00C49814 /* SadkoProto-Info.plist */; };
 		60A0562118CA047200EBFC27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60A0561F18CA047200EBFC27 /* InfoPlist.strings */; };
 		60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */; };
 		60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */; };
@@ -119,10 +120,7 @@
 		60ACF53F18B6446100A16C2F /* UIBranchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF53D18B6446100A16C2F /* UIBranchListViewController.xib */; };
 		60ACF54318B6447900A16C2F /* UIBranchDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACF54118B6447900A16C2F /* UIBranchDetailsViewController.m */; };
 		60ACF54418B6447900A16C2F /* UIBranchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60ACF54218B6447900A16C2F /* UIBranchDetailsViewController.xib */; };
-		60D3CE9A18C0CEE600A80AAD /* UISidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D3CE9918C0CEE600A80AAD /* UISidePanelViewController.m */; };
 		60F96E1518C0AAE1003FB8E6 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F96E1418C0AAE1003FB8E6 /* Service.m */; };
-		60F96E1B18C0C4F0003FB8E6 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F96E1818C0C4F0003FB8E6 /* JASidePanelController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		60F96E1C18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F96E1A18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m */; };
 		60F96E2318C0C8AE003FB8E6 /* UIBranchFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F96E2118C0C8AE003FB8E6 /* UIBranchFilterViewController.m */; };
 		60F96E2418C0C8AE003FB8E6 /* UIBranchFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F96E2218C0C8AE003FB8E6 /* UIBranchFilterViewController.xib */; };
 /* End PBXBuildFile section */
@@ -246,6 +244,9 @@
 		27B9503A18B6AA4B00EDBE52 /* UIHumanSchemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHumanSchemeViewController.m; sourceTree = "<group>"; };
 		27B9503B18B6AA4B00EDBE52 /* UIHumanSchemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIHumanSchemeViewController.xib; sourceTree = "<group>"; };
 		27B9503F18B6B19200EDBE52 /* Clinics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Clinics.plist; sourceTree = "<group>"; };
+		27D90D1818CFB2DA00C660FF /* UIMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMainMenuViewController.h; sourceTree = "<group>"; };
+		27D90D1918CFB2DA00C660FF /* UIMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMainMenuViewController.m; sourceTree = "<group>"; };
+		27D90D1A18CFB2DA00C660FF /* UIMainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMainMenuViewController.xib; sourceTree = "<group>"; };
 		60025C0D18C4B6B000725A1C /* faq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faq.png; sourceTree = "<group>"; };
 		60025C0E18C4B6B000725A1C /* faq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faq@2x.png"; sourceTree = "<group>"; };
 		60025C1118C4C31900725A1C /* UIBonusCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBonusCardViewController.h; sourceTree = "<group>"; };
@@ -324,14 +325,8 @@
 		60ACF54018B6447900A16C2F /* UIBranchDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBranchDetailsViewController.h; sourceTree = "<group>"; };
 		60ACF54118B6447900A16C2F /* UIBranchDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBranchDetailsViewController.m; sourceTree = "<group>"; };
 		60ACF54218B6447900A16C2F /* UIBranchDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBranchDetailsViewController.xib; sourceTree = "<group>"; };
-		60D3CE9818C0CEE600A80AAD /* UISidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISidePanelViewController.h; sourceTree = "<group>"; };
-		60D3CE9918C0CEE600A80AAD /* UISidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISidePanelViewController.m; sourceTree = "<group>"; };
 		60F96E1318C0AAE1003FB8E6 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		60F96E1418C0AAE1003FB8E6 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
-		60F96E1718C0C4F0003FB8E6 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
-		60F96E1818C0C4F0003FB8E6 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
-		60F96E1918C0C4F0003FB8E6 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
-		60F96E1A18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		60F96E2018C0C8AE003FB8E6 /* UIBranchFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBranchFilterViewController.h; sourceTree = "<group>"; };
 		60F96E2118C0C8AE003FB8E6 /* UIBranchFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBranchFilterViewController.m; sourceTree = "<group>"; };
 		60F96E2218C0C8AE003FB8E6 /* UIBranchFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBranchFilterViewController.xib; sourceTree = "<group>"; };
@@ -589,11 +584,12 @@
 			children = (
 				60ACF4EF18B6261700A16C2F /* UIBaseViewController.h */,
 				60ACF4F018B6261700A16C2F /* UIBaseViewController.m */,
-				60D3CE9818C0CEE600A80AAD /* UISidePanelViewController.h */,
-				60D3CE9918C0CEE600A80AAD /* UISidePanelViewController.m */,
 				6096A40418BB6D63008064FC /* UISplashScreenViewController.h */,
 				6096A40518BB6D63008064FC /* UISplashScreenViewController.m */,
 				6096A40718BB6DC8008064FC /* UISplashScreenViewController.xib */,
+				27D90D1818CFB2DA00C660FF /* UIMainMenuViewController.h */,
+				27D90D1918CFB2DA00C660FF /* UIMainMenuViewController.m */,
+				27D90D1A18CFB2DA00C660FF /* UIMainMenuViewController.xib */,
 				60ACF4EA18B6256E00A16C2F /* UIMainScreenViewController.h */,
 				60ACF4EB18B6256E00A16C2F /* UIMainScreenViewController.m */,
 				60ACF4EC18B6256E00A16C2F /* UIMainScreenViewController.xib */,
@@ -674,7 +670,6 @@
 			children = (
 				2795D17B18C930F4006CEF6F /* Barcodes */,
 				2716785118C6FD4A00D289E8 /* ZBarSDK */,
-				60F96E1618C0C4F0003FB8E6 /* JASidePanel */,
 				6096A40C18BB74D9008064FC /* MBProgressHUD */,
 				60ACF4FA18B6273B00A16C2F /* TBMacros */,
 			);
@@ -733,17 +728,6 @@
 				2716784F18C6E24900D289E8 /* DataManager.m */,
 			);
 			path = "Data Model";
-			sourceTree = "<group>";
-		};
-		60F96E1618C0C4F0003FB8E6 /* JASidePanel */ = {
-			isa = PBXGroup;
-			children = (
-				60F96E1718C0C4F0003FB8E6 /* JASidePanelController.h */,
-				60F96E1818C0C4F0003FB8E6 /* JASidePanelController.m */,
-				60F96E1918C0C4F0003FB8E6 /* UIViewController+JASidePanel.h */,
-				60F96E1A18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m */,
-			);
-			path = JASidePanel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -852,7 +836,6 @@
 				60025C1518C4C31900725A1C /* UIBonusCardViewController.xib in Resources */,
 				60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */,
 				60ACF50D18B640BF00A16C2F /* UIDoctorCategoryViewController.xib in Resources */,
-				60A0561E18CA038000EBFC27 /* SadkoProto-Info.plist in Resources */,
 				27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */,
 				60ACF54418B6447900A16C2F /* UIBranchDetailsViewController.xib in Resources */,
 				2716787118C6FD4A00D289E8 /* zbar-help.html in Resources */,
@@ -860,6 +843,7 @@
 				274BEF5F18B1654C00C49814 /* Images.xcassets in Resources */,
 				2716787018C6FD4A00D289E8 /* zbar-back.png in Resources */,
 				2712D82D18BBEE3700C59B47 /* News.plist in Resources */,
+				27D90D1C18CFB2DA00C660FF /* UIMainMenuViewController.xib in Resources */,
 				2712D84218BC025700C59B47 /* avatar@2x.png in Resources */,
 				60ACF50318B6289B00A16C2F /* back@2x.png in Resources */,
 				6036753118BC82B2008D2CB5 /* service@2x.png in Resources */,
@@ -917,16 +901,15 @@
 				60ACF50C18B640BF00A16C2F /* UIDoctorCategoryViewController.m in Sources */,
 				60ACF52518B641EC00A16C2F /* UINewsViewController.m in Sources */,
 				2795D1B118C930F4006CEF6F /* NKDEAN8Barcode.m in Sources */,
-				60F96E1C18C0C4F0003FB8E6 /* UIViewController+JASidePanel.m in Sources */,
 				2795D1B418C930F4006CEF6F /* NKDInterleavedTwoOfFiveBarcode.m in Sources */,
 				60ACF4ED18B6256E00A16C2F /* UIMainScreenViewController.m in Sources */,
 				2795D1BA18C930F4006CEF6F /* NKDUPCABarcode.m in Sources */,
 				2795D1B218C930F4006CEF6F /* NKDExtendedCode39Barcode.m in Sources */,
-				60D3CE9A18C0CEE600A80AAD /* UISidePanelViewController.m in Sources */,
 				60ACF52A18B6420700A16C2F /* UINewsDetailsViewController.m in Sources */,
 				2795D1AD18C930F4006CEF6F /* NKDCodabarBarcode.m in Sources */,
 				60ACF4F118B6261700A16C2F /* UIBaseViewController.m in Sources */,
 				60ACF52018B641CF00A16C2F /* UIServiceDetailsViewController.m in Sources */,
+				27D90D1B18CFB2DA00C660FF /* UIMainMenuViewController.m in Sources */,
 				274BEF5D18B1654C00C49814 /* AppDelegate.m in Sources */,
 				60ACF52F18B643B900A16C2F /* UITopTenQuestionsViewController.m in Sources */,
 				6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */,
@@ -936,7 +919,6 @@
 				6036753A18BCB063008D2CB5 /* UIMapViewController.m in Sources */,
 				2795D1BB18C930F4006CEF6F /* NKDUPCEBarcode.m in Sources */,
 				60ACF51118B640D100A16C2F /* UIDoctorListViewController.m in Sources */,
-				60F96E1B18C0C4F0003FB8E6 /* JASidePanelController.m in Sources */,
 				274BEF5918B1654C00C49814 /* main.m in Sources */,
 				60ACF53918B6441000A16C2F /* UISymptomsViewController.m in Sources */,
 				2795D1AE18C930F4006CEF6F /* NKDCode128Barcode.m in Sources */,
