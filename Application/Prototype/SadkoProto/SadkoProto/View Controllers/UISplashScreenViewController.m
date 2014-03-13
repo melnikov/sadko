@@ -8,7 +8,7 @@
 
 #import "UISplashScreenViewController.h"
 
-#import "UIMainScreenViewController.h"
+#import "UIMainMenuViewController.h"
 
 @interface UISplashScreenViewController ()
 
@@ -47,7 +47,7 @@
 {
     [MBProgressHUD hideHUDForView:self.view animated:NO];
 
-    UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initWithScript:@"Clinics"];
+    UIMainMenuViewController* mainScreen = [[UIMainMenuViewController alloc] initWithScript:@"Clinics"];
     UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
     [[UIApplication sharedApplication] delegate].window.rootViewController = navVC;
 }
@@ -65,7 +65,7 @@
     }
     else
     {
-        UIMainScreenViewController* mainScreen = [[UIMainScreenViewController alloc] initWithScript:@"Clinics"];
+        UIMainMenuViewController* mainScreen = [[UIMainMenuViewController alloc] initWithScript:@"Clinics"];
         UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
         [[UIApplication sharedApplication] delegate].window.rootViewController = navVC;
     }
