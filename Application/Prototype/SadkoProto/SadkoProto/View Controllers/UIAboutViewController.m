@@ -12,9 +12,11 @@
 @property (nonatomic, retain) NSDictionary* clinic;
 
 @property (nonatomic, retain) IBOutlet UIScrollView* scroll;
-@property (nonatomic, retain) IBOutlet UILabel* phone;
+@property (nonatomic, retain) IBOutlet UIButton* phone;
 @property (nonatomic, retain) IBOutlet UILabel* schedule;
 @property (nonatomic, retain) IBOutlet UITableView* table;
+
+@property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initChildControls;
 - (void)emailSelected;
@@ -37,7 +39,9 @@
 {
     [super viewDidLoad];
 
-    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 590);
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 620);
+
+    self.callWebView = [[UIWebView alloc] init];
 
     self.table.backgroundView = nil;
     self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
@@ -50,11 +54,30 @@
     self.title = @"О клинике";
 }
 
+#pragma mark - User Interaction
+
+- (IBAction)callButtonPressed:(id)sender
+{
+    NSURL* callURL = [NSURL URLWithString:self.clinic[@"main_phone"]];
+    if ([[UIApplication sharedApplication] canOpenURL:callURL])
+    {
+        [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
+}
+
 #pragma mark - Private Methods
 
 - (void)initChildControls
 {
-    self.phone.text = self.clinic[@"main_phone"];
+    [self.phone setTitle:self.clinic[@"main_phone"] forState:UIControlStateNormal];
+    self.phone.layer.cornerRadius = 3.0f;
+
     self.schedule.text = self.clinic[@"schedule"];
 }
 
