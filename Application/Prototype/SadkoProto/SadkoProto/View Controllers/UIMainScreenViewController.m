@@ -36,6 +36,7 @@
 @property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initClinics;
+- (void)selectCurrentSlide;
 
 @end
 
@@ -48,6 +49,8 @@
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
         self.clinics = [[NSArray alloc] initWithContentsOfFile:filePath];
+
+        self.currentSlide = 0;
     }
     return self;
 }
@@ -61,11 +64,6 @@
     self.title = @"Садко";
 
     self.clinicSelector.delegate = self;
-	self.pageController.currentPage = 0;
-
-    self.pageController.numberOfPages = [self.clinics count];
-
-    [self selectionChanged];
     
     self.callWebView = [[UIWebView alloc] init];
 
@@ -129,7 +127,26 @@
         
         [self.clinicSelector addSubview:banner];
 
-        self.clinicSelector.contentSize = CGSizeMake(self.clinicSelector.contentSize.width + banner.frame.size.width, self.clinicSelector.contentSize.height);
+        self.clinicSelector.contentSize = CGSizeMake(self.clinicSelector.contentSize.width + banner.frame.size.width, self.clinicSelector.frame.size.height);
+    }
+
+    self.pageController.numberOfPages = [self.clinics count];
+
+    [self selectCurrentSlide];
+}
+
+- (void)selectCurrentSlide
+{
+    if ((self.currentSlide >= 0) && (self.currentSlide < [self.clinics count]))
+    {
+        CGRect frame = self.clinicSelector.frame;
+        frame.origin.x = frame.size.width * self.currentSlide;
+        frame.origin.y = 0;
+        [self.clinicSelector scrollRectToVisible:frame animated:NO];
+
+        self.pageController.currentPage = self.currentSlide;
+
+        [self selectionChanged];
     }
 }
 

@@ -9,7 +9,7 @@
 
 @interface UIMainScreenViewController : UIBaseViewController <UIScrollViewDelegate>
 
-@property (nonatomic, assign)
+@property (nonatomic, assign) NSInteger currentSlide;
 
 - (id)initWithScript:(NSString*)script;
 
