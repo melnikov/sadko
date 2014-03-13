@@ -11,6 +11,7 @@
 
 @property (nonatomic, retain) NSDictionary* clinic;
 
+@property (nonatomic, retain) IBOutlet UIScrollView* scroll;
 @property (nonatomic, retain) IBOutlet UILabel* phone;
 @property (nonatomic, retain) IBOutlet UILabel* schedule;
 @property (nonatomic, retain) IBOutlet UITableView* table;
@@ -35,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 590);
 
     self.table.backgroundView = nil;
     self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
@@ -99,7 +102,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,9 +125,12 @@
             cell.textLabel.text = @"Информация";
             break;
         case 1:
-            cell.textLabel.text = @"Отправить письмо";
+            cell.textLabel.text = @"Написать нам";
             break;
         case 2:
+            cell.textLabel.text = @"Письмо руководителю";
+            break;
+        case 3:
             cell.textLabel.text = @"Перейти на сайт";
             break;
             
@@ -151,6 +157,9 @@
             [self emailSelected];
             break;
         case 2:
+            [self emailSelected];
+            break;
+        case 3:
         {
             NSURL *url = [NSURL URLWithString:self.clinic[@"web"]];
             [[UIApplication sharedApplication] openURL:url];

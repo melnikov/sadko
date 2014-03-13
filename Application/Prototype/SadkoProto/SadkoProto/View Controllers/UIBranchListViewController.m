@@ -60,13 +60,14 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
-    cell.textLabel.text = [[self.branches objectAtIndex:indexPath.row] objectForKey:@"title"];
+
+    cell.textLabel.text = [[self.branches objectAtIndex:indexPath.row] objectForKey:@"address"];
+    cell.detailTextLabel.text = [[self.branches objectAtIndex:indexPath.row] objectForKey:@"phone"];
     
     return cell;
 }

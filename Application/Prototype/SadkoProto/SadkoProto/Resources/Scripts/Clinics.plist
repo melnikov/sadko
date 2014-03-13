@@ -19,7 +19,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 421-01-01</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://dental.sadkomed.ru/</string>
 		<key>branches</key>
@@ -34,7 +34,7 @@
 				<key>web</key>
 				<string>http://dental.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -51,7 +51,7 @@
 				<key>web</key>
 				<string>http://dental.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -68,7 +68,7 @@
 				<key>web</key>
 				<string>http://dental.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -85,7 +85,7 @@
 				<key>web</key>
 				<string>http://dental.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -449,7 +449,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 421-01-01</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://clinic.sadkomed.ru/</string>
 		<key>branches</key>
@@ -464,7 +464,7 @@
 				<key>web</key>
 				<string>http://clinic.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -481,7 +481,7 @@
 				<key>web</key>
 				<string>http://clinic.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -498,7 +498,7 @@
 				<key>web</key>
 				<string>http://clinic.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -509,13 +509,13 @@
 				<key>title</key>
 				<string>Филиал в Сормово</string>
 				<key>address</key>
-				<string>СОРМОВСКОЕ ШОССЕ, 20</string>
+				<string>Сормовское шоссе, 20</string>
 				<key>phone</key>
 				<string>+7 (831) 275-22-22</string>
 				<key>web</key>
 				<string>http://clinic.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -941,7 +941,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 4-21-01-01</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://women.sadkomed.ru/</string>
 		<key>branches</key>
@@ -956,7 +956,7 @@
 				<key>web</key>
 				<string>http://women.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -973,7 +973,7 @@
 				<key>web</key>
 				<string>http://women.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -990,7 +990,7 @@
 				<key>web</key>
 				<string>http://women.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -1001,13 +1001,13 @@
 				<key>title</key>
 				<string>Центр женского здоровья &quot;Садко&quot; в Сормово</string>
 				<key>address</key>
-				<string>СОРМОВСКОЕ ШОССЕ, 20</string>
+				<string>Сормовское шоссе, 20</string>
 				<key>phone</key>
 				<string>+7 (831) 275-22-22</string>
 				<key>web</key>
 				<string>http://women.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -1382,7 +1382,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 421-50-00</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://implant.sadkomed.ru/</string>
 		<key>branches</key>
@@ -1397,7 +1397,7 @@
 				<key>web</key>
 				<string>http://implant.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -1414,7 +1414,7 @@
 				<key>web</key>
 				<string>http://implant.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -1431,7 +1431,7 @@
 				<key>web</key>
 				<string>http://implant.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -1791,7 +1791,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 4-120-555</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://neurology.sadkomed.ru/</string>
 		<key>branches</key>
@@ -1806,7 +1806,7 @@
 				<key>web</key>
 				<string>http://neurology.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -2244,7 +2244,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 4-30-30-30</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://jam.sadkomed.ru/</string>
 		<key>branches</key>
@@ -2259,7 +2259,7 @@
 				<key>web</key>
 				<string>http://jam.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -2571,7 +2571,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 4-119-999</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://child.sadkomed.ru/</string>
 		<key>branches</key>
@@ -2586,7 +2586,7 @@
 				<key>web</key>
 				<string>http://child.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -2603,7 +2603,7 @@
 				<key>web</key>
 				<string>http://child.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -2620,7 +2620,7 @@
 				<key>web</key>
 				<string>http://child.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
@@ -3002,7 +3002,7 @@
 		<key>main_phone</key>
 		<string>+7 (831) 430-01-30</string>
 		<key>email</key>
-		<string>sadko@gmail.com</string>
+		<string>sadko-med@yandex.ru</string>
 		<key>web</key>
 		<string>http://zdorovenok.sadkomed.ru/</string>
 		<key>branches</key>
@@ -3017,7 +3017,7 @@
 				<key>web</key>
 				<string>http://zdorovenok.sadkomed.ru/</string>
 				<key>email</key>
-				<string>sadko@gmail.com</string>
+				<string>sadko-med@yandex.ru</string>
 				<key>schedule</key>
 				<string>пн-сб: 08:00 - 20:00
 вс: 09:00 - 18:00</string>
