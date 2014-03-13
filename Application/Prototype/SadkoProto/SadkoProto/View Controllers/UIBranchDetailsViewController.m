@@ -15,14 +15,16 @@
 @property (nonatomic, retain) IBOutlet UIScrollView* scroll;
 @property (nonatomic, retain) IBOutlet UILabel* branchTitle;
 @property (nonatomic, retain) IBOutlet UILabel* address;
-@property (nonatomic, retain) IBOutlet UILabel* phone;
+@property (nonatomic, retain) IBOutlet UIButton* mapButton;
 @property (nonatomic, retain) IBOutlet UILabel* schedule;
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
+@property (nonatomic, retain) UIWebView* callWebView;
 @property (nonatomic, retain) NSDictionary* branch;
 
 - (void)initChildControls;
 - (void)emailSelected;
+- (void)callUsSelected;
 
 @end
 
@@ -48,6 +50,10 @@
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
 
+    self.mapButton.layer.cornerRadius = 3.0f;
+
+    self.callWebView = [[UIWebView alloc] init];
+
     [self initChildControls];
 
     self.title = @"Филиал";
@@ -59,8 +65,22 @@
 {
     self.branchTitle.text = self.branch[@"title"];
     self.address.text = self.branch[@"address"];
-    self.phone.text = self.branch[@"phone"];
     self.schedule.text = self.branch[@"schedule"];
+}
+
+- (void)callUsSelected
+{
+    NSURL* callURL = [NSURL URLWithString:self.branch[@"phone"]];
+    if ([[UIApplication sharedApplication] canOpenURL:callURL])
+    {
+        [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
 }
 
 - (void)emailSelected
@@ -103,6 +123,14 @@
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - User Interaction
+
+- (IBAction)mapButtonPressed:(id)sender
+{
+    UIMapViewController* mapVC = [[UIMapViewController alloc] initFromNib];
+    [self.navigationController pushViewController:mapVC animated:YES];
+}
+
 #pragma mark - Table View Data Source Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -127,13 +155,16 @@
     switch (indexPath.row)
     {
         case 0:
-            cell.textLabel.text = @"Показать карту";
+            cell.imageView.image = [UIImage imageNamed:@"phone"];
+            cell.textLabel.text = self.branch[@"phone"];
             break;
         case 1:
-            cell.textLabel.text = @"Отправить письмо";
+            cell.imageView.image = [UIImage imageNamed:@"email"];
+            cell.textLabel.text = self.branch[@"email"];
             break;
         case 2:
-            cell.textLabel.text = @"Перейти на сайт";
+            cell.imageView.image = [UIImage imageNamed:@"web"];
+            cell.textLabel.text = self.branch[@"web"];
             break;
             
         default:
@@ -150,11 +181,8 @@
     switch (indexPath.row)
     {
         case 0:
-        {
-            UIMapViewController* mapVC = [[UIMapViewController alloc] initFromNib];
-            [self.navigationController pushViewController:mapVC animated:YES];
+            [self callUsSelected];
             break;
-        }
         case 1:
             [self emailSelected];
             break;

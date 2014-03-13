@@ -26,7 +26,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Нижегородский район</string>
+				<string>Стоматология</string>
 				<key>address</key>
 				<string>ул. Большая Покровская, 75</string>
 				<key>phone</key>
@@ -43,7 +43,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Советский район</string>
+				<string>Стоматология</string>
 				<key>address</key>
 				<string>ул. Бекетова, 13</string>
 				<key>phone</key>
@@ -60,7 +60,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Верхние Печеры</string>
+				<string>Стоматология</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -77,7 +77,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Сормово</string>
+				<string>Стоматология</string>
 				<key>address</key>
 				<string>Сормовское шоссе, 20</string>
 				<key>phone</key>
@@ -456,7 +456,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Филиал на Бекетова</string>
+				<string>Лечебно-диагностический комплекс</string>
 				<key>address</key>
 				<string>ул. Бекетова,13</string>
 				<key>phone</key>
@@ -473,7 +473,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Филиал на Родионова</string>
+				<string>Лечебно-диагностический комплекс</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -490,7 +490,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Филиал на проспекте Ленина</string>
+				<string>Лечебно-диагностический комплекс</string>
 				<key>address</key>
 				<string>пр. Ленина, 67/1</string>
 				<key>phone</key>
@@ -507,7 +507,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Филиал в Сормово</string>
+				<string>Лечебно-диагностический комплекс</string>
 				<key>address</key>
 				<string>Сормовское шоссе, 20</string>
 				<key>phone</key>
@@ -948,7 +948,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Центр женского здоровья &quot;Садко&quot; на Родионова</string>
+				<string>Центр женского здоровья</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -965,7 +965,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Центр женского здоровья &quot;Садко&quot; на пр. Ленина</string>
+				<string>Центр женского здоровья</string>
 				<key>address</key>
 				<string>пр. Ленина, 67/1</string>
 				<key>phone</key>
@@ -982,7 +982,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Центр женского здоровья &quot;Садко&quot; на Бекетова</string>
+				<string>Центр женского здоровья</string>
 				<key>address</key>
 				<string>ул. Бекетова,13</string>
 				<key>phone</key>
@@ -999,7 +999,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Центр женского здоровья &quot;Садко&quot; в Сормово</string>
+				<string>Центр женского здоровья</string>
 				<key>address</key>
 				<string>Сормовское шоссе, 20</string>
 				<key>phone</key>
@@ -1389,7 +1389,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Центр профессиональной имплантации &quot;САДКО&quot;</string>
+				<string>Центр имплантации</string>
 				<key>address</key>
 				<string>ул. Белинского, 71/1</string>
 				<key>phone</key>
@@ -1406,7 +1406,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Центр развития стоматологии &quot;САДКО&quot;</string>
+				<string>Центр имплантации</string>
 				<key>address</key>
 				<string>ул. Бекетова, 13</string>
 				<key>phone</key>
@@ -1423,7 +1423,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Нижегородское отделение сети клиник &quot;САДКО&quot;</string>
+				<string>Центр имплантации</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -1798,7 +1798,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Центр неврологии и реабилитации</string>
+				<string>Центр неврологии</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>
@@ -2251,7 +2251,7 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Центр ортодонтии Джем</string>
+				<string>Центр ортодонтии «Джем»</string>
 				<key>address</key>
 				<string>ул. Белинского 71/1 (6 этаж)</string>
 				<key>phone</key>
@@ -2595,7 +2595,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Детское отделение в стоматологии &quot;Садко&quot; на Белинского</string>
+				<string>Детское отделение в стоматологии</string>
 				<key>address</key>
 				<string>ул. Белинского, 71/1</string>
 				<key>phone</key>
@@ -2612,7 +2612,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>Детское отделение в стоматологии &quot;Садко&quot; на Родионова</string>
+				<string>Детское отделение в стоматологии</string>
 				<key>address</key>
 				<string>ул. Родионова, 199</string>
 				<key>phone</key>

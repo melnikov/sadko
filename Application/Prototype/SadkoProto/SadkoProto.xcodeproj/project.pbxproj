@@ -35,6 +35,14 @@
 		274BEF6818B1654C00C49814 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274BEF5018B1654C00C49814 /* UIKit.framework */; };
 		274BEF7018B1654C00C49814 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 274BEF6E18B1654C00C49814 /* InfoPlist.strings */; };
 		274BEF7218B1654C00C49814 /* SadkoProtoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 274BEF7118B1654C00C49814 /* SadkoProtoTests.m */; };
+		27509DA518D24ECC00027841 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 27509DA318D24ECC00027841 /* map.png */; };
+		27509DA618D24ECC00027841 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27509DA418D24ECC00027841 /* map@2x.png */; };
+		27672BEE18D2441F00DEEBA5 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BE818D2441F00DEEBA5 /* email.png */; };
+		27672BEF18D2441F00DEEBA5 /* email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BE918D2441F00DEEBA5 /* email@2x.png */; };
+		27672BF018D2441F00DEEBA5 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BEA18D2441F00DEEBA5 /* phone.png */; };
+		27672BF118D2441F00DEEBA5 /* phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BEB18D2441F00DEEBA5 /* phone@2x.png */; };
+		27672BF218D2441F00DEEBA5 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BEC18D2441F00DEEBA5 /* web.png */; };
+		27672BF318D2441F00DEEBA5 /* web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27672BED18D2441F00DEEBA5 /* web@2x.png */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
 		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
@@ -192,6 +200,14 @@
 		274BEF6D18B1654C00C49814 /* SadkoProtoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SadkoProtoTests-Info.plist"; sourceTree = "<group>"; };
 		274BEF6F18B1654C00C49814 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		274BEF7118B1654C00C49814 /* SadkoProtoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SadkoProtoTests.m; sourceTree = "<group>"; };
+		27509DA318D24ECC00027841 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		27509DA418D24ECC00027841 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		27672BE818D2441F00DEEBA5 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		27672BE918D2441F00DEEBA5 /* email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email@2x.png"; sourceTree = "<group>"; };
+		27672BEA18D2441F00DEEBA5 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		27672BEB18D2441F00DEEBA5 /* phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone@2x.png"; sourceTree = "<group>"; };
+		27672BEC18D2441F00DEEBA5 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		27672BED18D2441F00DEEBA5 /* web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web@2x.png"; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -701,6 +717,14 @@
 		60ACF4FF18B6289B00A16C2F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				27509DA318D24ECC00027841 /* map.png */,
+				27509DA418D24ECC00027841 /* map@2x.png */,
+				27672BE818D2441F00DEEBA5 /* email.png */,
+				27672BE918D2441F00DEEBA5 /* email@2x.png */,
+				27672BEA18D2441F00DEEBA5 /* phone.png */,
+				27672BEB18D2441F00DEEBA5 /* phone@2x.png */,
+				27672BEC18D2441F00DEEBA5 /* web.png */,
+				27672BED18D2441F00DEEBA5 /* web@2x.png */,
 				60EA5ACF18D1EC2300A70713 /* about.png */,
 				60EA5AD018D1EC2300A70713 /* about@2x.png */,
 				2795D17318C9249A006CEF6F /* next.png */,
@@ -812,6 +836,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27672BF218D2441F00DEEBA5 /* web.png in Resources */,
 				60025C1018C4B6B000725A1C /* faq@2x.png in Resources */,
 				60ACF51718B6411B00A16C2F /* UIDoctorDetailsViewController.xib in Resources */,
 				60ACF51C18B641B200A16C2F /* UIServiceListViewController.xib in Resources */,
@@ -827,22 +852,27 @@
 				27B9503618B6995A00EDBE52 /* banner@2x.png in Resources */,
 				60ACF4FD18B6273B00A16C2F /* README in Resources */,
 				6096A41518BB7547008064FC /* Default~iphone.png in Resources */,
+				27509DA518D24ECC00027841 /* map.png in Resources */,
 				60ACF52B18B6420700A16C2F /* UINewsDetailsViewController.xib in Resources */,
 				2716784C18C6DD9100D289E8 /* filter_menu@2x.png in Resources */,
 				6036753618BC901A008D2CB5 /* UIInfoViewController.xib in Resources */,
 				60EA5AD218D1EC2300A70713 /* about@2x.png in Resources */,
 				60ACF51218B640D100A16C2F /* UIDoctorListViewController.xib in Resources */,
+				27672BEE18D2441F00DEEBA5 /* email.png in Resources */,
 				6036753B18BCB063008D2CB5 /* UIMapViewController.xib in Resources */,
 				2712D82B18BBEC5800C59B47 /* FAQ.plist in Resources */,
 				6036753018BC82B2008D2CB5 /* service.png in Resources */,
 				60ACF53A18B6441000A16C2F /* UISymptomsViewController.xib in Resources */,
 				2795D17618C9249A006CEF6F /* next@2x.png in Resources */,
 				60ACF53518B643D400A16C2F /* UIQuestionAnswerViewController.xib in Resources */,
+				27509DA618D24ECC00027841 /* map@2x.png in Resources */,
 				27B9504018B6B19200EDBE52 /* Clinics.plist in Resources */,
 				60ACF50218B6289B00A16C2F /* back.png in Resources */,
 				60025C1518C4C31900725A1C /* UIBonusCardViewController.xib in Resources */,
 				60ACF4EE18B6256E00A16C2F /* UIMainScreenViewController.xib in Resources */,
 				60ACF50D18B640BF00A16C2F /* UIDoctorCategoryViewController.xib in Resources */,
+				27672BF118D2441F00DEEBA5 /* phone@2x.png in Resources */,
+				27672BF318D2441F00DEEBA5 /* web@2x.png in Resources */,
 				27B9503D18B6AA4C00EDBE52 /* UIHumanSchemeViewController.xib in Resources */,
 				60ACF54418B6447900A16C2F /* UIBranchDetailsViewController.xib in Resources */,
 				2716787118C6FD4A00D289E8 /* zbar-help.html in Resources */,
@@ -854,12 +884,14 @@
 				27D90D1C18CFB2DA00C660FF /* UIMainMenuViewController.xib in Resources */,
 				2712D84218BC025700C59B47 /* avatar@2x.png in Resources */,
 				60ACF50318B6289B00A16C2F /* back@2x.png in Resources */,
+				27672BEF18D2441F00DEEBA5 /* email@2x.png in Resources */,
 				6036753118BC82B2008D2CB5 /* service@2x.png in Resources */,
 				2795D17518C9249A006CEF6F /* next.png in Resources */,
 				2716784B18C6DD9100D289E8 /* filter_menu.png in Resources */,
 				60A0562118CA047200EBFC27 /* InfoPlist.strings in Resources */,
 				60ACF53F18B6446100A16C2F /* UIBranchListViewController.xib in Resources */,
 				60ACF53018B643B900A16C2F /* UITopTenQuestionsViewController.xib in Resources */,
+				27672BF018D2441F00DEEBA5 /* phone.png in Resources */,
 				6096A41418BB7547008064FC /* Default@2x~iphone.png in Resources */,
 				27B9503518B6995A00EDBE52 /* banner.png in Resources */,
 				6096A40818BB6DC8008064FC /* UISplashScreenViewController.xib in Resources */,
