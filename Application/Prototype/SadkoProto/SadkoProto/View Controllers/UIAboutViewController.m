@@ -35,13 +35,26 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.clinic = nil;
+    
+    self.scroll = nil;
+    self.phone = nil;
+    self.schedule = nil;
+    self.table = nil;
+    self.callWebView = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 620);
 
-    self.callWebView = [[UIWebView alloc] init];
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
 
     self.table.backgroundView = nil;
     self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
@@ -58,7 +71,12 @@
 
 - (IBAction)callButtonPressed:(id)sender
 {
-    NSURL* callURL = [NSURL URLWithString:self.clinic[@"main_phone"]];
+    NSString* phoneString = [[[[self.clinic[@"main_phone"] stringByReplacingOccurrencesOfString:@" " withString:@""]
+                               stringByReplacingOccurrencesOfString:@"(" withString:@""]
+                              stringByReplacingOccurrencesOfString:@")" withString:@""]
+                              stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    
+    NSURL* callURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", phoneString]];
     if ([[UIApplication sharedApplication] canOpenURL:callURL])
     {
         [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
@@ -87,6 +105,7 @@
     {
         UIAlertView* downloadAlert = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"На данном устройстве не настроена почта" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [downloadAlert show];
+        [downloadAlert release];
         return;
     }
     
@@ -136,7 +155,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -174,6 +193,7 @@
         {
             UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:self.clinic[@"info"]];
             [self.navigationController pushViewController:infoScreen animated:YES];
+            [infoScreen release];
             break;
         }
         case 1:

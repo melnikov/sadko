@@ -76,12 +76,26 @@
         self.clinic = clinic;
         self.serviceList = self.clinic[@"services"];
 
-        self.filteredList = [[NSMutableArray alloc] init];
+        self.filteredList = [[[NSMutableArray alloc] init] autorelease];
         [self initSectionsFromList:self.serviceList];
 
         self.searching = NO;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    self.table = nil;
+    self.searchBar = nil;
+    self.shadow = nil;
+    self.clinic = nil;
+    self.serviceList = nil;
+    self.sectionedList = nil;
+    self.filteredList = nil;
+    self.collation = nil;
+    
+    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -122,6 +136,7 @@
         Service* service = [[Service alloc] initWithDictionary:item];
         NSInteger section = [_collation sectionForObject:service collationStringSelector:@selector(title)];
         [sections addObject:service toSubarrayAtIndex:section];
+        [service release];
     }
     
     NSInteger section = 0;
@@ -250,7 +265,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    int idx = [self.collation sectionForSectionIndexTitleAtIndex:index];
+    NSInteger idx = [self.collation sectionForSectionIndexTitleAtIndex:index];
     
     return (self.sectionedList.count > idx && [[self.sectionedList objectAtIndex:idx] count] != 0) ? idx : -1;
 }
@@ -298,6 +313,7 @@
 
     UIServiceDetailsViewController* serviceScreen = [[UIServiceDetailsViewController alloc] initWithClinicInfo:self.clinic andService:service];
     [self.navigationController pushViewController:serviceScreen animated:YES];
+    [serviceScreen release];
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

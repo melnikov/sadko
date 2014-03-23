@@ -28,6 +28,14 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.textView = nil;
+    self.textInfo = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

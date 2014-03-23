@@ -12,14 +12,25 @@
 
 @interface UISplashScreenViewController ()
 
-@property (nonatomic, strong) IBOutlet UIImageView* background;
+@property (nonatomic, retain) IBOutlet UIImageView* background;
 
-@property (nonatomic, strong) MBProgressHUD* hud;
-@property (nonatomic, strong) NSTimer* progressTimer;
+@property (nonatomic, retain) MBProgressHUD* hud;
+@property (nonatomic, retain) NSTimer* progressTimer;
 
 @end
 
 @implementation UISplashScreenViewController
+
+- (void)dealloc
+{
+    self.background = nil;
+    self.hud = nil;
+
+    [self.progressTimer invalidate];
+    self.progressTimer = nil;
+    
+    [super dealloc];
+}
 
 - (void)viewDidLoad
 {
@@ -34,13 +45,8 @@
         self.background.image = [UIImage imageNamed: @"Default~iphone"];
     }
 
-    UIAlertView* downloadAlert = [[UIAlertView alloc] initWithTitle:@"Обновление данных" message:@"На сервере доступно обновление данных для приложения. Загрузить?" delegate:self cancelButtonTitle:@"Не сейчас" otherButtonTitles:@"Загрузить", nil];
+    UIAlertView* downloadAlert = [[[UIAlertView alloc] initWithTitle:@"Обновление данных" message:@"На сервере доступно обновление данных для приложения. Загрузить?" delegate:self cancelButtonTitle:@"Не сейчас" otherButtonTitles:@"Загрузить", nil] autorelease];
     [downloadAlert show];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)progressTimerCallback
@@ -50,6 +56,9 @@
     UIMainMenuViewController* mainScreen = [[UIMainMenuViewController alloc] initWithScript:@"Clinics"];
     UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
     [[UIApplication sharedApplication] delegate].window.rootViewController = navVC;
+
+    [navVC release];
+    [mainScreen release];
 }
 
 #pragma mark - Alert View Delegate Methods
@@ -68,6 +77,9 @@
         UIMainMenuViewController* mainScreen = [[UIMainMenuViewController alloc] initWithScript:@"Clinics"];
         UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
         [[UIApplication sharedApplication] delegate].window.rootViewController = navVC;
+        
+        [navVC release];
+        [mainScreen release];
     }
 }
 

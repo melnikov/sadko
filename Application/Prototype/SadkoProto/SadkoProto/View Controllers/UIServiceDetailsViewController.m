@@ -40,11 +40,27 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    self.scroll = nil;
+    self.serviceTitle = nil;
+    self.clinic = nil;
+    self.logo = nil;
+    self.description = nil;
+    self.callButton = nil;
+
+    self.service = nil;
+    self.callWebView = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.callWebView = [[UIWebView alloc] init];
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
     self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 970);
 
     [self initChildControls];
@@ -105,7 +121,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
     }
@@ -127,6 +143,7 @@
 
     UIDoctorDetailsViewController* doctor = [[UIDoctorDetailsViewController alloc] initWithDoctorInfo:doc];
     [self.navigationController pushViewController:doctor animated:YES];
+    [doctor release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

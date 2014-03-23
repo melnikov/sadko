@@ -36,6 +36,16 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    self.clinic = nil;
+    self.category = nil;
+    self.doctors = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,7 +63,7 @@
 
 - (void)initDoctorList
 {
-    NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[self.clinic[@"docs"] count]];
+    NSMutableArray* result = [[[NSMutableArray alloc] initWithCapacity:[self.clinic[@"docs"] count]] autorelease];
 
     for (NSDictionary* doc in self.clinic[@"docs"])
     {
@@ -86,7 +96,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -105,6 +115,7 @@
 {
     UIDoctorDetailsViewController* doc = [[UIDoctorDetailsViewController alloc] initWithDoctorInfo:[self.doctors objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:doc animated:YES];
+    [doc release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

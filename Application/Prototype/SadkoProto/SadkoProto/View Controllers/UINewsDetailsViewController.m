@@ -33,6 +33,16 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.infoTitle = nil;
+    self.infoText = nil;
+    self.info = nil;
+    self.screenTitle = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

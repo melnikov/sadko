@@ -33,6 +33,15 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    self.clinic = nil;
+    self.categories = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -50,7 +59,7 @@
 
 - (void)initCategoryListWithArray:(NSArray *)docs
 {
-    NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:[docs count]];
+    NSMutableArray* result = [[[NSMutableArray alloc] initWithCapacity:[docs count]] autorelease];
 
     for (NSDictionary* doc in docs)
     {
@@ -87,7 +96,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -108,11 +117,13 @@
     {
         UIBranchFilterViewController* filterScreen = [[UIBranchFilterViewController alloc] initWithClinicInfo:self.clinic andCategory:[self.categories objectAtIndex:indexPath.row]];
         [self.navigationController pushViewController:filterScreen animated:YES];
+        [filterScreen release];
     }
     else if ([branches count] > 0)
     {
         UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic category:[self.categories objectAtIndex:indexPath.row] andBranchIndex:-1];
         [self.navigationController pushViewController:docList animated:YES];
+        [docList release];
     }
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

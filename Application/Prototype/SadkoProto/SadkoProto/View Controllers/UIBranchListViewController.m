@@ -32,6 +32,16 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    
+    self.clinic = nil;
+    self.branches = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -60,7 +70,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.detailTextLabel.textColor = [UIColor blackColor];
@@ -79,6 +89,7 @@
 {
     UIBranchDetailsViewController* branch = [[UIBranchDetailsViewController alloc] initWithBranchInfo:[self.branches objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:branch animated:YES];
+    [branch release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

@@ -31,6 +31,15 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.titleLabel = nil;
+    self.leftButtonActionBlock = nil;
+    self.rightButtonActionBlock = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,7 +91,7 @@
 
 - (void)initTitleLabel
 {
-    [self setTitleLabel:[[[UILabel alloc] initWithFrame:[[[self navigationController] navigationBar] bounds]]autorelease]];
+    [self setTitleLabel:[[[UILabel alloc] initWithFrame:[[[self navigationController] navigationBar] bounds]] autorelease]];
     [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [self.titleLabel setBackgroundColor:[UIColor clearColor]];
     [self.titleLabel setFont:[UIFont systemFontOfSize:20.0f]];

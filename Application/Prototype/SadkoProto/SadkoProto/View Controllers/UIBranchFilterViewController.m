@@ -37,6 +37,16 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    self.clinic = nil;
+    self.category = nil;
+    self.branches = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -94,7 +104,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.detailTextLabel.textColor = [UIColor blackColor];
@@ -128,6 +138,7 @@
 
     UIDoctorListViewController* docList = [[UIDoctorListViewController alloc] initWithClinicInfo:self.clinic category:self.category andBranchIndex:branch];
     [self.navigationController pushViewController:docList animated:YES];
+    [docList release];
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

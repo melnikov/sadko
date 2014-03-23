@@ -37,9 +37,26 @@
     if (self)
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        self.clinics = [[NSArray alloc] initWithContentsOfFile:filePath];
+        self.clinics = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    self.clinics = nil;
+
+    self.buttonBonus = nil;
+    self.buttonBranch1 = nil;
+    self.buttonBranch2 = nil;
+    self.buttonBranch3 = nil;
+    self.buttonBranch4 = nil;
+    self.buttonBranch5 = nil;
+    self.buttonBranch6 = nil;
+    self.buttonBranch7 = nil;
+    self.buttonBranch8 = nil;
+
+    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -104,6 +121,7 @@
 {
     UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
     [self.navigationController pushViewController:bonusVC animated:YES];
+    [bonusVC release];
 }
 
 - (IBAction)branchButtonPressed:(UIButton*)sender
@@ -116,6 +134,7 @@
         mainVC.currentSlide = index;
 
         [self.navigationController pushViewController:mainVC animated:YES];
+        [mainVC release];
     }
 }
 

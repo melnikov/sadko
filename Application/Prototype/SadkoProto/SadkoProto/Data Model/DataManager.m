@@ -27,9 +27,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataManager)
     return self;
 }
 
+- (void)dealloc
+{
+    self.filter = nil;
+    self.card = nil;
+    
+    [super dealloc];
+}
+
 -(void)resetFilterWithCapacity:(NSInteger)count
 {
-    self.filter = [[NSMutableArray alloc] initWithCapacity:count];
+    self.filter = [[[NSMutableArray alloc] initWithCapacity:count] autorelease];
 
     for (int i = 0; i < count; i ++)
     {

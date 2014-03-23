@@ -31,12 +31,23 @@
     if (self)
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        NSDictionary* info = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+        NSDictionary* info = [[[NSDictionary alloc] initWithContentsOfFile:filePath] autorelease];
 
         self.news = info[@"news"];
         self.deals = info[@"deals"];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    self.table = nil;
+    self.dealSelector = nil;
+    self.pageController = nil;
+    self.news = nil;
+    self.deals = nil;
+    
+    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -92,6 +103,9 @@
         [banner addSubview:title];
         
         [self.dealSelector addSubview:banner];
+
+        [banner release];
+        [title release];
         
         self.dealSelector.contentSize = CGSizeMake(self.dealSelector.contentSize.width + banner.frame.size.width, self.dealSelector.contentSize.height);
     }
@@ -101,6 +115,7 @@
 {
     UINewsDetailsViewController* newsDetails = [[UINewsDetailsViewController alloc] initWithInfo:[self.deals objectAtIndex:self.pageController.currentPage] andTitle:@"Акция"];
     [self.navigationController pushViewController:newsDetails animated:YES];
+    [newsDetails release];
 }
 
 #pragma mark - Table View Data Source Methods
@@ -118,7 +133,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -135,6 +150,7 @@
 {
     UINewsDetailsViewController* newsDetails = [[UINewsDetailsViewController alloc] initWithInfo:[self.news objectAtIndex:indexPath.row] andTitle:@"Новость"];
     [self.navigationController pushViewController:newsDetails animated:YES];
+    [newsDetails release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

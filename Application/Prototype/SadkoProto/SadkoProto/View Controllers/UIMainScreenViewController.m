@@ -48,11 +48,30 @@
     if (self)
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        self.clinics = [[NSArray alloc] initWithContentsOfFile:filePath];
+        self.clinics = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
 
         self.currentSlide = 0;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    self.clinics = nil;
+    
+    self.clinicSelector = nil;
+    self.pageController = nil;
+    self.viewMenu = nil;
+    self.buttonDoctors = nil;
+    self.buttonAbout = nil;
+    self.buttonServices = nil;
+    self.buttonNews = nil;
+    self.buttonSymptoms = nil;
+    self.buttonContacts = nil;
+    self.buttonCallUs = nil;
+    self.callWebView = nil;
+    
+    [super dealloc];
 }
 
 - (void)viewDidLoad
@@ -65,7 +84,7 @@
 
     self.clinicSelector.delegate = self;
     
-    self.callWebView = [[UIWebView alloc] init];
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
 
     self.buttonDoctors.layer.cornerRadius = 3.0f;
     self.buttonAbout.layer.cornerRadius = 3.0f;
@@ -88,6 +107,7 @@
     {
         UIBonusCardViewController* bonusVC = [[UIBonusCardViewController alloc] initFromNib];
         [self.navigationController pushViewController:bonusVC animated:YES];
+        [bonusVC release];
     }];
 }
 
@@ -97,7 +117,7 @@
 {
     CGFloat pageWidth = self.clinicSelector.frame.size.width;
     int page = floor((self.clinicSelector.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    int oldPage = self.pageController.currentPage;
+    NSInteger oldPage = self.pageController.currentPage;
     
     self.pageController.currentPage = page;
 
@@ -126,6 +146,9 @@
         [banner addSubview:title];
         
         [self.clinicSelector addSubview:banner];
+
+        [banner release];
+        [title release];
 
         self.clinicSelector.contentSize = CGSizeMake(self.clinicSelector.contentSize.width + banner.frame.size.width, self.clinicSelector.frame.size.height);
     }
@@ -170,24 +193,28 @@
 {
     UIDoctorCategoryViewController* categoryScreen = [[UIDoctorCategoryViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:categoryScreen animated:YES];
+    [categoryScreen release];
 }
 
 - (IBAction)buttonAboutPressed:(id)sender
 {
     UIAboutViewController* aboutScreen = [[UIAboutViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:aboutScreen animated:YES];
+    [aboutScreen release];
 }
 
 - (IBAction)buttonServicesPressed:(id)sender
 {
     UIServiceListViewController* servicesScreen = [[UIServiceListViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
     [self.navigationController pushViewController:servicesScreen animated:YES];
+    [servicesScreen release];
 }
 
 - (IBAction)buttonNewsPressed:(id)sender
 {
     UINewsViewController* newsScreen = [[UINewsViewController alloc] initWithScript:@"News"];
     [self.navigationController pushViewController:newsScreen animated:YES];
+    [newsScreen release];
 }
 
 - (IBAction)buttonSymptomsPressed:(id)sender
@@ -198,11 +225,13 @@
     {
         UITopTenQuestionsViewController* top10Screen = [[UITopTenQuestionsViewController alloc] initWithScript:@"FAQ"];
         [self.navigationController pushViewController:top10Screen animated:YES];
+        [top10Screen release];
     }
     else
     {
         UIHumanSchemeViewController* schemeScreen = [[UIHumanSchemeViewController alloc] initFromNib];
         [self.navigationController pushViewController:schemeScreen animated:YES];
+        [schemeScreen release];
     }
 }
 
@@ -214,11 +243,13 @@
     {
         UIBranchListViewController* contactScreen = [[UIBranchListViewController alloc] initWithClinicInfo:[self.clinics objectAtIndex:self.pageController.currentPage]];
         [self.navigationController pushViewController:contactScreen animated:YES];
+        [contactScreen release];
     }
     else if ([branches count] > 0)
     {
         UIBranchDetailsViewController* detailsScreen = [[UIBranchDetailsViewController alloc] initWithBranchInfo:[branches objectAtIndex:0]];
         [self.navigationController pushViewController:detailsScreen animated:YES];
+        [detailsScreen release];
     }
 }
 

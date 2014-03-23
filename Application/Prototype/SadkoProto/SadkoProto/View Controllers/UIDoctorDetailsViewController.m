@@ -36,11 +36,29 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.scroll = nil;
+    self.avatar = nil;
+    self.last = nil;
+    self.first = nil;
+    self.middle = nil;
+    self.speciality = nil;
+    self.resume = nil;
+    self.schedule = nil;
+    self.callButton = nil;
+
+    self.doctor = nil;
+    self.callWebView = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.callWebView = [[UIWebView alloc] init];
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
     self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 500);
 
     self.callButton.layer.cornerRadius = 3.0f;

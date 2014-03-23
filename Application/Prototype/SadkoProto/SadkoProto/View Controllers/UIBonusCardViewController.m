@@ -36,6 +36,18 @@
 
 @implementation UIBonusCardViewController
 
+- (void)dealloc
+{
+    self.emptyLabel = nil;
+    self.barCodeImage = nil;
+    self.barCodeLabel = nil;
+    self.prompt = nil;
+    self.lastScanned = nil;
+    self.reader = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,6 +86,7 @@
     }
     popup.tag = ACTION_SHEET_TAG;
     [popup showInView:[UIApplication sharedApplication].keyWindow];
+    [popup release];
 }
 
 - (void)updateChildControls
@@ -87,7 +100,7 @@
         self.barCodeImage.hidden = NO;
         self.barCodeLabel.hidden = NO;
 
-        NKDBarcode* nkdbarcode = [[NKDEAN13Barcode alloc] initWithContent:code];
+        NKDBarcode* nkdbarcode = [[[NKDEAN13Barcode alloc] initWithContent:code] autorelease];
         UIImage* image = [UIImage imageFromBarcode:nkdbarcode];
         CGSize size = image.size;
 
@@ -151,13 +164,14 @@
                 [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
                 alert.tag = ALERT_MANUAL_ENTER_TAG;
                 [alert show];
+                [alert release];
                 break;
             }
             case 1:
             {
                 self.lastScanned = nil;
 
-                self.reader = [ZBarReaderViewController new];
+                self.reader = [[[ZBarReaderViewController alloc] init] autorelease];
                 self.reader.readerDelegate = self;
                 self.reader.readerView.zoom = 1.0f;
                 [self presentViewController:self.reader animated:YES completion:nil];
@@ -194,6 +208,7 @@
             {
                 UIAlertView  *errorMessage = [[UIAlertView alloc]initWithTitle:@"Ошибка" message:@"Код карты введен неверно. Для ввода карты используйте только цифры." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [errorMessage show];
+                [errorMessage release];
             }
         }
     }
@@ -227,6 +242,9 @@
         [alert show];
 
         [self.reader dismissViewControllerAnimated:YES completion:nil];
+
+        self.reader.readerDelegate = nil;
+        self.reader = nil;
 
         break; //We need only the first one
     }

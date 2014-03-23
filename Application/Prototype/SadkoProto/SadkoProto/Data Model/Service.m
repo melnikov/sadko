@@ -23,4 +23,14 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.title = nil;
+    self.description = nil;
+    self.image = nil;
+    self.doctors = nil;
+    
+    [super dealloc];
+}
+
 @end

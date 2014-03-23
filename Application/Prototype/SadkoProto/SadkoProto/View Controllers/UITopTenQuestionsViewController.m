@@ -26,7 +26,7 @@
     if (self)
     {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:script ofType:@"plist"];
-        self.questions = [[NSArray alloc] initWithContentsOfFile:filePath];
+        self.questions = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
     }
     return self;
 }
@@ -44,6 +44,14 @@
     self.title = @"Вопросы врачу";
 }
 
+- (void)dealloc
+{
+    self.table = nil;
+    self.questions = nil;
+    
+    [super dealloc];
+}
+
 #pragma mark - Table View Data Source Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,13 +67,13 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-    cell.textLabel.text = [NSString stringWithFormat:@"Вопрос №%d", indexPath.row + 1];
+    cell.textLabel.text = [NSString stringWithFormat:@"Вопрос №%d", (int)indexPath.row + 1];
     
     return cell;
 }
@@ -76,6 +84,7 @@
 {
     UIQuestionAnswerViewController* question = [[UIQuestionAnswerViewController alloc] initWithInfo:[self.questions objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:question animated:YES];
+    [question release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

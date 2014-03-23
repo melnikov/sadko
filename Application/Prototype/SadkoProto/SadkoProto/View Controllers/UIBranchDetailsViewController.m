@@ -40,6 +40,21 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.scroll = nil;
+    self.branchTitle = nil;
+    self.address = nil;
+    self.mapButton = nil;
+    self.schedule = nil;
+    self.table = nil;
+    
+    self.callWebView = nil;
+    self.branch = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,7 +67,7 @@
 
     self.mapButton.layer.cornerRadius = 3.0f;
 
-    self.callWebView = [[UIWebView alloc] init];
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
 
     [self initChildControls];
 
@@ -70,7 +85,12 @@
 
 - (void)callUsSelected
 {
-    NSURL* callURL = [NSURL URLWithString:self.branch[@"phone"]];
+    NSString* phoneString = [[[[self.branch[@"phone"] stringByReplacingOccurrencesOfString:@" " withString:@""]
+                               stringByReplacingOccurrencesOfString:@"(" withString:@""]
+                              stringByReplacingOccurrencesOfString:@")" withString:@""]
+                             stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    
+    NSURL* callURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", phoneString]];
     if ([[UIApplication sharedApplication] canOpenURL:callURL])
     {
         [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
@@ -89,6 +109,7 @@
     {
         UIAlertView* downloadAlert = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"На данном устройстве не настроена почта" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [downloadAlert show];
+        [downloadAlert release];
         return;
     }
     
@@ -129,6 +150,7 @@
 {
     UIMapViewController* mapVC = [[UIMapViewController alloc] initFromNib];
     [self.navigationController pushViewController:mapVC animated:YES];
+    [mapVC release];
 }
 
 #pragma mark - Table View Data Source Methods
@@ -146,7 +168,7 @@
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

@@ -30,14 +30,23 @@
     return self;
 }
 
+- (void)dealloc
+{
+    self.info = nil;
+
+    self.question = nil;
+    self.answer = nil;
+    self.picture = nil;
+    
+    [super dealloc];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     self.title = @"Вопрос - ответ";
 
-    //self.question.text = self.info[@"question"];
-    //self.answer.text = self.info[@"answer"];
     self.picture.image = [UIImage imageNamed:self.info[@"picture"]];
 }
 
