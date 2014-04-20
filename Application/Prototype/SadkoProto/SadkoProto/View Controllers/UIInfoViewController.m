@@ -13,17 +13,19 @@
 @property (nonatomic, retain) IBOutlet UITextView* textView;
 
 @property (nonatomic, retain) NSString* textInfo;
+@property (nonatomic, retain) NSString* textTitle;
 
 @end
 
 @implementation UIInfoViewController
 
-- (id)initWithText:(NSString *)text
+- (id)initWithText:(NSString *)text andTitle:(NSString *)title
 {
     self = [super initFromNib];
     if (self)
     {
         self.textInfo = text;
+        self.textTitle = title;
     }
     return self;
 }
@@ -32,6 +34,7 @@
 {
     self.textView = nil;
     self.textInfo = nil;
+    self.title = nil;
     
     [super dealloc];
 }
@@ -42,7 +45,7 @@
 
     self.textView.text = self.textInfo;
 
-    self.title = @"Информация";
+    self.title = self.textTitle;
 }
 
 @end

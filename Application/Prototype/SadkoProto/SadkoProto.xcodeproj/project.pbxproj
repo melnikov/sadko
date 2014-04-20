@@ -48,6 +48,7 @@
 		277F246D19046AB500A32B9B /* UISlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F246B19046AB500A32B9B /* UISlideMenuViewController.m */; };
 		277F246E19046AB500A32B9B /* UISlideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F246C19046AB500A32B9B /* UISlideMenuViewController.xib */; };
 		277F24711904710700A32B9B /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F24701904710700A32B9B /* MenuItem.m */; };
+		277F247619047FAD00A32B9B /* General.plist in Resources */ = {isa = PBXBuildFile; fileRef = 277F247519047FAD00A32B9B /* General.plist */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
 		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
@@ -222,6 +223,7 @@
 		277F246C19046AB500A32B9B /* UISlideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISlideMenuViewController.xib; sourceTree = "<group>"; };
 		277F246F1904710700A32B9B /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		277F24701904710700A32B9B /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		277F247519047FAD00A32B9B /* General.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = General.plist; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				27B9503F18B6B19200EDBE52 /* Clinics.plist */,
 				2712D82A18BBEC5800C59B47 /* FAQ.plist */,
 				2712D82C18BBEE3700C59B47 /* News.plist */,
+				277F247519047FAD00A32B9B /* General.plist */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 				60ACF51718B6411B00A16C2F /* UIDoctorDetailsViewController.xib in Resources */,
 				60ACF51C18B641B200A16C2F /* UIServiceListViewController.xib in Resources */,
 				60025C0F18C4B6B000725A1C /* faq.png in Resources */,
+				277F247619047FAD00A32B9B /* General.plist in Resources */,
 				27B9503718B6995A00EDBE52 /* logo.png in Resources */,
 				60ACF50818B6405E00A16C2F /* UIAboutViewController.xib in Resources */,
 				2716787318C6FD4A00D289E8 /* zbar-samples.png in Resources */,

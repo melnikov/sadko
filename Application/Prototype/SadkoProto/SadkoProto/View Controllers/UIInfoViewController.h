@@ -10,6 +10,6 @@
 
 @interface UIInfoViewController : UIBaseViewController
 
-- (id)initWithText:(NSString*)text;
+- (id)initWithText:(NSString*)text andTitle:(NSString*)title;
 
 @end

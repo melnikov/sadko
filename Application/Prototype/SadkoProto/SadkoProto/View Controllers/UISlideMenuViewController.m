@@ -10,6 +10,8 @@
 
 #import "MenuItem.h"
 
+#import "UIInfoViewController.h"
+
 @interface UISlideMenuViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
@@ -17,6 +19,8 @@
 @property (nonatomic, retain) NSArray* menuItems;
 
 - (void)createMenuItems;
+
+- (void)historyItemSelected;
 
 @end
 
@@ -69,6 +73,8 @@
     MenuItem* menuItem = nil;
     
     menuItem = [MenuItem menuItemWithTitle:@"История компании"];
+    menuItem.target = self;
+    menuItem.selector = @selector(historyItemSelected);
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Выбрать врача"];
@@ -132,6 +138,25 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     [self.sidePanelController toggleLeftPanel:nil];
+
+    MenuItem* item = [self.menuItems objectAtIndex:indexPath.row];
+
+    if ([item.target respondsToSelector:item.selector])
+    {
+        [item.target performSelector:item.selector withObject:nil];
+    }
+}
+
+#pragma mark - Menu Items Handling
+
+- (void)historyItemSelected
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"General" ofType:@"plist"];
+    NSDictionary* data = [[[NSDictionary alloc] initWithContentsOfFile:filePath] autorelease];
+
+    UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:data[@"history"] andTitle:@"История компании"];
+    [self.centerController.navigationController pushViewController:infoScreen animated:YES];
+    [infoScreen release];
 }
 
 @end

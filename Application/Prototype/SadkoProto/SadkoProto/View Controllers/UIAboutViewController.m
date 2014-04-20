@@ -191,7 +191,7 @@
     {
         case 0:
         {
-            UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:self.clinic[@"info"]];
+            UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:self.clinic[@"info"] andTitle:@"Информация"];
             [self.navigationController pushViewController:infoScreen animated:YES];
             [infoScreen release];
             break;
