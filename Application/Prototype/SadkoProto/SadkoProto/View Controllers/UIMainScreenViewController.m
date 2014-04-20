@@ -31,6 +31,8 @@
 
 @property (nonatomic, retain) IBOutlet UIButton* buttonCallUs;
 
+@property (nonatomic, retain) IBOutlet UILabel* openingLabel;
+
 @property (nonatomic, retain) NSArray* clinics;
 
 @property (nonatomic, retain) UIWebView* callWebView;
@@ -69,6 +71,7 @@
     self.buttonSymptoms = nil;
     self.buttonContacts = nil;
     self.buttonCallUs = nil;
+    self.openingLabel = nil;
     self.callWebView = nil;
     
     [super dealloc];
@@ -184,6 +187,29 @@
     else
     {
         [self.buttonSymptoms setTitle:@"Что болит?" forState:UIControlStateNormal];
+    }
+
+    if ([[clinic objectForKey:@"open"] boolValue])
+    {
+        self.buttonDoctors.hidden = NO;
+        self.buttonAbout.hidden = NO;
+        self.buttonServices.hidden = NO;
+        self.buttonNews.hidden = NO;
+        self.buttonSymptoms.hidden = NO;
+        self.buttonContacts.hidden = NO;
+        self.buttonCallUs.hidden = NO;
+        self.openingLabel.hidden = YES;
+    }
+    else
+    {
+        self.buttonDoctors.hidden = YES;
+        self.buttonAbout.hidden = YES;
+        self.buttonServices.hidden = YES;
+        self.buttonNews.hidden = YES;
+        self.buttonSymptoms.hidden = YES;
+        self.buttonContacts.hidden = YES;
+        self.buttonCallUs.hidden = YES;
+        self.openingLabel.hidden = NO;
     }
 }
 

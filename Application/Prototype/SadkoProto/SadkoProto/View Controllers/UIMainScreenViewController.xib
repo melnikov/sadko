@@ -15,6 +15,7 @@
                 <outlet property="buttonServices" destination="KCn-bJ-c8l" id="Puh-8j-SMs"/>
                 <outlet property="buttonSymptoms" destination="OL1-oR-2pX" id="mA3-1F-SnQ"/>
                 <outlet property="clinicSelector" destination="df5-5G-Vk1" id="FWa-b1-Rio"/>
+                <outlet property="openingLabel" destination="Ziy-by-HOr" id="Edi-K6-XEJ"/>
                 <outlet property="pageController" destination="gYy-L7-Igj" id="kzt-6o-f5L"/>
                 <outlet property="view" destination="1" id="3"/>
                 <outlet property="viewMenu" destination="g4X-zf-VJB" id="IqM-U7-dgK"/>
@@ -138,6 +139,13 @@
                         <action selector="buttonCallUsPressed:" destination="-1" eventType="touchUpInside" id="ve3-YW-f3u"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро открытие!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ziy-by-HOr">
+                    <rect key="frame" x="20" y="262" width="280" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <size key="shadowOffset" width="0.0" height="1"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

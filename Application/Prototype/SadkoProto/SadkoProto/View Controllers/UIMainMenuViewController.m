@@ -13,6 +13,8 @@
 
 @interface UIMainMenuViewController ()
 
+@property (nonatomic, retain) IBOutlet UIScrollView* scroll;
+
 @property (nonatomic, retain) IBOutlet UIButton* buttonBonus;
 @property (nonatomic, retain) IBOutlet UIButton* buttonBranch1;
 @property (nonatomic, retain) IBOutlet UIButton* buttonBranch2;
@@ -22,8 +24,15 @@
 @property (nonatomic, retain) IBOutlet UIButton* buttonBranch6;
 @property (nonatomic, retain) IBOutlet UIButton* buttonBranch7;
 @property (nonatomic, retain) IBOutlet UIButton* buttonBranch8;
+@property (nonatomic, retain) IBOutlet UIButton* buttonBranch9;
+@property (nonatomic, retain) IBOutlet UIButton* buttonBranch10;
+@property (nonatomic, retain) IBOutlet UIButton* buttonBranch11;
+
+@property (nonatomic, retain) IBOutlet UIButton* buttonCallUs;
 
 @property (nonatomic, retain) NSArray* clinics;
+
+@property (nonatomic, retain) UIWebView* callWebView;
 
 - (void)initChildControls;
 
@@ -55,6 +64,11 @@
     self.buttonBranch6 = nil;
     self.buttonBranch7 = nil;
     self.buttonBranch8 = nil;
+    self.buttonBranch9 = nil;
+    self.buttonBranch10 = nil;
+    self.buttonBranch11 = nil;
+
+    self.callWebView = nil;
 
     [super dealloc];
 }
@@ -63,7 +77,11 @@
 {
     [super viewDidLoad];
 
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 600);
+
     [self initChildControls];
+
+    self.callWebView = [[[UIWebView alloc] init] autorelease];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -93,6 +111,15 @@
     self.buttonBranch6.layer.cornerRadius = 3.0f;
     self.buttonBranch7.layer.cornerRadius = 3.0f;
     self.buttonBranch8.layer.cornerRadius = 3.0f;
+    self.buttonBranch9.layer.cornerRadius = 3.0f;
+    self.buttonBranch10.layer.cornerRadius = 3.0f;
+    self.buttonBranch11.layer.cornerRadius = 3.0f;
+    
+    self.buttonCallUs.layer.cornerRadius = 3.0f;
+
+    self.buttonBonus.titleLabel.numberOfLines = 0;
+    self.buttonBonus.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonBonus.titleLabel.textAlignment = NSTextAlignmentCenter;
 
     self.buttonBranch1.titleLabel.numberOfLines = 0;
     self.buttonBranch1.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -113,6 +140,18 @@
     self.buttonBranch5.titleLabel.numberOfLines = 0;
     self.buttonBranch5.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.buttonBranch5.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+    self.buttonBranch9.titleLabel.numberOfLines = 0;
+    self.buttonBranch9.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonBranch9.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+    self.buttonBranch10.titleLabel.numberOfLines = 0;
+    self.buttonBranch10.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonBranch10.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+    self.buttonBranch11.titleLabel.numberOfLines = 0;
+    self.buttonBranch11.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.buttonBranch11.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 #pragma mark - User Interaction
@@ -135,6 +174,21 @@
 
         [self.navigationController pushViewController:mainVC animated:YES];
         [mainVC release];
+    }
+}
+
+- (IBAction)buttonCallUsPressed:(id)sender
+{
+    NSURL* callURL = [NSURL URLWithString:@"tel:+78314210101"];
+    if ([[UIApplication sharedApplication] canOpenURL:callURL])
+    {
+        [self.callWebView loadRequest:[NSURLRequest requestWithURL:callURL]];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"Данное устройство не может совершать звонки." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
     }
 }
 

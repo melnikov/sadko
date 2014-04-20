@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Сеть стоматологических клиник</string>
 		<key>top10</key>
@@ -435,6 +437,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Лечебно-диагностический комплекс</string>
 		<key>top10</key>
@@ -929,6 +933,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Центр женского здоровья</string>
 		<key>top10</key>
@@ -1368,6 +1374,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Центр имплантации</string>
 		<key>top10</key>
@@ -1777,6 +1785,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Центр неврологии</string>
 		<key>top10</key>
@@ -2232,6 +2242,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Центр ортодонтии «Джем»</string>
 		<key>top10</key>
@@ -2559,6 +2571,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Детская стоматология «Динозубрик»</string>
 		<key>top10</key>
@@ -2990,6 +3004,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>open</key>
+		<true/>
 		<key>title</key>
 		<string>Детская клиника &quot;Здоровёнок&quot;</string>
 		<key>top10</key>
@@ -3431,6 +3447,63 @@
 				</array>
 			</dict>
 		</array>
+	</dict>
+	<dict>
+		<key>open</key>
+		<false/>
+		<key>title</key>
+		<string>Центр маммологии</string>
+		<key>top10</key>
+		<false/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Центр маммологии</string>
+		<key>main_phone</key>
+		<string>+7 (831) 430-01-30</string>
+		<key>email</key>
+		<string>sadko-med@yandex.ru</string>
+		<key>web</key>
+		<string>http://zdorovenok.sadkomed.ru/</string>
+	</dict>
+	<dict>
+		<key>open</key>
+		<false/>
+		<key>title</key>
+		<string>Центр мужского здоровья</string>
+		<key>top10</key>
+		<false/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Центр мужского здоровья</string>
+		<key>main_phone</key>
+		<string>+7 (831) 430-01-30</string>
+		<key>email</key>
+		<string>sadko-med@yandex.ru</string>
+		<key>web</key>
+		<string>http://zdorovenok.sadkomed.ru/</string>
+	</dict>
+	<dict>
+		<key>open</key>
+		<false/>
+		<key>title</key>
+		<string>Хирургический центр</string>
+		<key>top10</key>
+		<false/>
+		<key>schedule</key>
+		<string>пн-сб: 08:00 - 20:00
+вс: 09:00 - 18:00</string>
+		<key>info</key>
+		<string>Хирургический центр</string>
+		<key>main_phone</key>
+		<string>+7 (831) 430-01-30</string>
+		<key>email</key>
+		<string>sadko-med@yandex.ru</string>
+		<key>web</key>
+		<string>http://zdorovenok.sadkomed.ru/</string>
 	</dict>
 </array>
 </plist>
