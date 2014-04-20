@@ -11,6 +11,7 @@
 #import "MenuItem.h"
 
 #import "UIInfoViewController.h"
+#import "UIPriceCalcViewController.h"
 
 @interface UISlideMenuViewController ()
 
@@ -22,6 +23,7 @@
 
 - (void)historyItemSelected;
 - (void)sendEmailItemSelected;
+- (void)priceCalcItemSelected;
 
 @end
 
@@ -90,6 +92,8 @@
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Расчет стоимости"];
+    menuItem.target = self;
+    menuItem.selector = @selector(priceCalcItemSelected);
     [menu addObject:menuItem];
 
     menuItem = [MenuItem menuItemWithTitle:@"Акции"];
@@ -150,6 +154,27 @@
     }
 }
 
+#pragma mark - MFMailComposer Delegate Methods
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	switch (result)
+    {
+		case MFMailComposeResultCancelled:
+			break;
+		case MFMailComposeResultSaved:
+			break;
+		case MFMailComposeResultSent:
+			break;
+		case MFMailComposeResultFailed:
+			break;
+		default:
+			break;
+	}
+    controller.delegate = nil;
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Menu Items Handling
 
 - (void)historyItemSelected
@@ -184,25 +209,11 @@
     [self presentViewController:pickerCtl animated:YES completion:nil];
 }
 
-#pragma mark - MFMailComposer Delegate Methods
-
-- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+- (void)priceCalcItemSelected
 {
-	switch (result)
-    {
-		case MFMailComposeResultCancelled:
-			break;
-		case MFMailComposeResultSaved:
-			break;
-		case MFMailComposeResultSent:
-			break;
-		case MFMailComposeResultFailed:
-			break;
-		default:
-			break;
-	}
-    controller.delegate = nil;
-    [controller dismissViewControllerAnimated:YES completion:nil];
+    UIPriceCalcViewController* priceCalcVC = [[UIPriceCalcViewController alloc] initFromNib];
+    [self.centerController.navigationController pushViewController:priceCalcVC animated:YES];
+    [priceCalcVC release];
 }
 
 @end

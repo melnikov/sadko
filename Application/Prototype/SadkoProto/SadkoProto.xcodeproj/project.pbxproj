@@ -49,6 +49,8 @@
 		277F246E19046AB500A32B9B /* UISlideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F246C19046AB500A32B9B /* UISlideMenuViewController.xib */; };
 		277F24711904710700A32B9B /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F24701904710700A32B9B /* MenuItem.m */; };
 		277F247619047FAD00A32B9B /* General.plist in Resources */ = {isa = PBXBuildFile; fileRef = 277F247519047FAD00A32B9B /* General.plist */; };
+		277F247A190484B300A32B9B /* UIPriceCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F2478190484B300A32B9B /* UIPriceCalcViewController.m */; };
+		277F247B190484B300A32B9B /* UIPriceCalcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F2479190484B300A32B9B /* UIPriceCalcViewController.xib */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
 		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
@@ -224,6 +226,9 @@
 		277F246F1904710700A32B9B /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		277F24701904710700A32B9B /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		277F247519047FAD00A32B9B /* General.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = General.plist; sourceTree = "<group>"; };
+		277F2477190484B300A32B9B /* UIPriceCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPriceCalcViewController.h; sourceTree = "<group>"; };
+		277F2478190484B300A32B9B /* UIPriceCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPriceCalcViewController.m; sourceTree = "<group>"; };
+		277F2479190484B300A32B9B /* UIPriceCalcViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIPriceCalcViewController.xib; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -698,6 +703,9 @@
 				60025C1118C4C31900725A1C /* UIBonusCardViewController.h */,
 				60025C1218C4C31900725A1C /* UIBonusCardViewController.m */,
 				60025C1318C4C31900725A1C /* UIBonusCardViewController.xib */,
+				277F2477190484B300A32B9B /* UIPriceCalcViewController.h */,
+				277F2478190484B300A32B9B /* UIPriceCalcViewController.m */,
+				277F2479190484B300A32B9B /* UIPriceCalcViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -925,6 +933,7 @@
 				2795D17518C9249A006CEF6F /* next.png in Resources */,
 				2716784B18C6DD9100D289E8 /* filter_menu.png in Resources */,
 				60A0562118CA047200EBFC27 /* InfoPlist.strings in Resources */,
+				277F247B190484B300A32B9B /* UIPriceCalcViewController.xib in Resources */,
 				60ACF53F18B6446100A16C2F /* UIBranchListViewController.xib in Resources */,
 				60ACF53018B643B900A16C2F /* UITopTenQuestionsViewController.xib in Resources */,
 				27672BF018D2441F00DEEBA5 /* phone.png in Resources */,
@@ -999,6 +1008,7 @@
 				277F246919046A6700A32B9B /* UIViewController+JASidePanel.m in Sources */,
 				2795D1BB18C930F4006CEF6F /* NKDUPCEBarcode.m in Sources */,
 				60ACF51118B640D100A16C2F /* UIDoctorListViewController.m in Sources */,
+				277F247A190484B300A32B9B /* UIPriceCalcViewController.m in Sources */,
 				274BEF5918B1654C00C49814 /* main.m in Sources */,
 				60ACF53918B6441000A16C2F /* UISymptomsViewController.m in Sources */,
 				2795D1AE18C930F4006CEF6F /* NKDCode128Barcode.m in Sources */,
