@@ -21,6 +21,7 @@
 - (void)createMenuItems;
 
 - (void)historyItemSelected;
+- (void)sendEmailItemSelected;
 
 @end
 
@@ -84,6 +85,8 @@
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Отправить письмо"];
+    menuItem.target = self;
+    menuItem.selector = @selector(sendEmailItemSelected);
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Расчет стоимости"];
@@ -157,6 +160,49 @@
     UIInfoViewController* infoScreen = [[UIInfoViewController alloc] initWithText:data[@"history"] andTitle:@"История компании"];
     [self.centerController.navigationController pushViewController:infoScreen animated:YES];
     [infoScreen release];
+}
+
+- (void)sendEmailItemSelected
+{
+    if (![MFMailComposeViewController canSendMail])
+    {
+        UIAlertView* downloadAlert = [[UIAlertView alloc] initWithTitle:@"Ошибка" message:@"На данном устройстве не настроена почта" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [downloadAlert show];
+        [downloadAlert release];
+        return;
+    }
+    
+    MFMailComposeViewController* pickerCtl = [[MFMailComposeViewController alloc] init];
+    pickerCtl.mailComposeDelegate = self;
+    [self retain];
+    
+    NSArray *mailAddress = [[[NSArray alloc] initWithObjects:@"sadko-med@yandex.ru", nil] autorelease];
+    
+    [pickerCtl setSubject:@"Отзывы и предложения"];
+    [pickerCtl setToRecipients:mailAddress];
+    
+    [self presentViewController:pickerCtl animated:YES completion:nil];
+}
+
+#pragma mark - MFMailComposer Delegate Methods
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	switch (result)
+    {
+		case MFMailComposeResultCancelled:
+			break;
+		case MFMailComposeResultSaved:
+			break;
+		case MFMailComposeResultSent:
+			break;
+		case MFMailComposeResultFailed:
+			break;
+		default:
+			break;
+	}
+    controller.delegate = nil;
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

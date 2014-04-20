@@ -10,6 +10,8 @@
 
 #import "JASidePanelController.h"
 
+#import <MessageUI/MessageUI.h>
+
 typedef enum
 {
     UISlideMenuItemHistory = 0,
@@ -24,7 +26,7 @@ typedef enum
 }
 UIMainMenuItem;
 
-@interface UISlideMenuViewController : UIBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface UISlideMenuViewController : UIBaseViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, retain) JASidePanelController* sidePanelController;
 
