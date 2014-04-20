@@ -8,6 +8,9 @@
 
 #import "UISplashScreenViewController.h"
 
+#import "JASidePanelController.h"
+
+#import "UISlideMenuViewController.h"
 #import "UIMainMenuViewController.h"
 
 @interface UISplashScreenViewController ()
@@ -74,12 +77,23 @@
     }
     else
     {
+        UISlideMenuViewController* slideMenu = [[[UISlideMenuViewController alloc] initFromNib] autorelease];
         UIMainMenuViewController* mainScreen = [[UIMainMenuViewController alloc] initWithScript:@"Clinics"];
         UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:mainScreen];
-        [[UIApplication sharedApplication] delegate].window.rootViewController = navVC;
         
-        [navVC release];
-        [mainScreen release];
+        JASidePanelController* sidePanelViewController = [[JASidePanelController alloc] init];
+        sidePanelViewController.bounceOnSidePanelOpen = NO;
+        sidePanelViewController.bounceOnSidePanelClose = NO;
+        sidePanelViewController.bounceOnCenterPanelChange = NO;
+        
+        slideMenu.sidePanelController = sidePanelViewController;
+        slideMenu.centerController = mainScreen;
+        
+        sidePanelViewController.leftPanel = slideMenu;
+        sidePanelViewController.centerPanel = navVC;
+        sidePanelViewController.shouldDelegateAutorotateToVisiblePanel = NO;
+        
+        [[UIApplication sharedApplication] delegate].window.rootViewController = sidePanelViewController;
     }
 }
 
