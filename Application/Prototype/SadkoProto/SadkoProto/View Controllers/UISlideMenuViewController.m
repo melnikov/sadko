@@ -12,6 +12,7 @@
 
 #import "UIInfoViewController.h"
 #import "UIPriceCalcViewController.h"
+#import "UIAllDealsViewController.h"
 
 @interface UISlideMenuViewController ()
 
@@ -24,6 +25,7 @@
 - (void)historyItemSelected;
 - (void)sendEmailItemSelected;
 - (void)priceCalcItemSelected;
+- (void)allDealsItemSelected;
 
 @end
 
@@ -97,6 +99,8 @@
     [menu addObject:menuItem];
 
     menuItem = [MenuItem menuItemWithTitle:@"Акции"];
+    menuItem.target = self;
+    menuItem.selector = @selector(allDealsItemSelected);
     [menu addObject:menuItem];
 
     menuItem = [MenuItem menuItemWithTitle:@"Контакты"];
@@ -214,6 +218,16 @@
     UIPriceCalcViewController* priceCalcVC = [[UIPriceCalcViewController alloc] initFromNib];
     [self.centerController.navigationController pushViewController:priceCalcVC animated:YES];
     [priceCalcVC release];
+}
+
+- (void)allDealsItemSelected
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"News" ofType:@"plist"];
+    NSDictionary* data = [[[NSDictionary alloc] initWithContentsOfFile:filePath] autorelease];
+
+    UIAllDealsViewController* allDealsVC = [[UIAllDealsViewController alloc] initWithList:data[@"deals"]];
+    [self.centerController.navigationController pushViewController:allDealsVC animated:YES];
+    [allDealsVC release];
 }
 
 @end
