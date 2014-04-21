@@ -16,6 +16,8 @@
 #import "UIAllContactsViewController.h"
 #import "UIAllDoctorsViewController.h"
 
+#import "UIServiceListViewController.h"
+
 @interface UISlideMenuViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
@@ -30,6 +32,7 @@
 - (void)allDealsItemSelected;
 - (void)allContactsItemSelected;
 - (void)allDoctorsItemSelected;
+- (void)allServicesItemSelected;
 
 @end
 
@@ -92,6 +95,8 @@
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Услуги"];
+    menuItem.target = self;
+    menuItem.selector = @selector(allServicesItemSelected);
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Отправить письмо"];
@@ -256,6 +261,16 @@
     UIAllDoctorsViewController* allDocsVC = [[UIAllDoctorsViewController alloc] initWithAllClinics:data];
     [self.centerController.navigationController pushViewController:allDocsVC animated:YES];
     [allDocsVC release];
+}
+
+- (void)allServicesItemSelected
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Clinics" ofType:@"plist"];
+    NSArray* data = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
+    
+    UIServiceListViewController* servicesVC = [[UIServiceListViewController alloc] initWithAllClinics:data];
+    [self.centerController.navigationController pushViewController:servicesVC animated:YES];
+    [servicesVC release];
 }
 
 @end

@@ -29,6 +29,7 @@
     self.description = nil;
     self.image = nil;
     self.doctors = nil;
+    self.clinicInfo = nil;
     
     [super dealloc];
 }

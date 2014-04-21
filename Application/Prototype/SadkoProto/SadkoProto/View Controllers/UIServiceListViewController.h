@@ -9,4 +9,6 @@
 
 - (id)initWithClinicInfo:(NSDictionary*)clinic;
 
+- (id)initWithAllClinics:(NSArray*)clinics;
+
 @end

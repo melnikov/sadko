@@ -15,6 +15,8 @@
 @property (nonatomic, retain) NSString* image;
 @property (nonatomic, retain) NSArray* doctors;
 
+@property (nonatomic, retain) NSDictionary* clinicInfo;
+
 - (id)initWithDictionary:(NSDictionary*)info;
 
 @end

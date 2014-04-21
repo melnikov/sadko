@@ -54,7 +54,6 @@
 @property (nonatomic, retain) IBOutlet UISearchBar* searchBar;
 @property (nonatomic, retain) IBOutlet UIButton* shadow;
 
-@property (nonatomic, retain) NSDictionary* clinic;
 @property (nonatomic, retain) NSArray* serviceList;
 @property (nonatomic, retain) NSArray* sectionedList;
 @property (nonatomic, retain) NSMutableArray* filteredList;
@@ -62,7 +61,8 @@
 
 @property (nonatomic, retain) UILocalizedIndexedCollation* collation;
 
-- (void)initSectionsFromList:(NSArray*)list;
+- (void)initServicesFromAllClinics:(NSArray*)list;
+- (void)initSectionsFromList:(NSArray*)list withClinicData:(NSDictionary*)clinic;
 
 @end
 
@@ -73,12 +73,24 @@
     self = [super initFromNib];
     if (self)
     {
-        self.clinic = clinic;
-        self.serviceList = self.clinic[@"services"];
+        self.serviceList = clinic[@"services"];
 
         self.filteredList = [[[NSMutableArray alloc] init] autorelease];
-        [self initSectionsFromList:self.serviceList];
+        [self initSectionsFromList:self.serviceList withClinicData:clinic];
 
+        self.searching = NO;
+    }
+    return self;
+}
+
+- (id)initWithAllClinics:(NSArray *)clinics
+{
+    self = [super initFromNib];
+    if (self)
+    {
+        self.filteredList = [[[NSMutableArray alloc] init] autorelease];
+        [self initServicesFromAllClinics:clinics];
+        
         self.searching = NO;
     }
     return self;
@@ -89,7 +101,6 @@
     self.table = nil;
     self.searchBar = nil;
     self.shadow = nil;
-    self.clinic = nil;
     self.serviceList = nil;
     self.sectionedList = nil;
     self.filteredList = nil;
@@ -126,7 +137,34 @@
 
 #pragma mark - Private Methods
 
-- (void)initSectionsFromList:(NSArray*)list;
+- (void)initServicesFromAllClinics:(NSArray *)clinics
+{
+    NSMutableArray *sections = [NSMutableArray array];
+    self.collation = [UILocalizedIndexedCollation currentCollation];
+
+    for (NSDictionary* clinic in clinics)
+    {
+        for (NSDictionary *item in clinic[@"services"])
+        {
+            Service* service = [[Service alloc] initWithDictionary:item];
+            service.clinicInfo = clinic;
+            NSInteger section = [_collation sectionForObject:service collationStringSelector:@selector(title)];
+            [sections addObject:service toSubarrayAtIndex:section];
+            [service release];
+        }
+    }
+    
+    NSInteger section = 0;
+    for (section = 0; section < [sections count]; section++)
+    {
+        NSArray *sortedSubarray = [_collation sortedArrayFromArray:[sections objectAtIndex:section] collationStringSelector:@selector(title)];
+        [sections replaceObjectAtIndex:section withObject:sortedSubarray];
+    }
+    
+    self.sectionedList = sections;
+}
+
+- (void)initSectionsFromList:(NSArray*)list withClinicData:(NSDictionary *)clinic
 {
     NSMutableArray *sections = [NSMutableArray array];
     self.collation = [UILocalizedIndexedCollation currentCollation];
@@ -134,6 +172,7 @@
     for (NSDictionary *item in list)
     {
         Service* service = [[Service alloc] initWithDictionary:item];
+        service.clinicInfo = clinic;
         NSInteger section = [_collation sectionForObject:service collationStringSelector:@selector(title)];
         [sections addObject:service toSubarrayAtIndex:section];
         [service release];
@@ -311,7 +350,7 @@
         service = [self.sectionedList objectAtIndexPath:indexPath];
     }
 
-    UIServiceDetailsViewController* serviceScreen = [[UIServiceDetailsViewController alloc] initWithClinicInfo:self.clinic andService:service];
+    UIServiceDetailsViewController* serviceScreen = [[UIServiceDetailsViewController alloc] initWithClinicInfo:service.clinicInfo andService:service];
     [self.navigationController pushViewController:serviceScreen animated:YES];
     [serviceScreen release];
 
