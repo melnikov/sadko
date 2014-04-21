@@ -53,6 +53,8 @@
 		277F247B190484B300A32B9B /* UIPriceCalcViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F2479190484B300A32B9B /* UIPriceCalcViewController.xib */; };
 		277F247F1904D08B00A32B9B /* UIAllDealsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F247D1904D08B00A32B9B /* UIAllDealsViewController.m */; };
 		277F24801904D08B00A32B9B /* UIAllDealsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F247E1904D08B00A32B9B /* UIAllDealsViewController.xib */; };
+		277F24871904D36200A32B9B /* UIAllContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F24851904D36200A32B9B /* UIAllContactsViewController.m */; };
+		277F24881904D36200A32B9B /* UIAllContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F24861904D36200A32B9B /* UIAllContactsViewController.xib */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
 		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
@@ -234,6 +236,9 @@
 		277F247C1904D08B00A32B9B /* UIAllDealsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAllDealsViewController.h; sourceTree = "<group>"; };
 		277F247D1904D08B00A32B9B /* UIAllDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAllDealsViewController.m; sourceTree = "<group>"; };
 		277F247E1904D08B00A32B9B /* UIAllDealsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAllDealsViewController.xib; sourceTree = "<group>"; };
+		277F24841904D36200A32B9B /* UIAllContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAllContactsViewController.h; sourceTree = "<group>"; };
+		277F24851904D36200A32B9B /* UIAllContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAllContactsViewController.m; sourceTree = "<group>"; };
+		277F24861904D36200A32B9B /* UIAllContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAllContactsViewController.xib; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -714,6 +719,9 @@
 				277F247C1904D08B00A32B9B /* UIAllDealsViewController.h */,
 				277F247D1904D08B00A32B9B /* UIAllDealsViewController.m */,
 				277F247E1904D08B00A32B9B /* UIAllDealsViewController.xib */,
+				277F24841904D36200A32B9B /* UIAllContactsViewController.h */,
+				277F24851904D36200A32B9B /* UIAllContactsViewController.m */,
+				277F24861904D36200A32B9B /* UIAllContactsViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -891,6 +899,7 @@
 				60025C1018C4B6B000725A1C /* faq@2x.png in Resources */,
 				60ACF51718B6411B00A16C2F /* UIDoctorDetailsViewController.xib in Resources */,
 				60ACF51C18B641B200A16C2F /* UIServiceListViewController.xib in Resources */,
+				277F24881904D36200A32B9B /* UIAllContactsViewController.xib in Resources */,
 				60025C0F18C4B6B000725A1C /* faq.png in Resources */,
 				277F247619047FAD00A32B9B /* General.plist in Resources */,
 				27B9503718B6995A00EDBE52 /* logo.png in Resources */,
@@ -1011,6 +1020,7 @@
 				60ACF52F18B643B900A16C2F /* UITopTenQuestionsViewController.m in Sources */,
 				6096A40618BB6D63008064FC /* UISplashScreenViewController.m in Sources */,
 				2795D1B618C930F4006CEF6F /* NKDModifiedPlesseyHexBarcode.m in Sources */,
+				277F24871904D36200A32B9B /* UIAllContactsViewController.m in Sources */,
 				60ACF51B18B641B200A16C2F /* UIServiceListViewController.m in Sources */,
 				2795D1BC18C930F4006CEF6F /* NSString-UPCEAN.m in Sources */,
 				277F247F1904D08B00A32B9B /* UIAllDealsViewController.m in Sources */,

@@ -13,6 +13,7 @@
 #import "UIInfoViewController.h"
 #import "UIPriceCalcViewController.h"
 #import "UIAllDealsViewController.h"
+#import "UIAllContactsViewController.h"
 
 @interface UISlideMenuViewController ()
 
@@ -26,6 +27,7 @@
 - (void)sendEmailItemSelected;
 - (void)priceCalcItemSelected;
 - (void)allDealsItemSelected;
+- (void)allContactsItemSelected;
 
 @end
 
@@ -104,6 +106,8 @@
     [menu addObject:menuItem];
 
     menuItem = [MenuItem menuItemWithTitle:@"Контакты"];
+    menuItem.target = self;
+    menuItem.selector = @selector(allContactsItemSelected);
     [menu addObject:menuItem];
     
     self.menuItems = [NSArray arrayWithArray:menu];
@@ -228,6 +232,16 @@
     UIAllDealsViewController* allDealsVC = [[UIAllDealsViewController alloc] initWithList:data[@"deals"]];
     [self.centerController.navigationController pushViewController:allDealsVC animated:YES];
     [allDealsVC release];
+}
+
+- (void)allContactsItemSelected
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Clinics" ofType:@"plist"];
+    NSArray* data = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
+    
+    UIAllContactsViewController* allContactsVC = [[UIAllContactsViewController alloc] initWithAllClinics:data];
+    [self.centerController.navigationController pushViewController:allContactsVC animated:YES];
+    [allContactsVC release];
 }
 
 @end

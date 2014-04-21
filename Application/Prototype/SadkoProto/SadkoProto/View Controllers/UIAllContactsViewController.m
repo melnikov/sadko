@@ -1,31 +1,33 @@
 //
-//  UIAllDealsViewController.m
+//  UIAllContactsViewController.m
 //  SadkoProto
 //
 //  Created by Artyom Syrov on 21.04.14.
 //  Copyright (c) 2014 Stex Group. All rights reserved.
 //
 
-#import "UIAllDealsViewController.h"
+#import "UIAllContactsViewController.h"
 
-#import "UINewsDetailsViewController.h"
+#import "UIBranchDetailsViewController.h"
 
-@interface UIAllDealsViewController ()
+@interface UIAllContactsViewController ()
 
 @property (nonatomic, retain) IBOutlet UITableView* table;
 
-@property (nonatomic, retain) NSArray* list;
+@property (nonatomic, retain) NSArray* contacts;
+
+- (void)initContactsfFromClinics:(NSArray*)list;
 
 @end
 
-@implementation UIAllDealsViewController
+@implementation UIAllContactsViewController
 
-- (id)initWithList:(NSArray *)list
+- (id)initWithAllClinics:(NSArray *)clinics
 {
     self = [super initFromNib];
     if (self)
     {
-        self.list = list;
+        [self initContactsfFromClinics:clinics];
     }
     return self;
 }
@@ -33,7 +35,8 @@
 - (void)dealloc
 {
     self.table = nil;
-
+    self.contacts = nil;
+    
     [super dealloc];
 }
 
@@ -41,20 +44,33 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Акции";
+    self.title = @"Контакты";
     
     self.table.backgroundView = nil;
     self.table.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
     self.table.backgroundColor = [UIColor clearColor];
     self.table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.table.separatorColor = [UIColor whiteColor];
+    self.table.rowHeight = 60.0f;
+}
+
+- (void)initContactsfFromClinics:(NSArray *)list
+{
+    NSMutableArray* result = [[[NSMutableArray alloc] init] autorelease];
+
+    for (NSDictionary* clinic in list)
+    {
+        [result addObjectsFromArray:clinic[@"branches"]];
+    }
+
+    self.contacts = [NSArray arrayWithArray:result];
 }
 
 #pragma mark - Table View Data Source Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.list count];
+    return [self.contacts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,14 +81,15 @@
     
     if (!cell)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kMenuCellId] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMenuCellId] autorelease];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor blackColor];
         cell.detailTextLabel.textColor = [UIColor blackColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = [[self.list objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.textLabel.text = [[self.contacts objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.detailTextLabel.text = [[self.contacts objectAtIndex:indexPath.row] objectForKey:@"address"];
     
     return cell;
 }
@@ -81,12 +98,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UINewsDetailsViewController* newsDetails = [[UINewsDetailsViewController alloc] initWithInfo:[self.list objectAtIndex:indexPath.row] andTitle:@"Акция"];
-    [self.navigationController pushViewController:newsDetails animated:YES];
-    [newsDetails release];
+    UIBranchDetailsViewController* branch = [[UIBranchDetailsViewController alloc] initWithBranchInfo:[self.contacts objectAtIndex:indexPath.row]];
+    [self.navigationController pushViewController:branch animated:YES];
+    [branch release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end
