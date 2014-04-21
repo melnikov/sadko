@@ -12,6 +12,7 @@
 
 @interface UIPriceCalcViewController ()
 
+@property (nonatomic, retain) IBOutlet UIScrollView* scroll;
 @property (nonatomic, retain) IBOutlet UITextField* nameField;
 @property (nonatomic, retain) IBOutlet UITextField* phoneField;
 @property (nonatomic, retain) IBOutlet UITextView* textView;
@@ -31,6 +32,8 @@
     [super viewDidLoad];
     
     self.title = @"Расчет стоимости";
+    
+    self.scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 500);
 
     self.sendButton.layer.cornerRadius = 3.0f;
 

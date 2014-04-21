@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="nameField" destination="pk5-QF-k5C" id="nUm-VC-Gqq"/>
                 <outlet property="phoneField" destination="xIu-hG-Gcy" id="zqv-W1-Xli"/>
+                <outlet property="scroll" destination="4ry-nI-aq8" id="v1L-95-STb"/>
                 <outlet property="sendButton" destination="b9O-gX-tEX" id="dih-1n-Hxp"/>
                 <outlet property="textView" destination="whA-Xd-Vag" id="MSm-F2-2XR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,7 +48,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Опишите проблему:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NRU-ef-ojv">
                             <rect key="frame" x="20" y="170" width="280" height="21"/>
