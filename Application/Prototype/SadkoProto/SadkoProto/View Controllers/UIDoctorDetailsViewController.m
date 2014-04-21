@@ -33,6 +33,25 @@
     {
         self.doctor = doctor;
     }
+
+    return self;
+}
+
+- (id)initWithDoctor:(Doctor *)doctor
+{
+    self = [super initFromNib];
+    if (self)
+    {
+        self.doctor = @{@"branch":[NSNumber numberWithInteger:doctor.branch],
+                        @"last": doctor.last,
+                        @"first": doctor.first,
+                        @"middle": doctor.middle,
+                        @"speciality": doctor.speciality,
+                        @"resume": doctor.resume,
+                        @"picture": doctor.picture,
+                        @"time": doctor.time};
+    }
+
     return self;
 }
 

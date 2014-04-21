@@ -55,6 +55,9 @@
 		277F24801904D08B00A32B9B /* UIAllDealsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F247E1904D08B00A32B9B /* UIAllDealsViewController.xib */; };
 		277F24871904D36200A32B9B /* UIAllContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F24851904D36200A32B9B /* UIAllContactsViewController.m */; };
 		277F24881904D36200A32B9B /* UIAllContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F24861904D36200A32B9B /* UIAllContactsViewController.xib */; };
+		277F248C1904E74E00A32B9B /* UIAllDoctorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F248A1904E74E00A32B9B /* UIAllDoctorsViewController.m */; };
+		277F248D1904E74E00A32B9B /* UIAllDoctorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277F248B1904E74E00A32B9B /* UIAllDoctorsViewController.xib */; };
+		277F24931904E9CB00A32B9B /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 277F24921904E9CB00A32B9B /* Doctor.m */; };
 		2795D17518C9249A006CEF6F /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17318C9249A006CEF6F /* next.png */; };
 		2795D17618C9249A006CEF6F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2795D17418C9249A006CEF6F /* next@2x.png */; };
 		2795D1A918C930F4006CEF6F /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2795D17D18C930F4006CEF6F /* JapanPostBarcode.m */; };
@@ -239,6 +242,11 @@
 		277F24841904D36200A32B9B /* UIAllContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAllContactsViewController.h; sourceTree = "<group>"; };
 		277F24851904D36200A32B9B /* UIAllContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAllContactsViewController.m; sourceTree = "<group>"; };
 		277F24861904D36200A32B9B /* UIAllContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAllContactsViewController.xib; sourceTree = "<group>"; };
+		277F24891904E74E00A32B9B /* UIAllDoctorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAllDoctorsViewController.h; sourceTree = "<group>"; };
+		277F248A1904E74E00A32B9B /* UIAllDoctorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAllDoctorsViewController.m; sourceTree = "<group>"; };
+		277F248B1904E74E00A32B9B /* UIAllDoctorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAllDoctorsViewController.xib; sourceTree = "<group>"; };
+		277F24911904E9CB00A32B9B /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		277F24921904E9CB00A32B9B /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		2795D17318C9249A006CEF6F /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		2795D17418C9249A006CEF6F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		2795D17C18C930F4006CEF6F /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -722,6 +730,9 @@
 				277F24841904D36200A32B9B /* UIAllContactsViewController.h */,
 				277F24851904D36200A32B9B /* UIAllContactsViewController.m */,
 				277F24861904D36200A32B9B /* UIAllContactsViewController.xib */,
+				277F24891904E74E00A32B9B /* UIAllDoctorsViewController.h */,
+				277F248A1904E74E00A32B9B /* UIAllDoctorsViewController.m */,
+				277F248B1904E74E00A32B9B /* UIAllDoctorsViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -808,6 +819,8 @@
 		60F96E1218C0AAC6003FB8E6 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				277F24911904E9CB00A32B9B /* Doctor.h */,
+				277F24921904E9CB00A32B9B /* Doctor.m */,
 				60F96E1318C0AAE1003FB8E6 /* Service.h */,
 				60F96E1418C0AAE1003FB8E6 /* Service.m */,
 				2716784E18C6E24900D289E8 /* DataManager.h */,
@@ -905,6 +918,7 @@
 				27B9503718B6995A00EDBE52 /* logo.png in Resources */,
 				60ACF50818B6405E00A16C2F /* UIAboutViewController.xib in Resources */,
 				2716787318C6FD4A00D289E8 /* zbar-samples.png in Resources */,
+				277F248D1904E74E00A32B9B /* UIAllDoctorsViewController.xib in Resources */,
 				60ACF52118B641CF00A16C2F /* UIServiceDetailsViewController.xib in Resources */,
 				60ACF52618B641EC00A16C2F /* UINewsViewController.xib in Resources */,
 				2712D83818BC01E600C59B47 /* avatar.png in Resources */,
@@ -999,6 +1013,7 @@
 				27B9503C18B6AA4C00EDBE52 /* UIHumanSchemeViewController.m in Sources */,
 				277F246819046A6700A32B9B /* JASidePanelController.m in Sources */,
 				2795D1BD18C930F4006CEF6F /* UIImage-NKDBarcode.m in Sources */,
+				277F248C1904E74E00A32B9B /* UIAllDoctorsViewController.m in Sources */,
 				60ACF4F818B6264C00A16C2F /* UIImage+Extensions.m in Sources */,
 				2795D1AA18C930F4006CEF6F /* NKDAbstractUPCEANBarcode.m in Sources */,
 				60ACF51618B6411B00A16C2F /* UIDoctorDetailsViewController.m in Sources */,
@@ -1033,6 +1048,7 @@
 				60ACF53918B6441000A16C2F /* UISymptomsViewController.m in Sources */,
 				2795D1AE18C930F4006CEF6F /* NKDCode128Barcode.m in Sources */,
 				2795D1B518C930F4006CEF6F /* NKDModifiedPlesseyBarcode.m in Sources */,
+				277F24931904E9CB00A32B9B /* Doctor.m in Sources */,
 				2716785018C6E24900D289E8 /* DataManager.m in Sources */,
 				60ACF50718B6405E00A16C2F /* UIAboutViewController.m in Sources */,
 			);

@@ -14,6 +14,7 @@
 #import "UIPriceCalcViewController.h"
 #import "UIAllDealsViewController.h"
 #import "UIAllContactsViewController.h"
+#import "UIAllDoctorsViewController.h"
 
 @interface UISlideMenuViewController ()
 
@@ -28,6 +29,7 @@
 - (void)priceCalcItemSelected;
 - (void)allDealsItemSelected;
 - (void)allContactsItemSelected;
+- (void)allDoctorsItemSelected;
 
 @end
 
@@ -85,6 +87,8 @@
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Выбрать врача"];
+    menuItem.target = self;
+    menuItem.selector = @selector(allDoctorsItemSelected);
     [menu addObject:menuItem];
     
     menuItem = [MenuItem menuItemWithTitle:@"Услуги"];
@@ -242,6 +246,16 @@
     UIAllContactsViewController* allContactsVC = [[UIAllContactsViewController alloc] initWithAllClinics:data];
     [self.centerController.navigationController pushViewController:allContactsVC animated:YES];
     [allContactsVC release];
+}
+
+- (void)allDoctorsItemSelected
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Clinics" ofType:@"plist"];
+    NSArray* data = [[[NSArray alloc] initWithContentsOfFile:filePath] autorelease];
+    
+    UIAllDoctorsViewController* allDocsVC = [[UIAllDoctorsViewController alloc] initWithAllClinics:data];
+    [self.centerController.navigationController pushViewController:allDocsVC animated:YES];
+    [allDocsVC release];
 }
 
 @end
